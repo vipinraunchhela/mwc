@@ -11,6 +11,31 @@
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
         <link href="css/styles.min.css" rel="stylesheet">
         <link href="css/aip.css" rel="stylesheet">
+        <style type="text/css">
+         .aip-nav-list li:hover ul.show-left {
+            left: -100%;
+            box-shadow:-3px 1px 14px 0 rgba(0,0,0,0.4)
+        }
+        .seprate-link,
+        .seprate-link:hover,
+        .seprate-link:active,
+        .seprate-link:focus{
+    width: 60%;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.94px;
+    line-height: 27px;
+    text-align: center;
+    background: rgba(33, 26, 138, .5);
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+        </style>
     </head>
 
     <body>
@@ -54,7 +79,7 @@
                                 <li><a id="roamingBusinessAdvisor2" data-toggle="modal" data-target="#myModal">Roaming Business Advisor</a></li>
                                 <li><a id="steeringOfRoaming" data-toggle="modal" data-target="#myModal">Steering of Roaming<br/>(SS7/DIAMETER/OTA/VoLte)</a></li>
                                 <li><a id="nationalRoaming" data-toggle="modal" data-target="#myModal">Border/National Roaming</a></li>
-                                <li><a id="smartHomeRouting" data-toggle="modal" data-target="#myModal">Smart Home Routing</a></li>
+                                <li><a id="leastCostRouting" data-toggle="modal" data-target="#myModal">Least Cost Routing</a></li>
                                 <li><a id="permanentRoaming" data-toggle="modal" data-target="#myModal">Permanent Roaming</a></li>
                                 <li><a id="cliGuarantee" data-toggle="modal" data-target="#myModal">CLI Guarantee</a></li>
                                 <li><a href="aiwb-dashboard-wholesale.html">Demo</a></li>
@@ -94,21 +119,37 @@
                                 <tr>
                                     <td>
                                         <!-- <div class="list-logo"></div> -->
-                                        <div>Fraud &amp; Revenue Risk Intelligence</div>
+                                        <div>Security Intelligence</div>
                                     </td>
                                 </tr>
                             </table>
                             </li>
-                            <li><a href="">Fraud</a>
-                            <ul>
-                                <li><a id="virtualFraudManager" data-toggle="modal" data-target="#myModal">Virtual Fraud Manager</a></li>
-                                <li><a href="aiwb-dashboard-fraud.html">Demo</a></li>
-                            </ul>
-                            </li>
-                            <li><a href="">Revenue Assurance</a>
+                            <li><a href="">SS7 and Diameter Firewall</a>
                                 <ul>
-                                    <li><a id="interconnectRiskManager" data-toggle="modal" data-target="#myModal">Interconnect Risk Manager</a></li>
-                                    <li><a href="">Demo</a></li>
+                                    <li><a id="ss7andDiameterFirewall" data-toggle="modal" data-target="#myModal">SS7 and Diameter Firewall</a></li>
+                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">GTP Firewall</a>
+                                <ul>
+                                    <li><a id="gtpFirewall" data-toggle="modal" data-target="#myModal">GTP Firewall</a></li>
+                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">SMS Firewall</a>
+                                <ul>
+                                    <li><a id="SMSFirewall" data-toggle="modal" data-target="#myModal">SMS Firewall</a></li>
+                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">5G SEPP</a>
+                                <ul>
+                                    <li><a id="5GSEPP" data-toggle="modal" data-target="#myModal">5G SEPP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Security Analytics</a>
+                                <ul>
+                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -122,16 +163,27 @@
                                 <tr>
                                     <td>
                                         <!-- <div class="list-logo"></div> -->
-                                        <div>Security Intelligence</div>
+                                        <div>Fraud &amp; Revenue Risk Intelligence</div>
                                     </td>
                                 </tr>
                             </table>
                             </li>
-                            <li><a href="aiwb-dashboard-security.html">Security 1</a></li>
-                            <li><a href="aiwb-dashboard-security.html">Security 2</a></li>
+                            <li><a href="">Fraud</a>
+                            <ul class="show-left">
+                                <li><a id="virtualFraudManager" data-toggle="modal" data-target="#myModal">Virtual Fraud Manager</a></li>
+                                <li><a href="aiwb-dashboard-fraud.html">Demo</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="">Revenue Assurance</a>
+                                <ul class="show-left">
+                                    <li><a id="interconnectRiskManager" data-toggle="modal" data-target="#myModal">Interconnect Risk Manager</a></li>
+                                    <li><a href="">Demo</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </section>
                 </div>
+                
         </div>   
         <div class="row">
                 <div class="col-sm-12">
@@ -155,7 +207,7 @@
                             <div>Data Ingestion &amp; Other Adapters</div>
                         </div>
                     </section>
-                    <a class="seprate-link" href="">NFV</a>
+                    <a id="NFV" data-toggle="modal" data-target="#myModal" class="seprate-link">NFV (Network Function Virtualization)</a>
                 </div>
 
                 <div class="col-sm-6">
@@ -174,7 +226,7 @@
                             <div>Active Network &amp; BSS Interface</div>
                         </div>
                     </section>
-                    <a class="seprate-link" href="">NIF (Network Interface Function) </a>
+                    <a id="NIF" data-toggle="modal" data-target="#myModal" class="seprate-link" href="">NIF (Network Interface Function)</a>
                 </div>
 
             </div>
@@ -216,15 +268,15 @@
         <div class="nationalRoaming">
         <iframe src="pdf/MWC2019_Border/National Roaming.pdf" >Your browser does not support.</iframe>
         </div>
-        <div class="smartHomeRouting">
-        <iframe data-id="Testing" src="pdf/MWC2019_Smart Home Routing.pdf" >Your browser does not support.</iframe>
+        <div class="leastCostRouting">
+        <iframe src="pdf/MWC2019_CLIG_LCR.pdf" >Your browser does not support.</iframe>
         </div>
         <div class="permanentRoaming">
             <iframe src="pdf/MWC2019_Permanent Roaming.pdf" >Your browser does not support.</iframe>
         </div>
 
         <div class="cliGuarantee">
-            <iframe src="pdf/MWC2019_CLI Guarantee.pdf" >Your browser does not support.</iframe>
+            <iframe src="pdf/MWC2019_CLIG_LCR.pdf" >Your browser does not support.</iframe>
         </div>
         <div class="roamingCem">
             <iframe src="pdf/MWC2019_Roaming CEM.pdf" >Your browser does not support.</iframe>
@@ -244,6 +296,29 @@
         <div class="interconnectRiskManager">
             <iframe src="pdf/MWC2019_Interconnect Risk Manager.pdf" >Your browser does not support.</iframe>
         </div>
+
+
+        <div class="ss7andDiameterFirewall">
+            <iframe src="pdf/MWC2019_Security Firewall.pdf" >Your browser does not support.</iframe>
+        </div>
+        <div class="gtpFirewall">
+            <iframe src="pdf/MWC2019_GTP Firewall.pdf" >Your browser does not support.</iframe>
+        </div>
+        <div class="SMSFirewall">
+            <iframe src="pdf/MWC2019_SMS Firewall.pdf" >Your browser does not support.</iframe>
+        </div>
+        <div class="5GSEPP">
+            <iframe src="pdf/MWC2019_5G SEPP.pdf" >Your browser does not support.</iframe>
+        </div>
+        <div class="NFV">
+            <iframe src="pdf/MWC2019_NFV.pdf" >Your browser does not support.</iframe>
+        </div>
+        <div class="NIF">
+            <iframe src="pdf/MWC2019_NIF.pdf" >Your browser does not support.</iframe>
+        </div>
+
+
+
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -256,7 +331,7 @@
         <script type="text/javascript" src="slick/slick.js"></script>
         <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript">
-            $('.aip-nav-list a').on('click', function(){
+            $('a').on('click', function(){
                var itemId = $(this).attr('id');
                $('.iframes div.'+itemId+'').show().siblings().hide();
             })
