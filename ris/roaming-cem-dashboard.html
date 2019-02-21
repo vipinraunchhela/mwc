@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/fonts.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/laptop.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/style-td.css" />
         <link rel="stylesheet" type="text/css" href="css/laptop-td.css" />
@@ -30,6 +30,92 @@
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
     </head>
     <body>
+
+
+<!-- The Modal -->
+<div id="myModal2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content w-400">
+    <div class="modal-header flex-wrp">
+      <h2>Send new messago to subscriber</h2>
+      <span class="close"></span>
+    </div>
+    <div class="modal-body message-pop">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Enter the message to be sent to the customer..."></textarea>
+      <input type="submit" value="Send" class="btn-blue m-auto mt-10">
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal modal2">
+  <!-- Modal content -->
+  <div class="modal-content w-340">
+    <div class="modal-header flex-wrp">
+      <h2>View more</h2>
+      <span class="close"></span>
+    </div>
+    <div class="modal-body">
+      <div class="flex-wrp view-more-history-pop">
+        <div class="details">
+          <h5>Access Network</h5>
+          <p>LTE</p>
+        </div>
+        <div class="details">
+          <h5>Last SMS Sent</h5>
+          <p>03/02/2019 12:21</p>
+        </div>
+        <div class="details">
+          <h5>Services</h5>
+          <p>Data & VoLTE</p>
+        </div>
+        <div class="details">
+          <h5>Last Voice Call</h5>
+          <p>03/02/2019 11:05</p>
+        </div>
+        <div class="details">
+          <h5>Device</h5>
+          <p>iPhone 8</p>
+        </div>
+        <div class="details">
+          <h5>Last Data Session</h5>
+          <p>03/02/2019 12:05</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal3" class="modal modal3">
+  <!-- Modal content -->
+  <div class="modal-content w-400">
+    <div class="modal-header flex-wrp">
+      <h2>Trip History</h2>
+      <span class="close"></span>
+    </div>
+    <div class="modal-body">
+      <div class="flex-wrp view-more-history-pop flex-start trip-history">
+        <div class="details">
+          <h5>First Network <br> Registerd To</h5>
+          <p>Optus</p>
+        </div>
+        <div class="details">
+          <h5>Subsequent Network Registered To</h5>
+          <p>Telstra</p>
+        </div>
+        <div class="details">
+          <h5>Data Usage in First 30 Minutes</h5>
+          <p>5.8MB </p>
+        </div>
+        <div class="details">
+          <h5>Voice Usage in First 30 Minutes</h5>
+          <p>12m 31s</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         <header>
             <a href="../index.html"><div class="header-top"></div></a>
@@ -1272,32 +1358,78 @@
 
 
 
-        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script>
-                        function openCity(evt, cityName) {
-                            var i, tabcontent, tablinks;
-                            tabcontent = document.getElementsByClassName("tabcontent");
-                            for (i = 0; i < tabcontent.length; i++) {
-                                tabcontent[i].style.display = "none";
-                            }
-                            tablinks = document.getElementsByClassName("tablinks");
-                            for (i = 0; i < tablinks.length; i++) {
-                                tablinks[i].className = tablinks[i].className.replace(" active", "");
-                            }
-                            document.getElementById(cityName).style.display = "block";
-                            evt.currentTarget.className += " active";
-                        }
-                        // Get the element with id="defaultOpen" and click on it
-                        document.getElementById("defaultOpen").click();
-        </script>
 
-        <!-- JS For Highcharts -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/series-label.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-        <!-- For service-time Starts-->
+
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script>
+/*$(document).ready(function(){
+$(".view-trip-history-popup").on('click', function(){
+$(".modal2").show();
+})  
+})*/
+
+$(".message-pop-open").click(function(){
+  $(".modal").show();
+  $(".modal2").hide();
+  $(".modal3").hide();
+})
+
+$(".view-trip-history-popup").click(function(){
+  $(".modal2").show();
+})
+
+$(".country-view").click(function(){
+$(".modal3").show();
+$(".modal2").hide();
+})
+
+$(".close").click(function(){
+  $(".modal").hide();
+})
+
+$(".modal").click(function(e){
+  $(".modal").hide();
+  e.stopPropagation();
+})
+
+$(".modal-content").click(function(e){
+  e.stopPropagation();
+});
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+$(".trip-history-click").click(function(e){
+  openCity(e,'trip-hist');
+  $(".trip" ).addClass('active');
+});
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<!-- JS For Highcharts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<!-- <script src="https://code.highcharts.com/modules/series-label.js"></script> -->
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- For service-time Starts-->
 <script type="text/javascript">
+
+
  var change = {
         0: 'SMS’s',
         1: 'Data Sessions',
@@ -2059,9 +2191,14 @@
           }]
       }
   });
+
+//Model Code
+
+
+
+//Model Code End
 </script>
 <!-- For pie-dag3 Ends-->
-
 
     
 
