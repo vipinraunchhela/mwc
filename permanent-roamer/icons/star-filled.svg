@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M653,369 L943,369 C945.761424,369 948,371.238576 948,374 L948,709 C948,711.761424 945.761424,714 943,714 L653,714 C650.238576,714 648,711.761424 648,709 L648,374 C648,371.238576 650.238576,369 653,369 Z" id="path-1"></path>
+        <filter x="-9.2%" y="-5.1%" width="118.3%" height="115.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.883981718   0 0 0 0 0.854595883   0 0 0 0 0.854595883  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Mobileum-Active-Intelligence-Workbench" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1044.000000, -725.000000)">
+        <rect id="Rectangle-7" fill="#F2F0F0" x="0" y="0" width="1440" height="980"></rect>
+        <g id="Box" transform="translate(132.000000, 234.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Combined-Shape-Copy-19">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+        <g id="e09b" transform="translate(1044.000000, 725.000000)" fill="#B2B2B2" fill-rule="nonzero">
+            <path d="M4.0000237,0.49904096 L4.91292802,2.4531784 L5.07317652,2.7961 L5.43838821,2.8523082 L7.51350009,3.17047757 L6.0001947,4.72832161 L5.74602033,4.99015384 L5.8054734,5.35524932 L6.15894434,7.532028 L4.33013805,6.51679958 L3.99964895,6.3332205 L3.66915986,6.51679958 L1.84047852,7.53254363 L2.19407439,5.35524932 L2.25327766,4.99015384 L1.99910329,4.72832161 L0.486422455,3.17021988 L2.56153432,2.85205053 L2.92662113,2.79584233 L3.08699452,2.45304966 L4.0000237,0.49904096 Z M3.99989886,0 C3.77620046,0 3.57223647,0.130335991 3.47706162,0.334026264 L2.57227591,2.2729514 L0.490294414,2.59253894 C0.276463219,2.62554192 0.098853415,2.77624692 0.029907843,2.98238663 C-0.0389128276,3.18917094 0.0131710556,3.41671102 0.164176846,3.57179925 L1.68959767,5.14459754 L1.33575201,7.32537269 C1.30015511,7.5451777 1.39220744,7.76549838 1.57281487,7.89402949 C1.67211148,7.96441866 1.78876938,8 1.90555219,8 C2.00172627,8 2.09790035,7.97589235 2.18495662,7.92767706 L3.99989886,6.91902347 L5.81496594,7.92767706 C5.90227202,7.97589235 5.99844609,8 6.09424548,8 C6.21102829,8 6.32768618,7.96441866 6.42723259,7.89402949 C6.60759021,7.76549835 6.69976743,7.54517765 6.66392074,7.32537269 L6.30995016,5.14459754 L7.83612034,3.57179925 C7.98712611,3.41671104 8.03883531,3.189042 7.97001464,2.98238663 C7.90094416,2.77598908 7.72333438,2.62528407 7.50962807,2.59253894 L5.42802131,2.27295146 L4.52273596,0.334026329 C4.42818587,0.13007801 4.22409665,0 3.99989886,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,151 @@
+.list-logo{
+  background: url(../images/list-logo.png) no-repeat center top;
+  height: 31px;
+width: auto;
+ 
+
+}
+.body-banner{
+    background: url(../images/bg-image.png) no-repeat center top;
+    background-size: 100% auto;
+    padding-bottom:50px;
+    
+
+}
+h1{
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 3px #505050;
+    margin: 42px 0 10px;
+}
+.aip-section{
+	border: 1px solid #FFFFFF;
+	background: rgba(0,0,0,0.51);
+	border-radius: 5px;
+}
+.auto-adjust{
+	display: flex;
+	justify-content: space-between;
+}
+.auto-adjust div{
+	padding: 16px 0;
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.56px;
+    line-height: 17px;
+    text-align: center;
+    border-right: 1px solid #7D7D7D;
+    border-bottom: 1px solid #7D7D7D;
+}
+.auto-adjust.width50 div{
+	width:50%;
+}
+.auto-adjust.width33 div{
+	width:50%;
+}
+.auto-adjust.width100 div{
+	width: 100%;
+}
+.head-list{
+	border: 1px solid #FFFFFF;
+    background-color: rgba(210, 124, 52, 0.8);
+    height: 90px;
+}
+.head-list table{
+	width:100%;
+	height:100%;
+}
+.head-list table td{
+	vertical-align: middle;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 20px;	
+	font-weight: 500;	
+	letter-spacing: 1.61px;	
+	line-height: 28px;	
+	text-align: center;
+}
+.aip-nav-list{
+	padding: 0;
+	margin:0;
+}
+.aip-nav-list li{
+	display: block;
+	position: relative;
+	
+}
+.aip-nav-list li ul{
+	display: none;
+	padding: 0;
+	margin:0;
+}
+.aip-nav-list li:hover ul{
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 100%;
+	top: 0px;
+	border-radius: 5px;	
+	background-color: #5A8697;
+	z-index: 10;
+}
+.aip-nav-list li ul li a{
+	background-color: #5A8697;
+	border: 1px solid #4D7381;
+}
+.aip-nav-list li a{
+	display: block;
+	border-top: 1px solid #FFFFFF;
+	color: #FFFFFF;	
+	font-family: "Open Sans";	
+	font-size: 18px;	
+	font-weight: 500;	
+	letter-spacing: 0.94px;	
+	line-height: 27px;	
+	text-align: center;
+	background: rgba(33, 26, 138, .5);
+	padding: 10px 0; 
+	cursor: pointer;
+}
+.aip-nav-list li:hover a{
+	background-color: #5A8697;
+}
+.margin-top20{
+	margin-top: 20px;
+}
+.sub-head{
+	color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.94px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.modal-dialog{
+	width:1030px;
+	height:400px;
+}
+iframe{
+	width:1000px;
+	height:500px;
+}
+.iframes > div{
+	display: none;
+}
+.header-logo{
+	margin: 20px 0;
+}
+
+
+
+
+

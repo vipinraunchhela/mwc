@@ -1,0 +1,105 @@
+body{background: url("../icons/site-background.jpg") no-repeat center top; background-size: cover; background-attachment: fixed; height: auto;}
+body.nobg{background: #ffffff;}
+body.nobg h1{color: #555555;}
+h1{color: #ffffff; font-size: 38px;}
+.d-card{background: #f7f7f7;box-shadow: 0 6px 11px 0 rgba(237,237,237,0.39); margin-bottom: 20px;     min-height: 350px;}
+.d-card:hover{background: #ffffff;	box-shadow: 0 10px 15px 0 #E1DADA;}
+.d-card:hover .d-card-header:before{border-bottom: 5px solid #ffffff;}
+.d-card-header{	background:linear-gradient(223.5deg,#ff795f 0,#f94f6f 97.89%); padding: 20px; position: relative; max-height: 57px;}
+.d-card-header:before{width: 0;height: 0; border-left: 5px solid transparent;border-right: 5px solid transparent;border-bottom: 5px solid #f7f7f7; position: absolute; bottom: 0;left: 50px; content: "";}
+  .info-card{background: #f7f7f7;box-shadow: 0 6px 11px 0 rgba(237,237,237,0.39); margin-bottom: 20px;}
+  .info-card:hover{background: #ffffff;	box-shadow: 0 10px 15px 0 #E1DADA;}
+  .info-card table{
+    background: #ffffff;
+    border: 1px solid #ececec;
+    margin-bottom: 10px;
+  }
+  .info-card table tr th, .info-card table tr td{border:none; padding: 10px 15px; color: #555555;}
+
+.card-title{display: flex; justify-content: space-between;}
+.card-title .ytd{font-size: 24px; color: #ffffff; text-align: right; position: relative; line-height: 1; margin: 0;}
+.card-title .ytd span{font-size: 14px;}
+.card-title h4{color: #ffffff; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; margin: 0;}
+.card-content{padding: 20px;}
+.cat-content .cat-title{margin-bottom: 10px;}
+.cat-title{display: flex; position: relative;justify-content: space-between; font-size: 14px; text-transform: uppercase; color: #276EDB; letter-spacing: 1px; margin: 0;}
+.cat-content{padding-left: 15px; margin: 15px 0 25px;}
+.cat-content.cmpr{margin: 10px 0;}
+.cat-content.cmpr2{margin: 6px 0;}
+.cat-content.cmpr3{margin: 0px 0;}
+.cmpr3 ul{margin-bottom: 5px; margin-top: 3px;}
+.cat-content ul{list-style: none; padding:0;}
+.cat-content ul li{font-size: 12px; margin-bottom: 10px; display: flex; justify-content: space-between;}
+.star-filled{background: url('../icons/star-filled.png') no-repeat center top; height: 8px; width: 8px; display: inline-block;}
+.star-blank{background: url('../icons/star-blank.png') no-repeat center top; height: 8px; width: 8px; display: inline-block;}
+.arrow-up{background: url('../icons/green.svg') no-repeat center top; height: 12px; width: 9px; display: inline-block;}
+.arrow-up-reverted{background: url('../icons/green.svg') no-repeat center top; top:2px!important; transform: rotate(180deg); /* Standard syntax */ height: 12px; width: 9px; display: inline-block;}
+.arrow-down-reverted{background: url('../icons/red.svg') no-repeat center top; top:1px!important; transform: rotate(180deg); /* Standard syntax */ height: 12px; width: 9px; display: inline-block;}
+.arrow-down{background: url('../icons/red.svg') no-repeat center top; height: 12px; width: 9px; display: inline-block;}
+ul li{position: relative;}
+[class^="arrow"]{position: absolute; top: 3px; right: -13px;}
+.pl-15{
+  padding-left: 15px;
+}
+.mb-0{margin-bottom:0;}
+.mb-1{
+  margin-bottom: 10px;
+}
+.mb-2{
+  margin-bottom: 20px;
+}
+.mt-2{
+  margin-top: 20px;
+}
+.compressed li{
+  margin-bottom: 0!important;
+}
+button.current{
+  box-shadow: 0 10px 15px 0 #E1DADA;
+  background: #ffffff;
+}
+.tab-btn button{ color: #333333;}
+.site-logo{
+  width: 18%;
+}
+.site-logo img{max-width: 100%;}
+.header-new{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head-right{
+  display: flex;
+  justify-content: space-between;
+}
+.add-card{
+  position: relative;
+}
+.crd-content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.add-content{
+  font-size: 70px;
+  color: #ff795f;
+  line-height: 1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border:3px solid #ff795f;
+  display: flex;justify-content: center;
+  align-items: center;
+
+}
+.datalist{padding: 0 0 0 15px;}
+.datalist table tr td{color: #555555;}
+.datalist li{justify-content: space-between;}
+.datalist li p span{display: block; font-size: 10px;}
+.datalist li.total{margin-top: 5px; padding-top: 5px; border-top: 1px solid #ccc;}
+.greentxt{color: #2dce7f!important;}
+.redtxt{color:#f94974!important;}
+.bluetxt{color: #276EDB!important;}
+.orangetxt{color: #ff795f!important;}
+.text-bold{font-weight: 600;}

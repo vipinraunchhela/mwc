@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobileum</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/style_cal.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	
+	
+</head>
+<body>
+	<div>
+		<div class="sidebar">
+			<ul>
+				<li>
+				<span class="black-ham">
+					<span class="icon-hamburger">
+                		<span class="path1"></span><span class="path2"></span>
+                	</span>
+				<span>
+				</li>
+				<li>
+					<a href="index.html">
+						<span class="icon">
+							<span class="icon-Dashboard"> </span>
+						</span>
+						<span class="text">Dashboard</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="detail_page.html">
+						<span class="icon">
+							<span class="icon-My-ticket"> </span>
+						</span>
+						<span class="text">Ticket</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><span class="icon-Report">
+                
+                </span></span>
+						<span class="text">Report</span>
+					</a>	
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><span class="icon-help">
+                
+                </span></span>
+						<span class="text">Support?FAQ</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main-section">
+			<div class="header">
+				<div class="pull-left search">
+					<span class="magnifier"><span class="icon-Search">
+	                
+	                </span></span>
+					<input type="text" name="" placeholder="search">
+					
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+		            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="bellicon">
+                	<span class="icon-notification"> </span>
+                	<span class="badge">5</span>
+                </span>
+                </a>
+                <ul class="dropdown-menu notification">
+                  <li><a href="#">
+                  	<div class="notification_text">
+                  		<span class="status icon-Assigned"></span>
+                  		Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                  	</div>
+                  	<div class="timeblock">5min ago</div>
+                  </a></li>
+                  <li><a href="#">
+                  	<div class="notification_text">
+                  		<span class="status icon-Assigned"></span>
+                  		Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                  	</div>
+                  	<div class="timeblock">5min ago</div>
+                  </a></li>
+                  <li><a href="#">
+                  	<div class="notification_text">
+                  		<span class="status icon-Assigned"></span>
+                  		Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                  	</div>
+                  	<div class="timeblock">5min ago</div>
+                  </a></li>
+                  <li><a href="#">
+                  	<div class="notification_text">
+                  		<span class="status icon-Assigned"></span>
+                  		Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                  	</div>
+                  	<div class="timeblock">5min ago</div>
+                  </a></li>
+
+                </ul>
+              </li>
+		            <li>
+		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://via.placeholder.com/30x30" />
+		            	<span>Vipin</span> <span class="caret"></span></a>
+		            	
+
+	            	</a>
+		            	<ul class="dropdown-menu">
+		                  <li><a href="#">Action</a></li>
+		                  <li><a href="#">Another action</a></li>
+		                  <li><a href="#">Something else here</a></li>
+		                </ul>
+		            </li>
+
+		          </ul>
+			</div>
+			<div class="main_body container">
+			<div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="detail_page.html">tickets</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                </div>
+            </div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row padding-tb">
+							<div class="col-md-6"><i class="italic"><strong>Somalia Case List (8</strong> of 368)</i></div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="filter"><span class="icon-filter"></span> &nbsp;
+										<div class="filter-selection row">
+										<div class="col-xs-4">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs-left">
+                <li class="active"><a href="#fraudType" data-toggle="tab">Fraud Type</a></li>
+                <li><a href="#assignee" data-toggle="tab">Assignee</a></li>
+                <li><a href="#currentState" data-toggle="tab">Current State</a></li>
+                <li><a href="#country" data-toggle="tab">Country</a></li>
+                <li><a href="#settings" data-toggle="tab">MOU</a></li>
+                <li><a href="#valueAmount" data-toggle="tab">$Value</a></li>
+                <li><a href="#createdOn" data-toggle="tab">Created On</a></li>
+                <li><a href="#escalatedOn" data-toggle="tab">Escalated On</a></li>
+                <li><a href="#qualifyingRule" data-toggle="tab">Qualifying Rule</a></li>
+            </ul>
+        </div>
+         <div class="col-xs-8">
+            <!-- Tab panes -->
+            <div class="tab-content checbox-list">
+                <div class="tab-pane active" id="fraudType">
+                	<ul>
+                		<li><label id="irsf"><input type="checkbox"> IRSF </label></li>
+            			<li><label id="drsf"><input type="checkbox">DRSF<label> </li>
+            			<li><label id="byPass"> <input type="checkbox">BY PASS</label></li>
+            			<li><label id="cli"><input type="checkbox">CLI</label></li>
+            			<li><label id="roaming"><input type="checkbox">ROAMING</label></li>	
+                	</ul>
+                	
+                </div>
+                <div class="tab-pane" id="assignee">
+                	<ul>
+                		<li><label id="abc"><input type="checkbox"> abc </label></li>
+            			<li><label id="cde"><input type="checkbox"> cde <label> </li>
+                	</ul>
+                </div>
+                <div class="tab-pane" id="currentState">Messages Tab.</div>
+                <div class="tab-pane" id="country">country Tab.</div>
+                <div class="tab-pane" id="settings">Settings Tab.</div>
+                <div class="tab-pane" id="valueAmount">valueAmount Tab.</div>
+                <div class="tab-pane" id="createdOn">createdOn Tab.</div>
+                <div class="tab-pane" id="escalatedOn">escalatedOn Tab.</div>
+                <div class="tab-pane" id="qualifyingRule">qualifyingRule Tab.</div>
+            </div>
+        </div>
+        <div class="filter-footer clear">
+                		<div class="taginputs-view"> 
+                			
+            			</div>
+            			<div class="text-center">
+            				<input type="button" class="btn btn-default" value="Clear All">
+            				<input type="button" class="btn btn-primary" value="Apply">
+        				</div>
+                	</div>
+
+											
+										</div>
+
+										 </div> 
+										<div class="filter"><span class="icon-eye"></span></div>
+									</div>
+									<div class="date col-md-4">
+										<select class="form-control">
+											<option value="">Today</option>
+											<option value="">Yesterday</option>
+											<option value="">Select</option>
+										</select>
+									</div>	
+									<div class="date col-md-4">
+										<select class="form-control">
+											<option value="">7 Days</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="white-bg">
+							<table class="table">
+								<tr>
+									<th class="text-center"><input type="checkbox" name=""></th>
+									<th>Case ID</th>
+									<th>Fraud Type  <span class="arrow down"></th>
+									<th>Value</span></th>
+									<th>Open On</th>
+									<th>Escalated on</th>
+									<th>Qualifying Rules</th>
+								</tr>
+								<tr>
+									<td class="text-center"><input type="checkbox" name=""></td>
+									<td>
+										<div class="caseid">MBI 0376</div>
+										
+									</td>
+									<td>
+										<div class="type">IRSF</div> 
+										<div class="light-text">MOU-1500</div>
+									</td>
+									<td>$307</td>
+									<td>20 Sept</td>
+									<td>25 Sept</td>
+									<td>
+										<span class="icon-human high"></span> &nbsp; 
+										<span class="icon-machine high"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center"><input type="checkbox" name=""></td>
+									<td>
+										<div class="caseid">MBI 0376</div>
+										
+									</td>
+									<td>
+										<div class="type">IRSF</div> 
+										<div class="light-text">MOU-1500</div>
+									</td>
+									<td>$307</td>
+									<td>20 Sept</td>
+									<td>25 Sept</td>
+									<td>
+										<span class="icon-human medium"></span> &nbsp; 
+										<span class="icon-machine medium"></span>
+									</td>
+								</tr>
+								
+							</table>
+						</div>
+
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- side overlay -->
+	<div class="greyoverlay" id="countydata">
+		<div class="defaulter-details">
+	        <span class="close"> x </span>
+	        <h3 class="slideheader">
+	            <span class="flag"></span>Somalia
+	        </h3>
+	        <div class="action-items">
+	        <div class="row">
+	        	<div class="col-md-4">
+	        		<select name="" id="" class="form-control">
+	        		<option value="">MOU</option>
+	        	</select>
+	        	</div>
+	        	<div class="col-md-4">
+	        		<select name="" id="" class="form-control">
+	        		<option value="">Today v/s Yesterday</option>
+	        	</select>
+	        	</div>
+	        </div>
+	        	
+	        	
+	        </div>
+	        <div class="graphs-view" id="">
+	        	
+	        </div>
+	        <div class="text-center">
+	        	<input type="button" name="" class="btn btn-primary" value="View All Cases in Somalia" />
+        	</div>
+	    </div>
+    </div>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>			 -->
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/jQuery-plugin-progressbar.js"></script>
+
+	<!-- <script src="js/jquery.timelinr-0.9.6.js"></script> -->
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.icon-filter').on('click', function(){
+			$('.filter-selection').slideToggle();
+		})
+		$('.checbox-list input').on('change', function(){
+			var labeltext=  $(this).parent().text();
+			var labelid=  $(this).parent().attr('id');
+			var elem = '<div class="tag" data-id='+labelid+'>'+labeltext+'<span class="closetag">x</span></div>';
+			var checkvalue = $(this).is(":checked");
+			if(checkvalue == true){
+				// console.log('true');
+				$('.taginputs-view').append(elem);
+			}
+			else{
+				// console.log('false');
+				var uncheckid = $(this).parent().attr('id');
+				$('.taginputs-view').find('[data-id='+uncheckid+']').remove();
+			}
+		})
+
+		$('.taginputs-view').on('click', '.closetag', function(){
+			$(this).parent().remove();
+			var checkid = ($(this).parent().attr('data-id'));
+			$('#'+checkid).find('input').attr('checked', false);
+		})
+
+
+		$('.countryName').on('click', function(){
+			$('#countydata').show();
+		})
+
+		$('.view-type a').click(function(){
+		  $(this).addClass('active').parent().siblings().find('a').removeClass('active');
+		})
+		$('.card-list').click(function(){
+			$('.table.list, .mapblock').hide();
+		  	$('.cards').show();
+		})
+		$('.list-view').click(function(){
+			$('.cards, .mapblock').hide();
+		  	$('.table.list').show();
+		})
+		$('.mapview').click(function(){
+			$('.cards, .table.list').hide();
+		  	$('.mapblock').show();
+		})
+
+
+		// number details view
+		$('.redarrow').on('click', function(){
+			$('.greyoverlay').fadeIn();
+		})
+		$('.defaulter-details .close').on('click', function(){
+			$('.greyoverlay').fadeOut();
+		})
+
+		var datewidth = $('#dates li').length * 100
+		$('#dates').width(datewidth);
+
+
+		// $('#timeline').timelinr()
+		$('#dates li a').on('click', function(){
+			$(this).addClass('selected');
+			$(this).parent().siblings().find('a').removeClass('selected');
+		})
+	})
+
+	$(function() {
+
+		$('.slidedetails tr').on('click', function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		})
+
+  	  $( "#tabs").tabs({
+		  active: 2
+		});
+  	  $("#tabs2, #tabs3, #tabs4 ").tabs();
+ 
+
+	    var start = moment().subtract(29, 'days');
+	    var end = moment();
+
+	    function cb(start, end) {
+	        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+	    }
+	    $('#reportrange').daterangepicker({
+	        startDate: start,
+	        endDate: end,
+	        ranges: {
+	           'Today': [moment(), moment()],
+	           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+	           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+	           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+	           'This Month': [moment().startOf('month'), moment().endOf('month')],
+	           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+	        }
+	    }, cb);
+	    cb(start, end);
+	});
+	
+
+
+	$('.card-machine li').on('click', function(){
+		
+		
+
+		var activeLength = $(".card-machine li.active").length ;
+
+		if( activeLength < 3){
+		 $(this).toggleClass('active');
+		 $(this).find('input[type=checkbox]').prop("checked", !$(this).find('input[type=checkbox]').prop("checked"));
+		}
+		else{
+		   $(this).removeClass('active');
+		}
+	 	
+	})
+
+	</script>
+	<script type="text/javascript" src="js/donoutchart.js"></script>
+	<script type="text/javascript" src="js/barchart.js"></script>
+
+</body>
+</html>

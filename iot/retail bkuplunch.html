@@ -1,0 +1,194 @@
+<html lang="en"><head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   </head>
+   <body>
+      <div>
+         <div class="sidebar">
+            <ul>
+               <li>
+                    <a href="../aiwb-dashboard.html" class="home-link">
+						<span class="black-ham">
+							<span class="home-icon"></span>
+						</span>
+					</a>
+               </span></span></li>
+               <li class="active">
+                  <a href="#">
+                  <span class="icon">
+                  <span class="icon-Dashboard"> </span>
+                  </span>
+                  <span class="text">Dashboard</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="detail_page.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">Ticket</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Report</span>
+                  </a>  
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-help">
+                  </span></span>
+                  <span class="text">Support?FAQ</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-section">
+            <div class="header">
+               <div class="pull-left search">
+                  <span class="magnifier"><span class="icon-Search">
+                  </span></span>
+                  <input type="text" name="" placeholder="search">
+               </div>
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     <span class="bellicon">
+                     <span class="icon-notification"> </span>
+                     <span class="badge">5</span>
+                     </span>
+                     </a>
+                     <ul class="dropdown-menu notification">
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://via.placeholder.com/30x30">
+                     <span>Vipin</span> <span class="caret"></span></a>
+                     
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <div class="main_body container-fluid">
+               <div class="row marginTop">
+                  <div class="col-sm-4"></div><div class="col-sm-5 text-center box_blocks_fit"><b>Total Retail</b></div><div class="col-sm-3"></div>
+               </div>
+               <div class="row marginTop">
+                  <div class="col-sm-2"></div><div class="col-sm-4 text-center box_blocks_fit">Prepaid</div><div class="col-sm-1"></div><div class="col-sm-4 text-center box_blocks_fit">Postpaid</div><div class="col-sm-1"></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2"></div><div class="col-sm-2 text-center "><div class="box_blocks_fit"><i class="fa fa-hashtag"></i>Roamers</div></div><div class="col-sm-2 text-center  "><div class="box_blocks_fit"><i class="fa fa-dollar"></i>Revenue</div></div><div class="col-sm-1 "></div><div class="col-sm-2 text-center "><div class="box_blocks_fit"><i class="fa fa-hashtag"></i>Roamers</div></div><div class="col-sm-2 text-center "><div class="box_blocks_fit"><i class="fa fa-dollar"></i>Revenue</div></div><div class="col-sm-1"></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2 text-center"><div class="box_blocks_fit">Enterprise</div></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-1"></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-1"></div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-2 text-center"><div class="box_blocks_fit">Retail</div></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-1"></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-2"><div class= "box_blocks_number text-center">1</div></div><div class="col-sm-1"></div>
+               </div>
+               
+
+            </div>
+         </div>
+      </div>
+
+      
+      
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="js/jQuery-plugin-progressbar.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+            $(".progress-bar").loading();
+
+
+         $(".setsize").each(function() {
+                $(this).height($(this).width());
+         });
+         });
+         $(window).on('resize', function(){
+         $(".setsize").each(function() {
+         $(this).height($(this).width());
+         });
+
+
+         })
+         $(function() {
+            
+         
+             var start = moment().subtract(29, 'days');
+             var end = moment();
+         
+             function cb(start, end) {
+                 $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+             }
+             $('#reportrange').daterangepicker({
+                 startDate: start,
+                 endDate: end,
+                 ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                 }
+             }, cb);
+             cb(start, end);
+         });
+         
+      </script>
+   
+</body></html>

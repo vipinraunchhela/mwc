@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+      <link rel="stylesheet" type="text/css" href="css/main.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   </head>
+   <body>
+      <div>
+         <div class="sidebar">
+            <ul>
+               <li>
+                    <a href="../aiwb-dashboard.html" class="home-link">
+						<span class="black-ham">
+							<span class="home-icon"></span>
+						</span>
+					</a>
+               </li>
+               <li class="active">
+                  <a href="index.html">
+                  <span class="icon">
+                  <span class="icon-Dashboard"> </span>
+                  </span>
+                  <span class="text">Dashboard</span>
+                  </a>
+               </li>
+               <li >
+                  <a href="iot_analytics.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">Usage Analytics</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="iot_subscriber_analytics.html">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Subscriber Analytics</span>
+                  </a>	
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-help">
+                  </span></span>
+                  <span class="text">Support?FAQ</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-section">
+            <div class="header">
+               <div class="pull-left search">
+                  <span class="magnifier"><span class="icon-Search">
+                  </span></span>
+                  <input type="text" name="" placeholder="search">
+               </div>
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     <span class="bellicon">
+                     <span class="icon-notification"> </span>
+                     <span class="badge">5</span>
+                     </span>
+                     </a>
+                     <ul class="dropdown-menu notification">
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://via.placeholder.com/30x30" />
+                     <span>Vipin</span> <span class="caret"></span></a>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <div class="main_body container-fluid">
+               <div class="row">
+                  <div class="col-md-12 marginTop">
+                     <button type="button" class="btn btn-primary ">This Month</button>
+                     <button type="button" class="btn btn-light ">This Quarter</button>
+                     <button type="button" class="btn btn-light ">This Year</button>
+                     <button type="button" class="btn btn-light ">Custom</button>
+                  </div>
+                  <div class="col-md-6 marginTop">
+                     <div id = "iot1"></div>
+                  </div>
+                  <div class="col-md-6 marginTop">
+                    <img src="./provisioningoverview.png" class="img-fluid img-thumbnail" alt="Responsive image" style="
+                     height: 400px;">
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 marginTop" >
+                        <div id="iotpie1" ></div>
+                  </div>
+                  <div class="col-md-6 marginTop" >
+                        <div id="iotpie2" ></div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="js/jQuery-plugin-progressbar.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+         	$(".progress-bar").loading();
+
+
+ 			$(".setsize").each(function() {
+       			 $(this).height($(this).width());
+    		});
+			});
+			$(window).on('resize', function(){
+    		$(".setsize").each(function() {
+        	$(this).height($(this).width());
+    		});
+
+
+         })
+         $(function() {
+         	
+         
+             var start = moment().subtract(29, 'days');
+             var end = moment();
+         
+             function cb(start, end) {
+                 $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+             }
+             $('#reportrange').daterangepicker({
+                 startDate: start,
+                 endDate: end,
+                 ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                 }
+             }, cb);
+             cb(start, end);
+         });
+         
+      </script>
+      <script type="text/javascript">
+         
+Highcharts.chart('iotpie1', {
+         exporting: { enabled: false },
+      credits: {enabled:false},
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'IOT (Domestic)'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                        enabled: true,
+                         format: '{point.percentage:.0f} %',
+                         distance: -50,
+                         filter: {
+                             property: 'percentage',
+                             operator: '>',
+                             value: 4
+                         },
+                         style:{
+                           textOutline:false
+                         }
+            },
+            showInLegend: true
+        }
+    },
+    
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'OutRoamer',
+            y: 10,
+            color: '#9ACFFF',
+        }, {
+            name: 'IOT OutRoamer',
+            y: 20,
+            sliced: true,
+            selected: true,
+            color: '#8AE7AB',
+        }, {
+            name: 'Domestic',
+            y: 60,
+            color: '#C4A2E9',
+        },
+        {
+            name: 'IOT Domestic',
+            y: 8,
+            color: '#F4C28B',
+        },
+        {
+            name: 'UnCategorized',
+            y: 9,
+            color: '#FFABBC',
+        }]
+    }]
+});
+      </script>
+       <script type="text/javascript">
+         
+Highcharts.chart('iotpie2', {
+         exporting: { enabled: false },
+      credits: {enabled:false},
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'IOT Roaming'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                        enabled: true,
+                         format: '{point.percentage:.0f} %',
+                         distance: -50,
+                         filter: {
+                             property: 'percentage',
+                             operator: '>',
+                             value: 4
+                         },
+                         style:{
+                           textOutline:false
+                         }
+            },
+            showInLegend: true
+        }
+    },
+    
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: ' Normal Inroamer',
+            y: 18,
+            color: '#9ACFFF',
+        }, {
+            name: ' IOT InRoamer',
+            y: 7,
+            sliced: true,
+            selected: true,
+            color: '#8AE7AB',
+        },
+        {
+            name: 'UnCategorized IoT InRoamer',
+            y: 9,
+            color: '#FFABBC',
+        }]
+    }]
+});
+      </script>
+     
+       <script type="text/javascript">
+         
+Highcharts.chart('iot1', {
+
+    title: {
+        text: 'IOT New Activations'
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['W1','W2','W3','W4']
+    },
+    yAxis: {
+        title: {
+            text: 'Subscribers Count '
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },
+            marker: {
+               enabled:false,
+                lineWidth: 1,
+                lineColor: '#666666'
+            },
+            
+            enableMouseTracking: false
+        }
+    },
+
+    series: [{
+        name: 'SOLD',
+        data: [470000,520000,390000,440000]
+    },
+    {
+        name: 'ACTIVE',
+        data: [410000,410000,280000,370000]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+       
+   </body>
+</html>

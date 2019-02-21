@@ -1,0 +1,173 @@
+/* *********Laptop Media Query************* */
+
+@media(min-width:1367px) {
+body {
+width: 1366px;
+margin: 0 auto;
+}
+}
+
+
+@media (min-width:1200px) and (max-width:1365px) {
+
+.search {
+max-width: 288px;
+}
+
+.filter-box .heading h2 {
+    font-size: 16px;
+    width: auto;
+}
+
+main {
+    height: auto;
+    padding: 10px 20px;
+}
+
+.roamer-box-details:nth-child(4n){
+ margin-right: 4px
+}
+
+.roamer-box-details {
+width: 116px;
+}
+
+.table-grid td:first-child {
+    max-width: 115px;
+    padding-left: 10px;
+
+}	
+
+.table-grid th:first-child {
+    width: 115px;
+    padding-left: 10px;
+}
+
+.table-grid th:nth-child(2) {
+    width: 80px;
+}
+
+.gb-horizontal-scroll{
+
+}
+
+ .section-2-box1 {
+width: 100%;
+} 
+
+.flexs-para {
+font-size: 12px;
+}
+
+.analysis-box h5 {
+font-size: 12px;
+}
+
+.details-box h5 {
+font-size: 12px;
+}
+
+.actions-box-flex .para {
+padding-right: 18px;
+}
+
+.r-rate-flex {
+    padding: 10px 15px 15px;
+}
+
+.country-info-frame .frequencies h4 {
+    padding: 10px 15px;
+}
+
+.country-info-frame .r-rate h4 {
+    padding: 10px 15px;
+}
+
+.r-rate-flex .post-paid {
+    padding-right: 10px;
+}
+
+.r-rate-flex .payg {
+    padding-left: 15px;
+}
+
+.r-rate-flex .payg ul {
+    margin-right: 12px;
+}
+
+.country-info-frame .logo-text {
+width: 15%;
+}
+
+.country-info-frame .logo-text p {
+    font-size: 13px;
+}
+
+.country-info-frame .frequencies ul li {
+    padding: 5px 20px;
+}
+
+
+/* ********************* */
+}
+
+@media (min-width:1024px) and (max-width:1199px) {
+
+.filter-box .heading h2 {
+    font-size: 12px;
+    margin-right: 10px;
+    width: auto;
+}
+
+.search {
+    max-width: 230px;
+}
+
+main {
+    height: auto;
+    padding: 10px 20px;
+}
+
+.roaming-pack {
+    padding: 0px 10px 10px 10px;
+}
+
+.roamer-box-details:nth-child(4n) {
+    margin-right: 4px;
+}
+
+.internal-cem-table td {
+    font-size: 11px;
+}
+
+/* ** */
+
+.cur-sta-flex .input-box {
+margin-right: 10px;
+}
+
+.cur-sta-flex .input-control {
+    width: 140px;
+}
+
+.cur-sta-flex:last-child .input-box {
+margin-right: 0px;
+}
+
+.cur-sta-box2 .cur-sta-white-box {
+width: 49%;
+}
+.status-box-flex .loc {
+    width: 49%;
+}
+#pie-network {
+    height: 180px;
+}
+
+.country-info-frame .frequencies ul li {
+    padding: 5px 20px;
+}
+
+
+/* ********************* */
+}

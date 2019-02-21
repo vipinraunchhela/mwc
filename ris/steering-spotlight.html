@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Dashboard CEM</title>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/laptop.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+</head>
+
+<body>
+    <script>
+        function onClick() {
+            document.getElementById('remotepage').setAttribute('src', 'https://testfactory.net/Account/ValidateLogin?username=demo_user&password=TFdemo');
+            setTimeout(function () { window.open('https://testfactory.net', '_blank'); }, 2000);
+        }
+    </script>
+    <header>
+        <div class="header-top"></div>
+        <div class="header-heading header-master">
+            <div class="hea-head">
+                <h2><a href="../aiwb-dashboard-steering.html">Steering Analytics</a> <a href="#">/ Steering Spotlight</a></h2>
+            </div>
+            <div class="header-heading-icon">
+                <ul>
+                    <li>
+                        <a href="roaming-cem-dashboard.html">
+                            <span class="icon1"></span>
+                            <span class="tooltiptext">Sort</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard-cem.html">
+                            <span class="icon2"></span>
+                            <span class="tooltiptext">Filter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- header-heading -->
+    </header>
+
+    <!-- ===========header=========== -->
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="../aiwb-dashboard.html" class="home-link">
+                    <span class="black-ham">
+                        <span class="home-icon"></span>
+                    </span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="steering-spotlight.html">
+                    <span class="icon">
+                        <span class="icon-Dashboard"> </span>
+                    </span>
+                    <span class="text">Steering Spotlight</span>
+                </a>
+            </li>
+            <li>
+                <a href="anti-sor-overview.html">
+                    <span class="icon">
+                        <span class="icon-Dashboard"> </span>
+                    </span>
+                    <span class="text">Anti SOR Overview</span>
+                </a>
+            </li>
+            <li>
+                <a href="forbidden-netwrok.html">
+                    <span class="icon"><span class="icon-Report">
+                        </span></span>
+                    <span class="text">Forbidden Network Leakage</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-section">
+        <main>
+            <div class="screens">
+                <div class="row">
+                 <div class="col-md-3">
+                        <!-- <div class="heading-2">Traffic Overview</div> -->
+                        <img src="../images/Traffic Overview.jpg" alt="" style="width: 100%">
+                    </div>
+                    <div class="col-md-9 col-xs-12">
+                        <!-- <div class="heading">Steering Effectiveness Around the World</div> -->
+                                    <!-- <div id="steering"></div> -->
+                                    <img src="../images/Steering Effectiveness.jpg" style="width: 100%">
+                            <!-- </div> -->
+                        
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="screens-2">
+            <br/>
+            <img src="../images/Steering Effectiveness Across Zones.jpg" alt="" style="width: 100%">
+            
+                <!-- <div class="heading col-xs-12">Steering Effectiveness Across Zones</div>
+                <img src="../images/screens/5.PNG" alt="" class="screen--img"> -->
+            </div>
+        </main>
+    </div>
+    </div>
+    <!-- ===========main=========== -->
+
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="slick/slick.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/series-label.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                
+                // Prepare demo data
+                var data1 = [
+                    ['af', 5],
+                    ['al', 6.6],
+                    ['dz', 8],
+                    ['as', 4.3],
+                    ['ad', 4.8],
+                    ['ao', 8],
+                    ['ai', 5],
+                    ['ar', 8.0],
+                    ['am', 5.4],
+                    ['aw', 5.4],
+                    ['au', 1.0],
+                    ['at', 5.4],
+                    ['az', 4.6],
+                    ['bs', 5],
+                    ['bh', 6.2],
+                    ['bd', 8.0],
+                    ['bb', 4],
+                    ['by', 6],
+                    ['be', 6.2],
+                    ['bz', 5.7],
+                    ['bj', 6.6],
+                    ['bm', 4.1],
+                    ['bt', 7.9],
+                    ['bo', 1.5],
+                    ['ba', 8],
+                    ['bw', 11],
+                    ['br', 3.5],
+                    ['bn', 9.5],
+                    ['bg', 9.7],
+                    ['bf', 9.9],
+                    ['bi', 9.2],
+                    ['kh', 8.5],
+                    ['cm', 11.2],
+                    ['ca', 9.4],
+                    ['cv', 10.5],
+                    ['ky', 8.6],
+                    ['cf', 10.1],
+                    ['td', 9.8],
+                    ['cl', 1.8],
+                    ['cn', 4],
+                    ['co', 4],
+                    ['km', 9.8],
+                    ['cd', 9.6],
+                    ['cg', 8.9],
+                    ['cr', 9.1],
+                    ['ci', 11.1],
+                    ['hr', 9.8],
+                    ['cu', 11.6],
+                    ['cw', 11.5],
+                    ['cy', 8.5],
+                    ['cz', 1.0],
+                    ['dk', 8.5],
+                    ['dj', 10.3],
+                    ['dm', 9.3],
+                    ['do', 10],
+                    ['ec', 10.8],
+                    ['eg', 8],
+                    ['sv', 6.5],
+                    ['gq', 4.5],
+                    ['er', 7.7],
+                    ['ee', 6.5],
+                    ['et', 8],
+                    ['fo', 6.7],
+                    ['fj', 4.3],
+                    ['fi', 10],
+                    ['fr', 4.2],
+                    ['pf', 5.2],
+                    ['ga', 6.9],
+                    ['gb',9.9],
+                    ['gm', 5.5],
+                    ['ge', 2.8],
+                    ['de', 5.8],
+                    ['gh', 5.5],
+                    ['gr', 4.4],
+                    ['gl', 11.0],
+                    ['gd', 6.9],
+                    ['gu', 4.4],
+                    ['gt', 1.5],
+                    ['gn', 8.7],
+                    ['gw', 9],
+                    ['gy', 10.5],
+                    ['ht', 4.1],
+                    ['hn', 10],
+                    ['hk', 8],
+                    ['hu', 8.5],
+                    ['is', 5.5],
+                    ['in', 8.8],
+                    ['id', 10.5],
+                    // ['ir', 2.5],
+                    ['iq', 1.2],
+                    ['ie', 8],
+                    ['im', 1.4],
+                    ['il', 2.4],
+                    ['it', 8],
+                    ['jm', 4.2],
+                    ['jp', 8.0],
+                    ['jo', 3.9],
+                    ['kz', 8],
+                    ['ke', 8],
+                    ['ki', 1.7],
+                    ['kp', 8],
+                    ['kr', 8.0],
+                    ['xk', 2.7],
+                    ['kw', 10.8],
+                    ['kg', 8.8],
+                    ['la', 8.7],
+                    ['lv', 8.5],
+                    ['lb', 9.8],
+                    ['ls', 10.1],
+                    ['lr', 8.3],
+                    ['ly', 9.7],
+                    ['li', 10],
+                    ['lt', 8.3],
+                    ['lu', 8.8],
+                    ['mo', 10.3],
+                    ['mk', 10],
+                    ['mg', 9.9],
+                    ['mw', 9.1],
+                    ['my', 9.3],
+                    ['mv', 11.3],
+                    ['ml', 8.6],
+                    ['mt', 11.7],
+                    ['mh', 10.8],
+                    ['mr', 8.2],
+                    ['mu', 11],
+                    ['yt', 8.5],
+                    ['mx', 5.5],
+                    ['fm', 11.3],
+                    ['md', 2],
+                    ['mc', 12],
+                    ['mn', 4],
+                    ['me', 11.3],
+                    ['ma', 1.5],
+                    ['mz', 4.0],
+                    ['mm', 8],
+                    ['na', 8],
+                    ['np', 1.2],
+                    ['nl', 9.8],
+                    ['nc', 11.9],
+                    ['nz', 8.2],
+                    ['ni', 1.5],
+                    ['ne', 8.5],
+                    ['ng', 8.5],
+                    ['mp', 10.7],
+                    ['no', 10.2],
+                    ['om', 11.7],
+                    ['pk', 8.1],
+                    ['pw', 8.9],
+                    ['pa', 1.5],
+                    ['pg', 8.5],
+                    ['py', 9.9],
+                    ['pe', 8.4],
+                    ['ph', 10.8],
+                    ['pl', 8.7],
+                    ['pt', 4.0],
+                    ['pr', 8.9],
+                    ['wa', 8.4],
+                    ['ro', 10.9],
+                    ['ru', 10.1],
+                    ['rw', 11.3],
+                    ['ws', 11.2],
+                    ['sm', 10.5],
+                    ['st', 8.6],
+                    ['sa', 8.2],
+                    ['sn', 4.9],
+                    ['rs', 5.5],
+                    ['sc', 8],
+                    ['sl', 6.6],
+                    ['sg', 5.4],
+                    ['sk', 6.8],
+                    ['si', 4.7],
+                    ['sb', 6.7],
+                    ['so', 8],
+                    ['za', 8],
+                    ['ss', 8],
+                    ['es', 3.5],
+                    ['lk', 6.6],
+                    ['kn', 4.4],
+                    ['lc', 7.6],
+                    ['mf', 4.4],
+                    ['vc', 5],
+                    ['sd', 8],
+                    ['sr', 1.5],
+                    ['sz', 6.5],
+                    ['se', 8.0],
+                    ['ch', 7.5],
+                    ['sy', 5.5],
+                    ['tj', 5.8],
+                    ['tz', 5.9],
+                    ['th', 8.0],
+                    ['tp', 7.7],
+                    ['tg', 7.1],
+                    ['to', 7.7],
+                    ['tt', 8.6],
+                    ['tn', 10.6],
+                    ['tr', 10.7],
+                    ['tm', 9.8],
+                    ['tc', 8.8],
+                    ['tv', 9.6],
+                    ['ug', 11.6],
+                    ['ua', 10.4],
+                    ['ae', 10.7],
+                    ['uk', 9.3],
+                    ['us', 10.1],
+                    ['uy', 1.7],
+                    ['uz', 10.1],
+                    ['vu', 11.4],
+                    ['ve', 10.5],
+                    ['vn', 8],
+                    ['vi', 2.6],
+                    ['ps', 3],
+                    ['eh', 1.7],
+                    ['ye', 2.3],
+                    ['zm', 8],
+                    ['zw', 8]
+                ];
+    
+                Highcharts.mapChart('steering', {
+                    chart: {
+                        height: 252
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    mapNavigation: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return this.point.name + " : $" + this.point.value + "M";
+                        }
+                    },
+                    legend: {
+                        title: {
+                            text: 'Effectiveness',
+                            style: {
+                                //color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        },
+    
+                        align: 'right',
+                        valign: 'center',
+                        verticalAlign: 'top',
+                        y: 20,
+                        //floating: true,
+                        layout: 'vertical',
+                        valueDecimals: 0,
+    
+                        symbolRadius: 10,
+                        symbolHeight: 10,
+                        symbolPadding: 5,
+    
+                        itemMarginBottom: 7,
+                        labelFormatter: function () {
+                            return "<span style='margin-top:20px;'>" + this.text + "</span>";
+                        },
+    
+                        itemStyle: {
+                            font: '9pt Trebuchet MS, Verdana, sans-serif',
+                        }
+                    },
+                    colorAxis: {
+                        dataClasses: [{
+                                from: 8.0,
+                                to: 11.0,
+                                color: '#8ec14e',
+                                text: 'Excellent'
+                            },
+    
+                            {
+                                from: 4.0,
+                                to: 7.9,
+                                color: '#fad137',
+                                text: 'Good'
+                            },
+                            {
+                                from: 3.5,
+                                to: 3.9,
+                                color: '#ffb84d',
+                                text: 'Moderate',
+                            },
+                            {
+                                from: 2.0,
+                                to: 3.0,
+                                color: '#2e9cc0',
+                                text: 'Fair',
+                            },
+                            {
+                                from: 1.0,
+                                to: 2.0,
+                                color: '#e60000',
+                                text: 'Poor',
+                            }
+                        ]
+                    },
+    
+                    series: [{
+                            data: data1,
+                            mapData: Highcharts.maps['custom/world'],
+                            borderWidth: 0,
+                        }]
+                });
+            });
+        </script>
+</body>
+
+</html>

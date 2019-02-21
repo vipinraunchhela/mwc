@@ -1,0 +1,733 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Retail Roaming</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+   </head>
+   <body>
+      <div>
+         <div class="sidebar">
+            <ul>
+               <li>
+                  <span class="black-ham">
+                  <span class="icon-hamburger">
+                  <span class="path1"></span><span class="path2"></span>
+                  </span>
+                  <span>
+                  </span></span>
+               </li>
+               <li class="active">
+                  <a href="#">
+                  <span class="icon">
+                  <span class="icon-Dashboard"> </span>
+                  </span>
+                  <span class="text">Retail Roaming</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="retail2.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">Outbound Roamer</span>
+                  </a>
+               </li>
+		<li>
+                  <a href="../permanent-roamer/permanent-roamer.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">Permanent Roamers</span>
+                  </a>
+               </li>
+		<li>
+                  <a target="_blank" href="../iot/index.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">IOT</span>
+                  </a>
+               </li>
+               <li>
+		<form name="myform" action="http://tyche.mobileum.com:6080/rra/out" method="POST" target="_blank">
+                                      <input type="hidden" class="form-control " name="username" value="RAtest">
+                                      <input type="hidden" class="form-control " name="password" value="passw0rd">                                    
+		  <a href="http://tyche.mobileum.com:6080/rra/out" target="_blank" onclick="document.forms['myform'].submit(); return false;">
+		  <span class="icon"><span class="icon-Report">
+		  </span></span>
+		  <span class="text">RRRA</span>
+		  </a >
+                  </form>
+               </li>
+               
+            </ul>
+         </div>
+         <div class="main-section">
+	<div class="header header-new">
+            <div class="site-logo">
+                <img src="icons/mobileum-logo.png" alt="">
+            </div>
+            <div class="head-right">
+                <div class="search">
+                    <span class="magnifier">
+                        <span class="icon-Search"></span>
+                    </span>
+                    <input type="text" name="search" placeholder="">
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="bellicon">
+                                <span class="icon-notification"> </span>
+                                <span class="badge">5</span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu notification">
+                            <li><a href="#">
+                                <div class="notification_text">
+                                    <span class="status icon-Assigned"></span>
+                                    Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                </div>
+                                <div class="timeblock">5min ago</div>
+                            </a></li>
+                            <li><a href="#">
+                                <div class="notification_text">
+                                    <span class="status icon-Assigned"></span>
+                                    Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                </div>
+                                <div class="timeblock">5min ago</div>
+                            </a></li>
+                            <li><a href="#">
+                                <div class="notification_text">
+                                    <span class="status icon-Assigned"></span>
+                                    Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                </div>
+                                <div class="timeblock">5min ago</div>
+                            </a></li>
+                            <li><a href="#">
+                                <div class="notification_text">
+                                    <span class="status icon-Assigned"></span>
+                                    Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                </div>
+                                <div class="timeblock">5min ago</div>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="icons/alex.png">
+                            <span>Alex Sanders</span> <span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="main_body container-fluid">
+               <div class="row">
+		<div class="col-md-12 marginTop">
+                     <button type="button" class="btn btn-primary ">This Month</button>
+                     <button type="button" class="btn btn-light ">This Quarter</button>
+                     <button type="button" class="btn btn-light ">This Year</button>
+                     <button type="button" class="btn btn-light ">Custom</button>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="row marginTop">
+                        <div class="col-sm-4"></div>
+                        <div style = "border-style:none;" class="col-sm-5 text-center box_blocks_fit"><b>Total Retail : <i class="fa fa-dollar main"></i>5.7M</b></div>
+                        <div class="col-sm-3"></div>
+                     </div>
+                     <div class="row marginTop">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4 text-center box_blocks_fit" style = "border-style:none;" >Prepaid :<i class="fa fa-dollar main"></i>2.3M </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-4 text-center box_blocks_fit" style = "border-style: none;" >Postpaid : <i class="fa fa-dollar main"></i>3.4M</div>
+                        <div class="col-sm-1"></div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2 text-center ">
+                           <div class="box_blocks_fit" >Roamers</div>
+                        </div>
+                        <div class="col-sm-2 text-center  ">
+                           <div class="box_blocks_fit " >Revenue</div>
+                        </div>
+                        <div class="col-sm-1 "></div>
+                        <div class="col-sm-2 text-center ">
+                           <div class="box_blocks_fit">Roamers</div>
+                        </div>
+                        <div class="col-sm-2 text-center ">
+                           <div class="box_blocks_fit" >Revenue</div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-2 text-center">
+                           <div class="box_blocks_fit">Enterprise</div>
+                        </div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;"> 11 K</div>
+                        </div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;">$ 1.0 M</div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;">14 K</div>
+                        </div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;">$ 2.0 M</div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                     </div>
+                     <div class="row marginTop">
+                        <div class="col-sm-2 text-center">
+                           <div class="box_blocks_fit">Retail</div>
+                        </div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;">43.6 K</div>
+                        </div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;">$ 1.3 M</div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;"> 9.4 K</div>
+                        </div>
+                        <div class="col-sm-2">
+                           <div class= "box_blocks_number text-center" style = "background:#F2F0F0;">$ 1.4 M</div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 marginTop">
+                     <div style = " height: 300px; "id = "topten"></div>
+                  </div>
+               </div>
+                  
+               </div>
+               <div class="row">
+                  <div class="col-md-3 marginTop">
+                     <div id="revenue"></div>
+                  </div>
+                  <div class="col-md-3 marginTop">
+                     <div id="roamers"></div>
+                  </div>
+                  <div class="col-md-6 wholesale">
+                     <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#prepaidtab">Prepaid Revenue</a></li>
+                        <li><a data-toggle="tab" href="#postpaidtab">Postpaid Revenue</a></li>
+                       
+                      </ul>
+                     
+                      <div class="tab-content">
+                        <div id="prepaidtab" class="tab-pane fade in active">
+                          <div style = " height:370px;"id = "prepaid"></div>
+                         
+                        </div>
+                        <div id="postpaidtab" class="tab-pane fade">
+                          <div style = " height:370px;" id = "postpaid"></div>
+                         
+                        </div>
+                      </div>
+                </div>
+               
+
+            </div>
+         </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="js/jQuery-plugin-progressbar.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+            $(".progress-bar").loading();
+         
+         
+         $(".setsize").each(function() {
+                $(this).height($(this).width());
+         });
+         });
+         $(window).on('resize', function(){
+         $(".setsize").each(function() {
+         $(this).height($(this).width());
+         });
+         
+         
+         })
+         $(function() {
+            
+         
+             var start = moment().subtract(29, 'days');
+             var end = moment();
+         
+             function cb(start, end) {
+                 $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+             }
+             $('#reportrange').daterangepicker({
+                 startDate: start,
+                 endDate: end,
+                 ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                 }
+             }, cb);
+             cb(start, end);
+         });
+         
+      </script>
+      <script type="text/javascript">
+         
+Highcharts.chart('container', {
+chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Revenue'
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',],
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Revenue $(\'000s)'
+        }
+    },
+    legend: {
+        //enabled:false,
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },
+            enableMouseTracking: false
+        }
+    },
+
+    series: [{
+        name: 'Total Retail',
+        data: [6036286, 7539536, 6436286, 7239536, 6936286, 5736286, 7039536, 4951765]
+    }, {
+        name: 'Postpaid',
+        data: [4834784, 5467867, 5134784, 5267867, 5434784, 4634784, 5167867, 3961412]
+    },  {
+        name: 'Prepaid',
+        data: [1201502, 2071670, 1301502, 1971670, 1501502, 1101502, 1871670, 990353]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+           <script type="text/javascript">
+         
+Highcharts.chart('roamers', {
+chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Roamers'
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        title: {
+            text: 'Roamers Count'
+        },
+        labels: {enabled:false}
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        area: {
+            stacking: 'normal',
+            lineColor: '#666666',
+            lineWidth: 0,
+            marker: {
+               enabled:false,
+                lineWidth: 0,
+                lineColor: '#666666'
+            }
+        }
+    },
+
+    series: [{
+        name: 'Silent',
+        data: [ 52629,57421,56791,58028,54719,48196,47144,50173],
+        color:"#9ACFFF"
+    }, {
+        name: 'Prepaid',
+        data: [ 13255,13899,13960,12605,12765,13702,12911,13283],
+        color:"#8AE7AB"
+    },  {
+        name: 'Postpaid',
+        data: [11761,12630,12119,12085,12454,11528,12760,12597],
+        color:"#C4A2E9"
+    }],
+
+    responsive: {    
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+		    enabled: false,
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+      </script>
+           <script type="text/javascript">
+         
+Highcharts.chart('postpaid', {
+
+    title: {
+        text: ''
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        title: {
+            text: 'Revenue $ (\'000)'
+        },
+        labels: {
+            formatter: function () {
+                return this.value /1000;
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+	    tooltip: {
+        split: true,
+        valueSuffix: ' ',
+        valuePrefix: '$'
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },marker: {
+               enabled:false,
+                lineWidth: 1,
+                lineColor: '#666666'
+            },
+            enableMouseTracking: true
+        }
+    },
+
+    series: [{
+        name: 'Sub Total',
+        data: [3263997, 3730416, 4045585, 3335865, 2565931, 2468045, 3750969, 2833411]
+    }, {
+        name: 'PAYG',
+        data: [848640,1119125,1051853,1034119,846758,814455,1125291,765021]
+    },  {
+        name: 'Pack',
+        data: [2415357,2611291,2993732,2301746,1719173,1653590,2625678,2068390]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+       <script type="text/javascript">
+         
+Highcharts.chart('prepaid', {
+
+    title: {
+        text: ''
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        title: {
+            text: 'Revenue $ (\'000)'
+        },
+        labels: {
+            formatter: function () {
+                return this.value /1000;
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+	tooltip: {
+        split: true,
+        valueSuffix: ' ',
+        valuePrefix: '$'
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },
+            marker: {
+               enabled:false,
+                lineWidth: 1,
+                lineColor: '#666666'
+            },
+            enableMouseTracking: true
+        }
+    },
+
+    series: [{
+        name: 'Sub Total',
+        data: [2335722, 2661730, 2564688, 2407418, 2210670, 2740635, 2156055, 2030022]
+    }, {
+        name: 'PAYG',
+        data: [1424790,1543803,1487519,1492599,1392722,1589568,1336754,1177412]
+    },  {
+        name: 'Pack',
+        data: [910932,1117927,1077169,914819,817948,1151067,819301,852610]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+<script type="text/javascript">
+   Highcharts.chart('topten', {
+      exporting: { enabled: false },
+    credits: {enabled:false},
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Top Revenue Partners'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },	
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '{point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black', textOutline:false
+                }
+            },
+	    	showInLegend:true
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Orange France',
+            y: 56.33,
+            color:"#9ACFFF"
+        }, {
+            name: 'NTT DoCoMo',
+            y: 24.03,
+            sliced: true,
+            selected: true,
+            color:"#8AE7AB"
+        }, {
+            name: 'Vodafone UK',
+            y: 10.38,
+            color:"#F44343"
+        }, {
+            name: 'Teclecom Italia',
+            y: 4.77,
+            color:"#C4A2E9"
+        }, {
+            name: 'Other',
+            y: 4.5,
+            color:"#F4C28B"
+        }]
+    }]
+});
+</script>
+<script type="text/javascript">
+   
+Highcharts.chart('revenue', {
+   exporting: { enabled: false },
+    credits: {enabled:false},
+    chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Revenue'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',],
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Revenue $ (\'000s)'
+        },
+        labels: {
+            formatter: function () {
+                return this.value /1000;
+            }
+        }
+    },
+    tooltip: {
+        split: true,
+        valueSuffix: ' ',
+	valuePrefix: '$'
+    },
+    plotOptions: {
+        area: {
+            stacking: 'normal',
+            lineColor: '#666666',
+            lineWidth: 0,
+            marker: {
+               enabled:false,
+                lineWidth: 0,
+                lineColor: '#666666'
+            }
+        }
+    },
+    series: [
+         {
+        name: 'Prepaid',
+        data: [2335722,2661730,2564688,2407418,2210670,2740635,2156055,2030022],
+        color:"#C4A2E9"
+    },
+    {
+        name: 'Postpaid',
+        data: [3263997,3730416,4045585,3335865,2565931,2468045,3750969,2833411],
+        color:"#8AE7AB"
+    }
+    ],
+        responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+		    enabled: false,
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+});
+</script>
+   </body>
+</html>

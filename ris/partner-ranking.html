@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Data Services</title>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/custom.js"></script>
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/laptop.css">
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/laptop.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/laptop-td.css" />
+
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/style-td-rcx.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="header-top"></div>
+            <div class="header-heading">
+                <div class="hea-head">
+                    <h2> Roaming CEM Dashboard</h2>
+                </div>
+                <div class="header-heading-icon">
+                    <ul>
+                        <li><a href=""><span class="icon1"></span></a></li>
+                        <li><a href=""><span class="icon2"></span></a></li>
+                    </ul>
+                </div>
+            </div><!-- header-heading -->  
+        </header>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="../aiwb-dashboard.html" class="home-link">
+                        <span class="black-ham">
+                            <span class="home-icon"></span>
+                        </span>
+                    </a>
+                </li>
+                <li >
+                    <a href="dashboard-cem.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="roaming-cem-dashboard.html">
+                        <span class="icon"><span class="icon-Report">
+                            </span></span>
+                        <span class="text">Network Analytics</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gsma-data-chat.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Network SQI Score</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../ris/roaming-cem-dashboard.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Care View</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../ris/partner-ranking.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Partner Ranking</span>
+                    </a>
+                </li>
+
+                <!-- <li >
+                    <a href="data-service.html">
+                        <span class="icon"><span class="icon-Report">
+                            </span></span>
+                        <span class="text">Customer Care View</span>
+                    </a>
+                </li> -->
+		        <li>
+                    <a href="https://testfactory.net/" target="_blank">
+                        <span class="icon"><span class="icon-Report">
+                            </span></span>
+                        <span class="text">Test Factory</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><span class="icon-help">
+                            </span></span>
+                        <span class="text">Support?FAQ</span>
+                    </a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="main-section">
+<div class="roaming-tabs">
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'current-status')" id="defaultOpen">Top Partners</button>
+    <button class="tablinks" onclick="openCity(event, 'country-info')">Groupview</button>
+    <button class="tablinks trip" onclick="openCity(event, 'trip-hist')" >Inferior Preferred Partners</button>
+  </div><!-- tab -->
+
+    <div id="current-status" class="tabcontent">
+      <div class="tab-scroll">
+
+          <div class="container-fluid networkContainerDiv">
+            <div class="p15">
+               <!--------- Network SQI Score Section ------------>
+               <div class="row networkDiv">
+                  <div class="col-md-12">
+                     <div class="col-md-6 col-sm-4 col-xs-6" id="leftArrow">
+                        <a href="#"><img src="images/icons/iconLeftArrow.png"> </a>
+                        <span class="roboto18">Network SQI Score</span>
+                     </div>
+                     <div class="col-md-6">
+                        <ul class="iconsMenu pull-right">
+                           <li><a href="#"><img src="images/icons/iconsM2.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM3.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM4.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM5.png"></a></li>
+                           <li class="searchIconLast"><a href="#"><img src="images/icons/iconsM1.png"></a></li>
+                        </ul>
+                     </div>
+
+                      <div class="col-md-12">
+                        <div class="datepick-rcx">
+                             <ul class="iconsMenu" id="iconsMenuLeft">
+                                <li><span class="fetchDate">Start Date:1 jan, 19 15:00:00</span></li>
+                                <li><span class="fetchDate">End Date:7 jan, 19 21:00:00</span></li>
+                             </ul>
+                         </div> 
+                       </div>
+
+                     <div class="col-md-2 col-sm-12 pull-right">
+                        <div class="input-group search pageSearch" >
+                           <input type="text" placeholder="Search" class="form-control dateStyle"/>
+                           <span class="input-group-addon searchFa">
+                           <a href="#"> <i class="fa fa-search"></i></a>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--------- Table Section ------------>
+               <div class="row mainTableRow">
+                  <div class="col-md-12 listingscroll">
+                     <table class="table backWhite" >
+                        <thead>
+                           <th>Rank</th>
+                           <th>Operator</th>
+                           <th>Country</th>
+                           <th>SQI</th>
+                           <th>Avg Daily Roamers</th>
+                           <th>Voice SSI</th>
+                           <th>Data SSI</th>
+                           <th>Reg SSI</th>
+                           <th>SMS SSI</th>
+                           <th>Steering Config</th>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1</td>
+                              <td>02 UK</td>
+                              <td>United Kingdom</td>
+                              <td class="orangeColor">8.19</td>
+                              <td>23,124</td>
+                              <td class="orangeColor">8.9</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.3</td>
+                              <td>LBTR(B)</td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td>Maxis</td>
+                              <td>Malaysia</td>
+                              <td class="orangeColor">8.18</td>
+                              <td>1,342</td>
+                              <td class="orangeColor">8.7</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.4</td>
+                              <td>SRDC(90%)</td>
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td>Optus</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.11</td>
+                              <td>1,672</td>
+                              <td class="orangeColor">8.8</td>
+                              <td class="redColor">7.4</td>
+                              <td class="redColor">7.8</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td>Telstra</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.07</td>
+                              <td>321</td>
+                              <td class="orangeColor">8.6</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.0</td>
+                              <td>LBTR(N)</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td>Meteor</td>
+                              <td>Ireland</td>
+                              <td class="orangeColor">8.04</td>
+                              <td>3,298</td>
+                              <td class="orangeColor">8.5</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.6</td>
+                              <td class="greenColor">9.1</td>
+                              <td>SRDC(80+%)</td>
+                           </tr>
+                           <tr>
+                              <td>6</td>
+                              <td>Orange</td>
+                              <td>France</td>
+                              <td class="orangeColor">8.02</td>
+                              <td>7,432</td>
+                              <td class="orangeColor">8.4</td>
+                              <td class="redColor">7.1</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr>
+                           <!-- <tr>
+                              <td>7</td>
+                              <td>02 UK</td>
+                              <td>United Kingdom</td>
+                              <td class="orangeColor">8.19</td>
+                              <td>23,124</td>
+                              <td class="orangeColor">8.9</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.3</td>
+                              <td>LBTR(P)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>8</td>
+                              <td>Maxis</td>
+                              <td>Malaysia</td>
+                              <td class="orangeColor">8.18</td>
+                              <td>1,342</td>
+                              <td class="orangeColor">8.7</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.4</td>
+                              <td>SRDC(90%)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>9</td>
+                              <td>Optus</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.11</td>
+                              <td>1,672</td>
+                              <td class="orangeColor">8.8</td>
+                              <td class="redColor">7.4</td>
+                              <td class="redColor">7.8</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>10</td>
+                              <td>Telstra</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.07</td>
+                              <td>321</td>
+                              <td class="orangeColor">8.6</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.0</td>
+                              <td>LBTR(N)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>11</td>
+                              <td>Meteor</td>
+                              <td>Ireland</td>
+                              <td class="orangeColor">8.04</td>
+                              <td>3,298</td>
+                              <td class="orangeColor">8.5</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.6</td>
+                              <td class="greenColor">9.1</td>
+                              <td>SRDC(80+%)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>12</td>
+                              <td>Orange</td>
+                              <td>France</td>
+                              <td class="orangeColor">8.02</td>
+                              <td>7,432</td>
+                              <td class="orangeColor">8.4</td>
+                              <td class="redColor">7.1</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr> -->
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div><!-- tab-scroll -->
+    </div><!-- current-status -->   
+
+    <div id="country-info" class="tabcontent">
+      <div class="tab-scroll">
+
+          <div class="container-fluid networkContainerDiv">
+            <div class="p15">
+                             <!--------- Telecom Score Section ------------>
+               <div class="row networkDiv">
+                  <div class="col-md-12">
+                     <table class="table stripRow">
+                        <thead>
+                           <tr>
+                              <td>
+                                 <div>
+                                    <img src="images/icons/iconMvoda.png" alt="Telecom">
+                                 </div>
+                                 <select class="form-control withoutBox withoutBorder arrowDown">
+                                    <option>Vodafone</option>
+                                 </select>
+                              </td>
+                              <td>
+                                 <h4>7.19</h4>
+                                 <p>Overall Score</p>
+                              </td>
+                              <td>
+                                 <h4>93,124</h4>
+                                 <p>Avg. Daily Score</p>
+                              </td>
+                              <td>
+                                 <h4>6.9</h4>
+                                 <p>Voice Score</p>
+                              </td>
+                              <td>
+                                 <h4>7.1</h4>
+                                 <p>Data Score</p>
+                              </td>
+                              <td>
+                                 <h4>6.5</h4>
+                                 <p>Reg. Score</p>
+                              </td>
+                              <td>
+                                 <h4>8.3</h4>
+                                 <p>SMS Score</p>
+                              </td>
+                           </tr>
+                        </thead>
+                     </table>
+                  </div>
+               </div>
+               <br>
+               <!--------- Network SQI Score Section ------------>
+               <div class="row networkDiv">
+                  <div class="col-md-12">
+                     <div class="col-md-6 col-sm-4 col-xs-6" id="leftArrow">
+                        <a href="#"><img src="images/icons/iconLeftArrow.png"> </a>
+                        <span class="roboto18">Network SQI Score</span>
+                     </div>
+                     <div class="col-md-6">
+                        <ul class="iconsMenu pull-right">
+                           <li><a href="#"><img src="images/icons/iconsM2.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM3.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM4.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM5.png"></a></li>
+                           <li class="searchIconLast"><a href="#"><img src="images/icons/iconsM1.png"></a></li>
+                        </ul>
+                     </div>
+
+                      <div class="col-md-12">
+                        <div class="datepick-rcx">
+                             <ul class="iconsMenu" id="iconsMenuLeft">
+                                <li><span class="fetchDate">Start Date:1 jan, 19 15:00:00</span></li>
+                                <li><span class="fetchDate">End Date:7 jan, 19 21:00:00</span></li>
+                             </ul>
+                         </div> 
+                       </div>
+
+                     <div class="col-md-2 col-sm-12 pull-right">
+                        <div class="input-group search pageSearch" >
+                           <input type="text" placeholder="Search" class="form-control dateStyle"/>
+                           <span class="input-group-addon searchFa">
+                           <a href="#"> <i class="fa fa-search"></i></a>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--------- Table Section ------------>
+               <div class="row mainTableRow">
+                  <div class="col-md-12 listingscroll">
+                     <table class="table backWhite" >
+                        <thead>
+                           <th>Rank</th>
+                           <th>Operator</th>
+                           <th>Country</th>
+                           <th>SQI</th>
+                           <th>Avg Daily Roamers</th>
+                           <th>Voice SSI</th>
+                           <th>Data SSI</th>
+                           <th>Reg SSI</th>
+                           <th>SMS SSI</th>
+                           <th>Steering Config</th>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1</td>
+                              <td>02 UK</td>
+                              <td>United Kingdom</td>
+                              <td class="orangeColor">8.19</td>
+                              <td>23,124</td>
+                              <td class="orangeColor">8.9</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.3</td>
+                              <td>LBTR(B)</td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td>Maxis</td>
+                              <td>Malaysia</td>
+                              <td class="orangeColor">8.18</td>
+                              <td>1,342</td>
+                              <td class="orangeColor">8.7</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.4</td>
+                              <td>SRDC(90%)</td>
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td>Optus</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.11</td>
+                              <td>1,672</td>
+                              <td class="orangeColor">8.8</td>
+                              <td class="redColor">7.4</td>
+                              <td class="redColor">7.8</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td>Telstra</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.07</td>
+                              <td>321</td>
+                              <td class="orangeColor">8.6</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.0</td>
+                              <td>LBTR(N)</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td>Meteor</td>
+                              <td>Ireland</td>
+                              <td class="orangeColor">8.04</td>
+                              <td>3,298</td>
+                              <td class="orangeColor">8.5</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.6</td>
+                              <td class="greenColor">9.1</td>
+                              <td>SRDC(80+%)</td>
+                           </tr>
+                           <tr>
+                              <td>6</td>
+                              <td>Orange</td>
+                              <td>France</td>
+                              <td class="orangeColor">8.02</td>
+                              <td>7,432</td>
+                              <td class="orangeColor">8.4</td>
+                              <td class="redColor">7.1</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr>
+                           <!-- <tr>
+                              <td>7</td>
+                              <td>02 UK</td>
+                              <td>United Kingdom</td>
+                              <td class="orangeColor">8.19</td>
+                              <td>23,124</td>
+                              <td class="orangeColor">8.9</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.3</td>
+                              <td>LBTR(P)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>8</td>
+                              <td>Maxis</td>
+                              <td>Malaysia</td>
+                              <td class="orangeColor">8.18</td>
+                              <td>1,342</td>
+                              <td class="orangeColor">8.7</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.4</td>
+                              <td>SRDC(90%)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>9</td>
+                              <td>Optus</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.11</td>
+                              <td>1,672</td>
+                              <td class="orangeColor">8.8</td>
+                              <td class="redColor">7.4</td>
+                              <td class="redColor">7.8</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>10</td>
+                              <td>Telstra</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.07</td>
+                              <td>321</td>
+                              <td class="orangeColor">8.6</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.0</td>
+                              <td>LBTR(N)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>11</td>
+                              <td>Meteor</td>
+                              <td>Ireland</td>
+                              <td class="orangeColor">8.04</td>
+                              <td>3,298</td>
+                              <td class="orangeColor">8.5</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.6</td>
+                              <td class="greenColor">9.1</td>
+                              <td>SRDC(80+%)</td>
+                           </tr> -->
+                           <!-- <tr>
+                              <td>12</td>
+                              <td>Orange</td>
+                              <td>France</td>
+                              <td class="orangeColor">8.02</td>
+                              <td>7,432</td>
+                              <td class="orangeColor">8.4</td>
+                              <td class="redColor">7.1</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                           </tr> -->
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div><!-- tab-scroll -->
+    </div><!-- country-info -->
+
+    <div id="trip-hist" class="tabcontent">
+      <div class="tab-scroll">
+
+          <div class="container-fluid networkContainerDiv">
+            <div class="p15">
+               <!--------- Network SQI Score Section ------------>
+               <div class="row networkDiv">
+                  <div class="col-md-12">
+                     <div class="col-md-6 col-sm-4 col-xs-6" id="leftArrow">
+                        <a href="#"><img src="images/icons/iconLeftArrow.png"> </a>
+                        <span class="roboto18">Network SQI Score</span>
+                     </div>
+                     <div class="col-md-6">
+                        <ul class="iconsMenu pull-right">
+                           <li><a href="#"><img src="images/icons/iconsM2.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM3.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM4.png"></a></li>
+                           <li><a href="#"><img src="images/icons/iconsM5.png"></a></li>
+                           <li class="searchIconLast"><a href="#"><img src="images/icons/iconsM1.png"></a></li>
+                        </ul>
+                     </div>
+
+                      <div class="col-md-12">
+                        <div class="datepick-rcx">
+                             <ul class="iconsMenu" id="iconsMenuLeft">
+                                <li><span class="fetchDate">Start Date:1 jan, 19 15:00:00</span></li>
+                                <li><span class="fetchDate">End Date:7 jan, 19 21:00:00</span></li>
+                             </ul>
+                         </div> 
+                       </div>
+
+                     <div class="col-md-2 col-sm-12 pull-right">
+                        <div class="input-group search pageSearch" >
+                           <input type="text" placeholder="Search" class="form-control dateStyle"/>
+                           <span class="input-group-addon searchFa">
+                           <a href="#"> <i class="fa fa-search"></i></a>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--------- Table Section ------------>
+               <div class="row mainTableRow">
+                  <div class="col-md-12 listingscroll">
+                     <table class="table backWhite" >
+                        <thead>
+                           <th>Rank</th>
+                           <th>Operator</th>
+                           <th>Country</th>
+                           <th>SQI</th>
+                           <th>Avg Daily Roamers</th>
+                           <th>Voice SSI</th>
+                           <th>Data SSI</th>
+                           <th>Reg SSI</th>
+                           <th>SMS SSI</th>
+                           <th>Steering Config</th>
+                           <th>%Score Diffrence</th>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1</td>
+                              <td>02 UK</td>
+                              <td>United Kingdom</td>
+                              <td class="orangeColor">8.19</td>
+                              <td>23,124</td>
+                              <td class="orangeColor">8.9</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.3</td>
+                              <td>LBTR(B)</td>
+                              <td class="redColor"></td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td>Maxis</td>
+                              <td>Malaysia</td>
+                              <td class="orangeColor">8.18</td>
+                              <td>1,342</td>
+                              <td class="orangeColor">8.7</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.4</td>
+                              <td>SRDC(90%)</td>
+                              <td class="redColor">25%</td>                              
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td>Optus</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.11</td>
+                              <td>1,672</td>
+                              <td class="orangeColor">8.8</td>
+                              <td class="redColor">7.4</td>
+                              <td class="redColor">7.8</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                              <td class="redColor"></td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td>Telstra</td>
+                              <td>Australia</td>
+                              <td class="orangeColor">8.07</td>
+                              <td>321</td>
+                              <td class="orangeColor">8.6</td>
+                              <td class="redColor">7.3</td>
+                              <td class="redColor">7.7</td>
+                              <td class="greenColor">9.0</td>
+                              <td>LBTR(N)</td>
+                              <td class="redColor">23%</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td>Meteor</td>
+                              <td>Ireland</td>
+                              <td class="orangeColor">8.04</td>
+                              <td>3,298</td>
+                              <td class="orangeColor">8.5</td>
+                              <td class="redColor">7.2</td>
+                              <td class="redColor">7.6</td>
+                              <td class="greenColor">9.1</td>
+                              <td>SRDC(80+%)</td>
+                              <td class="redColor"></td>
+                           </tr>
+                           <tr>
+                              <td>6</td>
+                              <td>Orange</td>
+                              <td>France</td>
+                              <td class="orangeColor">8.02</td>
+                              <td>7,432</td>
+                              <td class="orangeColor">8.4</td>
+                              <td class="redColor">7.1</td>
+                              <td class="redColor">7.5</td>
+                              <td class="greenColor">9.1</td>
+                              <td>LBTR(P)</td>
+                              <td class="redColor">22%</td>
+                           </tr>
+                           
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div><!-- tab-scroll -->
+    </div><!-- trip-hist -->
+
+</div><!-- roaming-tabs -->
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script>
+                        function openCity(evt, cityName) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                            document.getElementById(cityName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+                        // Get the element with id="defaultOpen" and click on it
+                        document.getElementById("defaultOpen").click();
+        </script>
+
+        <!-- JS For Highcharts -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript">
+         $(function () {
+          $("#datepickerStart").datepicker({ 
+                autoclose: true, 
+                todayHighlight: true
+          }).datepicker();
+         });
+         $(function () {
+          $("#datepickerEnd").datepicker({ 
+                autoclose: true, 
+                todayHighlight: true
+          }).datepicker();
+         });
+      </script>
+
+    </body>
+</html>

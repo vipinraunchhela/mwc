@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Data Services</title>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/custom.js"></script>
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/laptop.css">
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/laptop.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/laptop-td.css" />
+
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="header-top"></div>
+            <div class="header-heading">
+                <div class="hea-head">
+                    <h2> Roaming CEM Dashboard</h2>
+                </div>
+                <div class="header-heading-icon">
+                    <ul>
+                        <li><a href=""><span class="icon1"></span></a></li>
+                        <li><a href=""><span class="icon2"></span></a></li>
+                    </ul>
+                </div>
+            </div><!-- header-heading -->  
+        </header>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="../aiwb-dashboard.html" class="home-link">
+                        <span class="black-ham">
+                            <span class="home-icon"></span>
+                        </span>
+                    </a>
+                </li>
+                <li >
+                    <a href="dashboard-cem.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard-cem.html">
+                        <span class="icon"><span class="icon-Report">
+                            </span></span>
+                        <span class="text">Network Analytics</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gsma-data-chat.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Network SQI Score</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../ris/roaming-cem-dashboard.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Care View</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../ris/partner-ranking.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Partner Ranking</span>
+                    </a>
+                </li>
+
+                <!-- <li >
+                    <a href="data-service.html">
+                        <span class="icon"><span class="icon-Report">
+                            </span></span>
+                        <span class="text">Customer Care View</span>
+                    </a>
+                </li> -->
+		        <li>
+                    <a href="https://testfactory.net/" target="_blank">
+                        <span class="icon"><span class="icon-Report">
+                            </span></span>
+                        <span class="text">Test Factory</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><span class="icon-help">
+                            </span></span>
+                        <span class="text">Support?FAQ</span>
+                    </a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="main-section">
+
+<div class="roaming-tabs">
+
+  <div class="cur-sta-box1 pb-15">
+    <div class="cur-sta-flex">
+       <div class="text">MSISDN</div>
+       <div class="input-box">
+        <input type="text" name="" placeholder="" class="input-control" value="345783921763">
+       </div><!--  -->
+    </div><!-- cur-sta-flex -->
+    <div class="cur-sta-flex">
+       <div class="text">IMSI</div>
+       <div class="input-box">
+        <input type="text" name="" placeholder="" class="input-control">
+       </div><!--  -->
+    </div><!-- cur-sta-flex -->
+    <div class="cur-sta-flex">
+       <div class="text">From</div>
+       <div class="input-box">
+        <input type="date" name="" placeholder="28/01/2018" class="input-control date-icon">
+       </div><!--  -->
+    </div><!-- cur-sta-flex -->
+    <div class="cur-sta-flex">
+       <div class="text">To</div>
+       <div class="input-box">
+        <input type="date" name="" placeholder="02/02/2018" class="input-control date-icon">
+       </div><!--  -->
+    </div><!-- cur-sta-flex -->
+    <div class="cur-sta-flex">
+       <div class="input-box">
+        <input type="button" name="" value="SEARCH" class="btn-blue">
+       </div><!--  -->
+    </div><!-- cur-sta-flex -->
+  </div><!-- cur-sta-box1 -->
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'current-status')" id="defaultOpen">Current Status</button>
+    <button class="tablinks" onclick="openCity(event, 'country-info')">Country Info</button>
+    <button class="tablinks trip" onclick="openCity(event, 'trip-hist')" >Trip History</button>
+  </div><!-- tab -->
+
+    <div id="current-status" class="tabcontent">
+      <div class="tab-scroll">
+         
+        <div class="cur-sta-box2">
+          <div class="cur-sta-white-box">
+            <h4>
+              <span>Status</span>
+              <a class="trip-history-click">View trip history</a>
+            </h4>
+            <div class="status-box-flex">
+              <div class="loc">
+                <div class="loc-flex">
+                  <div class="icons">
+                    <img src="images/icons/icons-24.png">
+                  </div>
+                  <div class="text">
+                    <h5>Location</h5>
+                    <p><span><img src="images/icons/icons-27.png"></span>Australia</p>
+                  </div>
+                </div><!-- loc-flex -->
+                <div class="loc-flex">
+                  <div class="icons">
+                    <img src="images/icons/icons-26.png">
+                  </div>
+                  <div class="text">
+                    <h5>Trip Start</h5>
+                    <p>28/01/2019  17:43  </p>
+                  </div>
+                </div><!-- loc-flex -->
+                <div class="loc-flex">
+                  <div class="icons">
+                    <img src="images/icons/icons-25.png">
+                  </div>
+                  <div class="text">
+                    <h5>Current Network</h5>
+                    <p>Vodafone Australia</p>
+                  </div>
+                </div><!-- loc-flex -->
+                <div class="loc-flex">
+                  <div class="icons">
+                    <img src="images/icons/icons-26.png">
+                  </div>
+                  <div class="text">
+                    <h5>Arrived in Australia</h5>
+                    <p>03/02/2019  10:13</p>
+                  </div>
+                </div><!-- loc-flex -->
+                <a class="link-btn view-trip-history-popup">View more</a>
+              </div><!-- loc -->
+              <div class="net">
+                <div id="pie-network"></div>
+              </div>
+            </div><!-- status-box-flex -->
+          </div><!-- status-box -->
+          <div class="cur-sta-white-box">
+            <h4>User Trip Experience</h4>
+              <div class="user-trip-table">
+               <table>
+                <tr>
+                  <th></th>
+                  <th>Overall</th>
+                  <th>REG</th>
+                  <th>2G <br> DATA</th>
+                  <th>3G <br> DATA</th>
+                  <th>LTE <br> DATA</th>
+                  <th>2G <br> VOICE</th>
+                  <th>3G <br> VOICE</th>
+                  <th>VoLTE</th>
+                  <th>SMS</th>
+                </tr>
+                <tr>
+                  <td>VF AUS</td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-gray">-</div></td>
+                  <td><div class="circle bg-red">4</div></td>
+                  <td><div class="circle bg-red">4</div></td>
+                  <td><div class="circle bg-gray">-</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-red">4</div></td>
+                </tr>
+                <tr>
+                  <td>TELSTRA</td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-gray">-</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-gray">-</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                </tr>
+                <tr>
+                  <td>OPTUS</td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-gray">-</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-gray">-</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                </tr>
+               </table><!--  --> 
+              </div><!-- user-trip-table -->
+          </div><!-- cur-sta-white-box -->
+          <div class="cur-sta-white-box">
+            <h4>Usage</h4>
+            <div class="usage-table">
+               <table>
+                <tr>
+                  <td></td>
+                  <td class="usage-tab-head"><span class="icon-1"></span>DATA</td>
+                  <td class="usage-tab-head"><span class="icon-2"></span>MO CALLS</td>
+                  <td class="usage-tab-head"><span class="icon-2"></span>MT CALLS</td>
+                  <td class="usage-tab-head"><span class="icon-3"></span>MO SMS</td>
+                </tr>
+                <tr>
+                  <td>Today</td>
+                  <td>232mb</td>
+                  <td>12</td>
+                  <td>11</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Trip</td>
+                  <td>728mb</td>
+                  <td>26</td>
+                  <td>34</td>
+                  <td>19</td>
+                </tr>
+              </table> 
+            </div><!-- usage-table -->
+          </div><!-- cur-sta-white-box -->
+          <div class="cur-sta-white-box">
+            <h4>
+              <span>Messages Sent by Operator</span>
+              <img src="images/icons/icons-37.png" 
+              class="plus-icon message-pop-open">
+            </h4>
+            <div class="welcome-sms">
+              <div class="flex-wrp msg-send">
+                <h5>03/02/2019 10:13  </h5>
+                <div class="tooltip">Welcome to Australia ! For £6  you can use your home voice and SMS bundles Welcome to Australia ! For £6  you can use your home voice and SMS bundles...
+                  <span class="tooltiptext">Welcome to Australia ! For £6  you can use your home voice and SMS bundles Welcome to Australia ! For £6  you can use your home voice and SMS bundles...</span>
+                </div>
+              </div><!-- msg-send -->
+              <div class="flex-wrp msg-send">
+                <h5>03/02/2019 12:13  </h5>
+                <div class="tooltip">As a valued customer we would like to offer you our special roaming pack. For...
+                  <span class="tooltiptext">As a valued customer we would like to offer you our special roaming pack. For...</span>
+                </div>
+              </div><!-- msg-send -->
+              <!-- <div class="flex-wrp msg-send">
+                <h5>03/02/2019 10:13 </h5>
+                <div class="tooltip">50211 ROAMOFFER
+                  <span class="tooltiptext">50211 ROAMOFFER</span>
+                </div>
+              </div> --><!-- msg-send -->
+              <div class="flex-wrp msg-send">
+                <h5>03/02/2019 15:26  </h5>
+                <div class="tooltip">We are delighted you have availed of our special roaming offer. You can use...
+                  <span class="tooltiptext tooltiptexttop">We are delighted you have availed of our special roaming offer. You can use...</span>
+                </div>
+              </div><!-- msg-send -->
+            </div><!-- welcome-sms -->
+          </div><!-- cur-sta-white-box -->
+          <div class="cur-sta-white-box">
+            <h4>Current Networks Service Status</h4>
+              <div class="user-trip-table">
+               <table>
+                <tr>
+                  <th></th>
+                  <th>2g  <br> reg</th>
+                  <th>3g  <br> reg</th>
+                  <th>LTE <br> reg</th>
+                  <th>2g <br> data</th>
+                  <th>3g <br> data</th>
+                  <th>LTE <br> DATA</th>
+                  <th>2G <br> VOICE</th>
+                  <th>3G <br> VOICE</th>
+                  <th>VoLTE</th>
+                  <th>SMS</th>
+                </tr>
+                <tr>
+                  <td>VF AUS</td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-red"></div></td>
+                  <td><div class="circle2 bg-red"></div></td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                </tr>
+                <tr>
+                  <td>TELSTRA</td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                </tr>
+                <tr>
+                  <td>OPTUS</td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-orange"></div></td>
+                  <td><div class="circle2 bg-orange"></div></td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                  <td><div class="circle2 bg-gray"></div></td>
+                  <td><div class="circle2 bg-orange"></div></td>
+                  <td><div class="circle2 bg-orange"></div></td>
+                  <td><div class="circle2 bg-green"></div></td>
+                </tr>
+               </table><!--  --> 
+              </div><!-- user-trip-table -->
+          </div><!-- cur-sta-white-box -->
+          <div class="cur-sta-white-box w-100x">
+            <h4>Network Operation Updates</h4>
+            <div class="network-operation-box">
+              <div class="network-operation-accord network-scrollx">
+                <div class="accordion">
+                  <h5>03/02/2019 12:23:23 </h5>
+                  <div class="accordion-head flex-wrp">
+                    <h3>CRITICAL SERVICE OUTAGE Vodafone Australia – Total Data Service Outage </h3>
+                    <div class="accord-arrow down"></div>
+                  </div>
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, enim ipsum quaerat voluptas facere provident similique dolore neque doloremque ratione maxime repudiandae consequatur non, quis. Illo laborum, ad distinctio pariatur!
+                    </p>
+                  </div>
+                  <h5>03/02/2019 12:23:23 </h5>
+                  <div class="accordion-head flex-wrp">
+                    <h3>Engineering Update VF AUS – Data Outage Expected to last 6 hours</h3><div class="accord-arrow down"></div>
+                  </div>
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, enim ipsum quaerat voluptas facere provident similique dolore neque doloremque ratione maxime repudiandae consequatur non, quis. Illo laborum, ad distinctio pariatur!</p>
+                  </div>
+                </div><!-- accordion -->
+              </div>  
+            </div>
+          </div><!-- cur-sta-white-box -->
+        </div><!-- cur-sta-box2 -->
+
+        <div class="cur-sta-box3">
+          <div class="cur-sta-white-box">
+            <!-- <h4>
+              <span>Service Timeline</span>
+              <div class="hours-box">
+                <a>1 Hr</a>
+                <a class="active">5 Hrs</a>
+                <a>12 Hrs</a>
+                <a>1 Day</a>
+                <a>3 Days</a>
+                <a>5 Days</a>
+                <a>7 Days</a>
+                <a>14 Days</a>
+                <a>1 Month</a>
+              </div> 
+            </h4> -->
+            <!-- <table border="0" style="width: 100%;text-align: center">
+              <tr><td style="width: 100px"></td> <td>10:00</td> <td>10:30</td> <td>11:00</td> <td>11:30</td> <td>12:00</td> <td>12:30</td> <td>13:00</td><td>13:30</td><td>14:00</td><td>14:30</td><td>15:00</td><td>15:30</td> </tr>
+            </table> -->
+            <div class="service-times">
+              <img src="images/time.png" class="img-responsive">
+            </div>
+          </div>
+        </div><!-- cur-sta-box3 -->
+
+        <div class="cur-sta-box4">
+          <div class="cur-sta-white-box">
+            <h4>Event History</h4>
+            <div class="event-history">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Status</th>
+                    <th>Country</th>
+                    <th>Network</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>03/02/2019</td>
+                    <td>12:22:41</td>
+                    <td>Subscriber calls +4472142****** </td>
+                    <td><span class="circle bg-green"></span>Success</td>
+                    <td>Australia</td>
+                    <td>Vodafone Australia</td>
+                  </tr>
+                  <tr>
+                    <td>03/02/2019  </td>
+                    <td>12:47:08  </td>
+                    <td>Data Session Creation Failed. Invalid Parameter.</td>
+                    <td><span class="circle bg-red"></span>Failed</td>
+                    <td>Australia</td>
+                    <td>Vodafone Australia</td>
+                  </tr>
+                  <tr>
+                    <td>03/02/2019</td>
+                    <td>12:50:45</td>
+                    <td>Subscriber calls +4472142****** </td>
+                    <td><span class="circle bg-green"></span>Success</td>
+                    <td>Australia</td>
+                    <td>Vodafone Australia</td>
+                  </tr>
+                  <tr>
+                    <td>03/02/2019</td>
+                    <td>12:55:47</td>
+                    <td>Data Session Creation Failed. Invalid Parameter. </td>
+                    <td><span class="circle bg-red"></span>Failed</td>
+                    <td>Australia</td>
+                    <td>Vodafone Australia</td>
+                  </tr>
+                  <tr>
+                    <td>03/02/2019 </td>
+                    <td>13:14:32 </td>
+                    <td>Data Session Creation Failed. Invalid Parameter. </td>
+                    <td><span class="circle bg-red"></span>Failed</td>
+                    <td>Australia</td>
+                    <td>Vodafone Australia</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- event-history -->
+          </div><!-- cur-sta-white-box -->
+        </div><!-- cur-sta-box3 -->
+      </div><!-- tab-scroll -->
+    </div><!-- current-status -->   
+
+    <div id="country-info" class="tabcontent">
+      <div class="tab-scroll">
+
+        <div class="cur-sta-box1">
+            <div class="cur-sta-flex">
+               <div class="text">COUNTRY</div>
+               <div class="input-box">
+                <!-- <input type="text" name="" placeholder="Australia" class="input-control"> -->
+                <input list="browsers" name="browser" class="input-control" placeholder="Australia">
+                <datalist id="browsers">
+                  <option value="AFG">Afghanistan</option>
+                  <option value="ALA">Åland Islands</option>
+                  <option value="ALB">Albania</option>
+                  <option value="DZA">Algeria</option>
+                  <option value="ASM">American Samoa</option>
+                  <option value="AND">Andorra</option>
+                  <option value="AGO">Angola</option>
+                  <option value="AIA">Anguilla</option>
+                  <option value="ATA">Antarctica</option>
+                  <option value="ATG">Antigua and Barbuda</option>
+                  <option value="ARG">Argentina</option>
+                  <option value="ARM">Armenia</option>
+                  <option value="ABW">Aruba</option>
+                  <option value="AUS">Australia</option>
+                  <option value="AUT">Austria</option>
+                  <option value="AZE">Azerbaijan</option>
+                  <option value="BHS">Bahamas</option>
+                  <option value="BHR">Bahrain</option>
+                  <option value="BGD">Bangladesh</option>
+                  <option value="BRB">Barbados</option>
+                  <option value="BLR">Belarus</option>
+                  <option value="BEL">Belgium</option>
+                  <option value="BLZ">Belize</option>
+                  <option value="BEN">Benin</option>
+                  <option value="BMU">Bermuda</option>
+                  <option value="BTN">Bhutan</option>
+                  <option value="BOL">Bolivia, Plurinational State of</option>
+                  <option value="BES">Bonaire, Sint Eustatius and Saba</option>
+                  <option value="BIH">Bosnia and Herzegovina</option>
+                  <option value="BWA">Botswana</option>
+                  <option value="BVT">Bouvet Island</option>
+                  <option value="BRA">Brazil</option>
+                  <option value="IOT">British Indian Ocean Territory</option>
+                  <option value="BRN">Brunei Darussalam</option>
+                  <option value="BGR">Bulgaria</option>
+                  <option value="BFA">Burkina Faso</option>
+                  <option value="BDI">Burundi</option>
+                  <option value="KHM">Cambodia</option>
+                  <option value="CMR">Cameroon</option>
+                  <option value="CAN">Canada</option>
+                  <option value="CPV">Cape Verde</option>
+                  <option value="CYM">Cayman Islands</option>
+                  <option value="CAF">Central African Republic</option>
+                  <option value="TCD">Chad</option>
+                  <option value="CHL">Chile</option>
+                  <option value="CHN">China</option>
+                  <option value="CXR">Christmas Island</option>
+                  <option value="CCK">Cocos (Keeling) Islands</option>
+                  <option value="COL">Colombia</option>
+                  <option value="COM">Comoros</option>
+                  <option value="COG">Congo</option>
+                  <option value="COD">Congo, the Democratic Republic of the</option>
+                  <option value="COK">Cook Islands</option>
+                  <option value="CRI">Costa Rica</option>
+                  <option value="CIV">Côte d'Ivoire</option>
+                  <option value="HRV">Croatia</option>
+                  <option value="CUB">Cuba</option>
+                  <option value="CUW">Curaçao</option>
+                  <option value="CYP">Cyprus</option>
+                  <option value="CZE">Czech Republic</option>
+                  <option value="DNK">Denmark</option>
+                  <option value="DJI">Djibouti</option>
+                  <option value="DMA">Dominica</option>
+                  <option value="DOM">Dominican Republic</option>
+                  <option value="ECU">Ecuador</option>
+                  <option value="EGY">Egypt</option>
+                  <option value="SLV">El Salvador</option>
+                  <option value="GNQ">Equatorial Guinea</option>
+                  <option value="ERI">Eritrea</option>
+                  <option value="EST">Estonia</option>
+                  <option value="ETH">Ethiopia</option>
+                  <option value="FLK">Falkland Islands (Malvinas)</option>
+                  <option value="FRO">Faroe Islands</option>
+                  <option value="FJI">Fiji</option>
+                  <option value="FIN">Finland</option>
+                  <option value="FRA">France</option>
+                  <option value="GUF">French Guiana</option>
+                  <option value="PYF">French Polynesia</option>
+                  <option value="ATF">French Southern Territories</option>
+                  <option value="GAB">Gabon</option>
+                  <option value="GMB">Gambia</option>
+                  <option value="GEO">Georgia</option>
+                  <option value="DEU">Germany</option>
+                  <option value="GHA">Ghana</option>
+                  <option value="GIB">Gibraltar</option>
+                  <option value="GRC">Greece</option>
+                  <option value="GRL">Greenland</option>
+                  <option value="GRD">Grenada</option>
+                  <option value="GLP">Guadeloupe</option>
+                  <option value="GUM">Guam</option>
+                  <option value="GTM">Guatemala</option>
+                  <option value="GGY">Guernsey</option>
+                  <option value="GIN">Guinea</option>
+                  <option value="GNB">Guinea-Bissau</option>
+                  <option value="GUY">Guyana</option>
+                  <option value="HTI">Haiti</option>
+                  <option value="HMD">Heard Island and McDonald Islands</option>
+                  <option value="VAT">Holy See (Vatican City State)</option>
+                  <option value="HND">Honduras</option>
+                  <option value="HKG">Hong Kong</option>
+                  <option value="HUN">Hungary</option>
+                  <option value="ISL">Iceland</option>
+                  <option value="IND">India</option>
+                  <option value="IDN">Indonesia</option>
+                  <option value="IRN">Iran, Islamic Republic of</option>
+                  <option value="IRQ">Iraq</option>
+                  <option value="IRL">Ireland</option>
+                  <option value="IMN">Isle of Man</option>
+                  <option value="ISR">Israel</option>
+                  <option value="ITA">Italy</option>
+                  <option value="JAM">Jamaica</option>
+                  <option value="JPN">Japan</option>
+                  <option value="JEY">Jersey</option>
+                  <option value="JOR">Jordan</option>
+                  <option value="KAZ">Kazakhstan</option>
+                  <option value="KEN">Kenya</option>
+                  <option value="KIR">Kiribati</option>
+                  <option value="PRK">Korea, Democratic People's Republic of</option>
+                  <option value="KOR">Korea, Republic of</option>
+                  <option value="KWT">Kuwait</option>
+                  <option value="KGZ">Kyrgyzstan</option>
+                  <option value="LAO">Lao People's Democratic Republic</option>
+                  <option value="LVA">Latvia</option>
+                  <option value="LBN">Lebanon</option>
+                  <option value="LSO">Lesotho</option>
+                  <option value="LBR">Liberia</option>
+                  <option value="LBY">Libya</option>
+                  <option value="LIE">Liechtenstein</option>
+                  <option value="LTU">Lithuania</option>
+                  <option value="LUX">Luxembourg</option>
+                  <option value="MAC">Macao</option>
+                  <option value="MKD">Macedonia, the former Yugoslav Republic of</option>
+                  <option value="MDG">Madagascar</option>
+                  <option value="MWI">Malawi</option>
+                  <option value="MYS">Malaysia</option>
+                  <option value="MDV">Maldives</option>
+                  <option value="MLI">Mali</option>
+                  <option value="MLT">Malta</option>
+                  <option value="MHL">Marshall Islands</option>
+                  <option value="MTQ">Martinique</option>
+                  <option value="MRT">Mauritania</option>
+                  <option value="MUS">Mauritius</option>
+                  <option value="MYT">Mayotte</option>
+                  <option value="MEX">Mexico</option>
+                  <option value="FSM">Micronesia, Federated States of</option>
+                  <option value="MDA">Moldova, Republic of</option>
+                  <option value="MCO">Monaco</option>
+                  <option value="MNG">Mongolia</option>
+                  <option value="MNE">Montenegro</option>
+                  <option value="MSR">Montserrat</option>
+                  <option value="MAR">Morocco</option>
+                  <option value="MOZ">Mozambique</option>
+                  <option value="MMR">Myanmar</option>
+                  <option value="NAM">Namibia</option>
+                  <option value="NRU">Nauru</option>
+                  <option value="NPL">Nepal</option>
+                  <option value="NLD">Netherlands</option>
+                  <option value="NCL">New Caledonia</option>
+                  <option value="NZL">New Zealand</option>
+                  <option value="NIC">Nicaragua</option>
+                  <option value="NER">Niger</option>
+                  <option value="NGA">Nigeria</option>
+                  <option value="NIU">Niue</option>
+                  <option value="NFK">Norfolk Island</option>
+                  <option value="MNP">Northern Mariana Islands</option>
+                  <option value="NOR">Norway</option>
+                  <option value="OMN">Oman</option>
+                  <option value="PAK">Pakistan</option>
+                  <option value="PLW">Palau</option>
+                  <option value="PSE">Palestinian Territory, Occupied</option>
+                  <option value="PAN">Panama</option>
+                  <option value="PNG">Papua New Guinea</option>
+                  <option value="PRY">Paraguay</option>
+                  <option value="PER">Peru</option>
+                  <option value="PHL">Philippines</option>
+                  <option value="PCN">Pitcairn</option>
+                  <option value="POL">Poland</option>
+                  <option value="PRT">Portugal</option>
+                  <option value="PRI">Puerto Rico</option>
+                  <option value="QAT">Qatar</option>
+                  <option value="REU">Réunion</option>
+                  <option value="ROU">Romania</option>
+                  <option value="RUS">Russian Federation</option>
+                  <option value="RWA">Rwanda</option>
+                  <option value="BLM">Saint Barthélemy</option>
+                  <option value="SHN">Saint Helena, Ascension and Tristan da Cunha</option>
+                  <option value="KNA">Saint Kitts and Nevis</option>
+                  <option value="LCA">Saint Lucia</option>
+                  <option value="MAF">Saint Martin (French part)</option>
+                  <option value="SPM">Saint Pierre and Miquelon</option>
+                  <option value="VCT">Saint Vincent and the Grenadines</option>
+                  <option value="WSM">Samoa</option>
+                  <option value="SMR">San Marino</option>
+                  <option value="STP">Sao Tome and Principe</option>
+                  <option value="SAU">Saudi Arabia</option>
+                  <option value="SEN">Senegal</option>
+                  <option value="SRB">Serbia</option>
+                  <option value="SYC">Seychelles</option>
+                  <option value="SLE">Sierra Leone</option>
+                  <option value="SGP">Singapore</option>
+                  <option value="SXM">Sint Maarten (Dutch part)</option>
+                  <option value="SVK">Slovakia</option>
+                  <option value="SVN">Slovenia</option>
+                  <option value="SLB">Solomon Islands</option>
+                  <option value="SOM">Somalia</option>
+                  <option value="ZAF">South Africa</option>
+                  <option value="SGS">South Georgia and the South Sandwich Islands</option>
+                  <option value="SSD">South Sudan</option>
+                  <option value="ESP">Spain</option>
+                  <option value="LKA">Sri Lanka</option>
+                  <option value="SDN">Sudan</option>
+                  <option value="SUR">Suriname</option>
+                  <option value="SJM">Svalbard and Jan Mayen</option>
+                  <option value="SWZ">Swaziland</option>
+                  <option value="SWE">Sweden</option>
+                  <option value="CHE">Switzerland</option>
+                  <option value="SYR">Syrian Arab Republic</option>
+                  <option value="TWN">Taiwan, Province of China</option>
+                  <option value="TJK">Tajikistan</option>
+                  <option value="TZA">Tanzania, United Republic of</option>
+                  <option value="THA">Thailand</option>
+                  <option value="TLS">Timor-Leste</option>
+                  <option value="TGO">Togo</option>
+                  <option value="TKL">Tokelau</option>
+                  <option value="TON">Tonga</option>
+                  <option value="TTO">Trinidad and Tobago</option>
+                  <option value="TUN">Tunisia</option>
+                  <option value="TUR">Turkey</option>
+                  <option value="TKM">Turkmenistan</option>
+                  <option value="TCA">Turks and Caicos Islands</option>
+                  <option value="TUV">Tuvalu</option>
+                  <option value="UGA">Uganda</option>
+                  <option value="UKR">Ukraine</option>
+                  <option value="ARE">United Arab Emirates</option>
+                  <option value="GBR">United Kingdom</option>
+                  <option value="USA">United States</option>
+                  <option value="UMI">United States Minor Outlying Islands</option>
+                  <option value="URY">Uruguay</option>
+                  <option value="UZB">Uzbekistan</option>
+                  <option value="VUT">Vanuatu</option>
+                  <option value="VEN">Venezuela, Bolivarian Republic of</option>
+                  <option value="VNM">Viet Nam</option>
+                  <option value="VGB">Virgin Islands, British</option>
+                  <option value="VIR">Virgin Islands, U.S.</option>
+                  <option value="WLF">Wallis and Futuna</option>
+                  <option value="ESH">Western Sahara</option>
+                  <option value="YEM">Yemen</option>
+                  <option value="ZMB">Zambia</option>
+                  <option value="ZWE">Zimbabwe</option>
+                </datalist>
+               </div><!--  -->
+            </div><!-- cur-sta-flex -->
+            <div class="cur-sta-flex">
+               <div class="input-box">
+                <input type="button" name="" value="SEARCH" class="btn-blue">
+               </div><!--  -->
+            </div><!-- cur-sta-flex -->
+        </div><!-- cur-sta-box1 --> 
+
+        <div class="country-info-frame">
+          <div class="logo-text">
+            <img src="images/images-2.jpg" class="img-responsive" alt="mobileum">
+            <p>Vodafone Australia </p>
+          </div>
+          <div class="frequencies">
+            <h4>Frequencies</h4>
+            <ul>
+              <li>
+                <img src="images/img-5.png"  alt="mobileum">
+                <h5>900, 1800</h5>
+              </li>
+              <li>
+                <img src="images/img-6.png"  alt="mobileum">
+                <h5>850, 900</h5>
+                <h5>2100</h5>
+              </li>
+              <li>
+                <img src="images/img-7.png"  alt="mobileum">
+                <h5>850, 1800</h5>
+              </li>
+            </ul>
+          </div><!-- frequencies -->
+          <div class="r-rate">
+            <h4>Roaming Rates</h4>
+            <div class="r-rate-flex">
+              <div class="post-paid">
+                <h6>POST PAID</h6>
+                <p>£6 per day inclusive</p>
+                <p>Free to receive calls or texts</p>
+              </div>
+              <div class="payg">
+                <h6>PAYG</h6>
+                <ul>
+                  <li><span>MO</span>60p / min</li>
+                  <li><span>MT</span>36p / min</li>
+                  <li><span>SMS</span>8p / text</li>
+                </ul>
+                <ul>
+                  <li><span>MMS</span>66p / message</li>
+                  <li><span>Data</span>12p / MB</li>
+                </ul>
+              </div>
+            </div><!-- r-rate-flex -->
+          </div><!-- r-rate -->
+        </div><!-- country-info-frame -->
+
+        <div class="country-info-frame">
+          <div class="logo-text">
+            <img src="images/img-3.png" class="img-responsive" alt="mobileum">
+            <p>Telstra </p>
+          </div>
+          <div class="frequencies">
+            <h4>Frequencies</h4>
+            <ul>
+              <li>
+                <img src="images/img-5.png"  alt="mobileum">
+                <h5>900, 1800</h5>
+              </li>
+              <li>
+                <img src="images/img-6.png"  alt="mobileum">
+                <h5>850, 900</h5>
+                <h5>2100</h5>
+              </li>
+              <li>
+                <img src="images/img-7.png"  alt="mobileum">
+                <h5>700, 180, 2100</h5>
+              </li>
+            </ul>
+          </div><!-- frequencies -->
+          <div class="r-rate">
+            <h4>Roaming Rates</h4>
+            <div class="r-rate-flex">
+              <div class="post-paid">
+                <h6>POST PAID</h6>
+                <p>£6 per day inclusive</p>
+                <p>Free to receive calls or texts</p>
+              </div>
+              <div class="payg">
+                <h6>PAYG</h6>
+                <ul>
+                  <li><span>MO</span>60p / min</li>
+                  <li><span>MT</span>36p / min</li>
+                  <li><span>SMS</span>8p / text</li>
+                </ul>
+                <ul>
+                  <li><span>MMS</span>66p / message</li>
+                  <li><span>Data</span>12p / MB</li>
+                </ul>
+              </div>
+            </div><!-- r-rate-flex -->
+          </div><!-- r-rate -->
+        </div><!-- country-info-frame -->
+
+        <div class="country-info-frame">
+          <div class="logo-text">
+            <img src="images/img-4.png" class="img-responsive" alt="mobileum">
+            <p>Optus</p>
+          </div>
+          <div class="frequencies">
+            <h4>Frequencies</h4>
+            <ul>
+              <li>
+                <img src="images/img-5.png"  alt="mobileum">
+                <h5>900, 1800</h5>
+              </li>
+              <li>
+                <img src="images/img-6.png"  alt="mobileum">
+                <h5>900, 2100</h5>
+              </li>
+              <li>
+                <img src="images/img-7.png"  alt="mobileum">
+                <h5>700, 1800, 2100, 2300, 2600</h5>
+              </li>
+            </ul>
+          </div><!-- frequencies -->
+          <div class="r-rate">
+            <h4>Roaming Rates</h4>
+            <div class="r-rate-flex">
+              <div class="post-paid">
+                <h6>POST PAID</h6>
+                <p>£6 per day inclusive</p>
+                <p>Free to receive calls or texts</p>
+              </div>
+              <div class="payg">
+                <h6>PAYG</h6>
+                <ul>
+                  <li><span>MO</span>60p / min</li>
+                  <li><span>MT</span>36p / min</li>
+                  <li><span>SMS</span>8p / text</li>
+                </ul>
+                <ul>
+                  <li><span>MMS</span>66p / message</li>
+                  <li><span>Data</span>12p / MB</li>
+                </ul>
+              </div>
+            </div><!-- r-rate-flex -->
+          </div><!-- r-rate -->
+        </div><!-- country-info-frame -->
+
+      </div><!-- tab-scroll -->
+    </div><!-- country-info -->
+
+    <div id="trip-hist" class="tabcontent">
+      <div class="tab-scroll">
+
+        <div class="trip-hist-frame1">
+          <div class="over">Overview</div>
+          <div class="net">Network Time Breakdown</div>
+          <div class="trip">Trip Service Experience</div>
+        </div><!-- trip-hist-frame1 -->
+
+        <div class="trip-hist-frame2 border-btm ">
+
+          <div class="country">
+
+            <div class="flex-wrp pb-25 country-flex">
+              <div class="header">Trip Start</div>
+              <div class="details">28/01/2019 17:41:06 
+              </div>
+            </div><!-- flex-wrp -->
+            
+            <div class="flex-wrp country-flex">
+              <div class="header">Country</div>
+              <div class="details">
+                <img src="images/icons/icons-27.png"> Australia
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Visit Start</div>
+              <div class="details">
+                03/02/2019   10:13:04
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Visit End</div>
+              <div class="details">
+                -
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">First Network Registered To</div>
+              <div class="details">
+                Optus
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Subsequent Network Registered To</div>
+              <div class="details">
+                Telstra
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Data Usage in First 30 Minutes </div>
+              <div class="details">
+                5.8MB
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Voice Usage in First 30 Minutes </div>
+              <div class="details">
+                12m 31s
+              </div>
+            </div><!-- flex-wrp -->
+            <!-- <a  class="country-view">View More</a> -->
+          </div><!-- country -->
+
+          <div class="pie-chart-box pie-dag">
+
+            <div class="flex-wrp pb-25 country-flex">
+              <div class="header">Trip End</div>
+              <div class="details">-</div>
+            </div><!-- flex-wrp -->
+
+            <div class="flex-wrp position-relat">
+              <div class="pie-dag-title">
+                <p>
+                  <span class="time">Time Spent</span>
+                  <span class="data"> Data</span> 
+                  <span class="voice">Voice</span>
+                </p>
+              </div>
+              <!-- <div id="pie-dag4"></div> -->
+              <div id="pie-dag1"></div>
+              <!-- <div id="pie-dag5"></div> -->
+            </div><!-- pie-dag -->
+
+          </div><!-- pie-chart-box -->
+
+
+          <div class="trip-services">
+
+            <div class="flex-wrp pb-25 country-flex">
+              <div class="header">Trip Duration</div>
+              <div class="details">6 days 19:02:06  
+              </div>
+            </div><!-- flex-wrp -->
+
+            <div class="user-trip-table trip-service-table">
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Overall</th>
+                  <th>REG</th>
+                  <th>DATA</th>
+                  <th>VOICE</th>
+                  <th>SMS</th>
+                </tr>
+                <tr>
+                  <td>VF AUS</td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-red">4</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>TELSTRA</td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>OPTUS</td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                </tr>
+              </table><!--  --> 
+            </div><!-- user-trip-table -->
+          </div><!-- trip-services -->
+          <!-- <div class="collapse-btn">
+            <div class="arrow"></div>
+          </div> -->
+        </div><!-- trip-hist-frame1 -->
+
+        <div class="trip-hist-frame2 mt-0 b-radius-top">
+          <div class="country">
+            <div class="flex-wrp country-flex">
+              <div class="header">Country</div>
+              <div class="details">
+                <img src="images/icons/icons-27.png"> New Zealand
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Visit Start</div>
+              <div class="details">
+                28/01/2019   17:41:06
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Visit End</div>
+              <div class="details">
+                03/02/2019   10:13:04
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">First Network Registered To</div>
+              <div class="details">
+                Optus
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Subsequent Network Registered To</div>
+              <div class="details">
+                2 degrees
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Data Usage in First 30 Minutes </div>
+              <div class="details">
+                0 MB
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Voice Usage in First 30 Minutes </div>
+              <div class="details">
+                0 s
+              </div>
+            </div><!-- flex-wrp -->
+          </div><!-- country -->
+          <div class="pie-dag flex-wrp position-relat">
+            <div class="pie-dag-title">
+              <p>
+                <span class="time">Time Spent</span>
+                <span class="data"> Data</span> 
+                <span class="voice">Voice</span>
+              </p>
+            </div>
+            <!-- <div id="pie-dag4"></div> -->
+            <div id="pie-dag22"></div>
+            <!-- <div id="pie-dag5"></div> -->
+          </div><!-- pie-dag -->
+          <div class="trip-services">
+            <div class="user-trip-table trip-service-table">
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Overall</th>
+                  <th>REG</th>
+                  <th>DATA</th>
+                  <th>VOICE</th>
+                  <th>SMS</th>
+                </tr>
+                <tr>
+                  <td>VF NZ</td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-red">4</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>2 Degree</td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">7</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <!-- <tr>
+                  <td>OPTUS</td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                </tr> -->
+              </table><!--  --> 
+            </div><!-- user-trip-table -->
+          </div><!-- trip-services -->
+        </div><!-- trip-hist-frame1 -->
+       
+        <div class="trip-hist-frame2 collapse-height">
+          <div class="country">
+            <div class="flex-wrp country-flex">
+              <div class="header">Country</div>
+              <div class="details">
+                <img src="images/icons/india.png"> India
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Trip Start</div>
+              <div class="details">
+                17/01/2019   06:21:06
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Trip End</div>
+              <div class="details">
+                20/01/2019   19:14:12
+              </div>
+            </div><!-- flex-wrp -->
+            <div class="flex-wrp country-flex">
+              <div class="header">Trip Duration</div>
+              <div class="details">
+                3 days   05:22:53
+              </div>
+            </div><!-- flex-wrp -->
+          </div><!-- country -->
+          <div class="pie-dag position-relat">
+            <div class="pie-dag-title">
+              <p>
+                <span class="time">Time Spent</span>
+                <span class="data"> Data</span> 
+                <span class="voice">Voice</span>
+              </p>
+            </div>
+            <div id="pie-dag33"></div>
+          </div><!--  -->
+          <div class="trip-services">
+            <div class="user-trip-table trip-service-table">
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Overall</th>
+                  <th>REG</th>
+                  <th>DATA</th>
+                  <th>VOICE</th>
+                  <th>SMS</th>
+                </tr>
+                <tr>
+                  <td>Vodafone India</td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">7</div></td>
+                  <td><div class="circle bg-yellow">4</div></td>
+                  <td><div class="circle bg-yellow">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>Airtel</td>
+                  <td><div class="circle bg-red">7</div></td>
+                  <td><div class="circle bg-red">7</div></td>
+                  <td><div class="circle bg-red">7</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>Idea</td>
+                  <td><div class="circle bg-red">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-red">6</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                </tr>
+                <tr>
+                  <td>Jio</td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">7</div></td>
+                  <td><div class="circle bg-yellow">4</div></td>
+                  <td><div class="circle bg-yellow">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>Aircel</td>
+                  <td><div class="circle bg-red">7</div></td>
+                  <td><div class="circle bg-red">7</div></td>
+                  <td><div class="circle bg-red">7</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                  <td><div class="circle bg-green">9</div></td>
+                </tr>
+                <tr>
+                  <td>Tata</td>
+                  <td><div class="circle bg-red">5</div></td>
+                  <td><div class="circle bg-yellow">6</div></td>
+                  <td><div class="circle bg-yellow">5</div></td>
+                  <td><div class="circle bg-red">6</div></td>
+                  <td><div class="circle bg-green">8</div></td>
+                </tr>
+              </table><!--  --> 
+            </div><!-- user-trip-table -->
+          </div><!-- trip-services -->
+          <div class="collapse-btn">
+            <div class="arrow"></div>
+          </div>
+        </div><!-- trip-hist-frame1 -->
+
+      </div><!-- tab-scroll -->
+    </div><!-- trip-hist -->
+
+</div><!-- roaming-tabs -->
+
+ 
+
+
+
+        </div>
+
+
+
+
+
+
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script>
+                        function openCity(evt, cityName) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                            document.getElementById(cityName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+                        // Get the element with id="defaultOpen" and click on it
+                        document.getElementById("defaultOpen").click();
+        </script>
+
+        <!-- JS For Highcharts -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <!-- For service-time Starts-->
+<script type="text/javascript">
+ var change = {
+        0: 'SMS’s',
+        1: 'Data Sessions',
+        2: 'Calls',
+        3: 'Data Registration',
+       // 4: 'Voice Registration'
+    };
+
+    Highcharts.chart('service-time', {
+        title: { text: '' },
+        subtitle: { text: '' },
+        exporting: { enabled: false },
+        credits: { enabled: false },
+        xAxis: {
+            //lineColor: 'transparent',
+            opposite: true,
+            /*categories: ['9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00']*/
+            categories: ['', '', '', '', '', '', '', '', '', '', '']
+        },
+        yAxis: {
+          visible:true,
+            lineColor: 'transparent',
+            title: { text: '' },
+            //categories: ['SMS’s', 'Data Sessions', 'Calls', 'Data Registration', 'Voice Registration'],
+            labels: {
+                formatter: function() {
+                    var value = change[this.value];
+                    return value !== 'undefined' ? value : this.value;
+                },
+                tickInterval: 1,
+                max:4
+            },
+        },
+        series: [ {
+            name: '',
+            showInLegend: false,
+            marker: { symbol: 'cirlce', radius: 8 },
+            lineWidth: 0,
+            states: {
+                hover: {
+                    enabled: false,
+                    lineWidth: 0
+                }
+            },
+            color: '#ffd960',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        },{
+            name: '',
+            showInLegend: false,
+            lineWidth: 0,
+            states: {
+                hover: {
+                    enabled: false,
+                    lineWidth: 0
+                }
+            },
+            color: '#8cc14b',
+            marker: { symbol: 'cirlce', radius: 8 },
+            data: [ 3, 2, 2, 1, 2, 2, 0, 0, 0,0, 0]
+
+        },
+        {
+            name: '',
+            showInLegend: false,
+            lineWidth: 0,
+            states: {
+                hover: {
+                    enabled: false,
+                    lineWidth: 0
+                }
+            },
+            color: '#8cc14b',
+            marker: { symbol: 'cirlce', radius: 8 },
+            data: [ 0, 0, 0, 0, 0, 3, 2, 2,  0,0, 2]
+
+        }, {
+            name: '',
+            showInLegend: false,
+            marker: { symbol: 'cirlce', radius: 8 },
+            lineWidth: 0,
+            states: {
+                hover: {
+                    enabled: false,
+                    lineWidth: 0
+                }
+            },
+            color: '#8cc14b',
+            //data: [1, 2, 1, 3, 1, 3, 2, 1, 2, 0, 2]
+        }]
+
+    });
+</script>
+<!-- For service-time Ends-->
+<!-- For service-time Ends-->
+
+<!-- For pie-network Starts-->
+<script type="text/javascript">
+  // Create the chart
+  Highcharts.chart('pie-network', {
+      chart: {
+          type: 'pie',
+          margin: [20, 100, 0, 0],
+        spacingTop: 5,
+        spacingBottom: 0,
+        spacingLeft: 0,
+        spacingRight: 0
+      },
+      title: {
+          text: 'Network Time Breakdown',
+          align: 'left',
+          useHTML: true
+      },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+          useHTML: true,
+          labelFormatter: function() {
+              return '<div style="display: flex; justify-content: flex-start;"><div>' + this.name + '</div><div style="margin-bottom:30px;padding-right:35px;"></div></div>';
+        },
+          // symbolHeight: 20,
+          // symbolWidth: 20,
+          // symbolRadius: 0
+      },
+      // subtitle: {
+      //     text: 'Click the slices to view versions. Source: netmarketshare.com.'
+      // },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: false,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          },
+           pie: {
+            size:90,
+            center: [40, 40,],
+            allowPointSelect: true,
+            cursor: 'pointer',
+            symbolWidth: 10,
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+      },
+      series: [{
+          // name: 'Brands',
+          colorByPoint: true,
+          data: [{
+              name: 'VF Australia',
+              y: 56.33,
+              drilldown: 'VF Australia',
+              color: '#cd1e1e'
+          }, {
+              name: 'Optus',
+              y: 24.03,
+              drilldown: 'Optus',
+              color: '#4bb296'
+          }, {
+              name: 'Telstra',
+              y: 10.38,
+              drilldown: 'Telstra',
+              color: '#e6d734'
+          }]
+      }],
+      drilldown: {
+          series: [{
+              name: 'VF Australia',
+              id: 'VF Australia',
+              data: [
+                  ['v11.0', 24.13],
+                  ['v8.0', 17.2],
+                  ['v9.0', 8.11],
+                  ['v10.0', 5.33],
+                  ['v6.0', 1.06],
+                  ['v7.0', 0.5]
+              ]
+          }, {
+              name: 'Telstra',
+              id: 'Telstra',
+              data: [
+                  ['v40.0', 5],
+                  ['v41.0', 4.32],
+                  ['v42.0', 3.68],
+                  ['v39.0', 2.96],
+                  ['v36.0', 2.53],
+                  ['v43.0', 1.45],
+                  ['v31.0', 1.24],
+                  ['v35.0', 0.85],
+                  ['v38.0', 0.6],
+                  ['v32.0', 0.55],
+                  ['v37.0', 0.38],
+                  ['v33.0', 0.19],
+                  ['v34.0', 0.14],
+                  ['v30.0', 0.14]
+              ]
+          }, {
+              name: 'Optus',
+              id: 'Optus',
+              data: [
+                  ['v35', 2.76],
+                  ['v36', 2.32],
+                  ['v37', 2.31],
+                  ['v34', 1.27],
+                  ['v38', 1.02],
+                  ['v31', 0.33],
+                  ['v33', 0.22],
+                  ['v32', 0.15]
+              ]
+          }]
+      }
+  });
+</script>
+<!-- For pie-network Ends-->
+
+<!-- For pie-dag1 Starts-->
+<script type="text/javascript">
+  // Create the chart
+  Highcharts.chart('pie-dag1', {
+      chart: {
+      },
+      title: {
+          text: '',
+          align: 'left',
+          useHTML: true
+      },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+          padding:0,
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom',
+          useHTML: true
+      },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: false,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          },
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+      },
+      series: [{
+      showInLegend: true,
+            type: 'pie',
+              name: 'Time Spent',
+              data: [
+              { y:20, color:'#cd1e1e', name:'VF Australia' },
+              { y:25, color:'#4bb296', name:'Optus' },
+              { y:55, color:'#e6d734', name:'Telstra' }
+              
+              ],
+              center: [50, 40],
+              size: 100,
+          }, {
+            type: 'pie',
+              name: 'Data',
+                data: [
+              { y:10, color:'#4bb296', name:'Optus'},
+              { y:50, color:'#cd1e1e', name:'VF Australia' },
+              { y:40, color:'#e6d734', name:'Telstra' }
+              ],
+        center: [160, 40],
+        size: 100
+          }, {
+            type: 'pie',
+              name: 'Voice',
+                 data: [
+              { y:10, color:'#4bb296', name:'Optus' },
+              { y:40, color:'#cd1e1e', name:'VF Australia'  },
+              { y:50, color:'#e6d734', name:'Telstra'  }
+              ],
+        center: [270, 40],
+        size: 100
+         
+      }],
+    
+  });
+</script>
+
+<script type="text/javascript">
+  // Create the chart
+  Highcharts.chart('pie-dag22', {
+      chart: {
+      },
+      title: {
+          text: '',
+          align: 'left',
+          useHTML: true
+      },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+          padding:0,
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom',
+          useHTML: true
+      },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: false,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          },
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+      },
+      series: [{
+      showInLegend: true,
+            type: 'pie',
+              name: 'Time Spent',
+              data: [
+              { y:30, color:'#cd1e1e ', name: 'VF NZ' },
+              { y:70, color:'#e6d734', name: '2degrees'},
+              //{ y:16, color:'#e6d734' }
+              ],
+              center: [50, 40],
+              size: 100,
+
+          }, {
+            type: 'pie',
+              name: 'Voice',
+                data: [
+              { y:30, color:'#cd1e1e', name: 'VF NZ'  },
+              { y:80, color:'#e6d734', name: '2degrees' },
+              
+              //{ y:16, color:'#e6d734' }
+              ],
+        center: [160, 40],
+        size: 100
+          }, {
+            type: 'pie',
+              name: 'Data',
+                 data: [
+              { y:30, color:'#cd1e1e', name: 'VF NZ'  },   
+              { y:70, color:'#e6d734', name: '2degrees' },
+              
+              //{ y:16, color:'#e6d734' }
+              ],
+        center: [270, 40],
+        size: 100
+         
+      }],
+    
+  });
+</script>
+
+<script type="text/javascript">
+  // Create the chart
+  Highcharts.chart('pie-dag33', {
+      chart: {
+      },
+      title: {
+          text: '',
+          align: 'left',
+          useHTML: true
+      },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+          padding:0,
+          layout: 'horizontal',
+          align: 'center',
+          itemWidth: 110,
+          y: 15,
+          verticalAlign: 'bottom',
+          useHTML: true
+      },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: false,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          },
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+      },
+      series: [{
+      showInLegend: true,
+            type: 'pie',
+              name: 'VF Australia',
+              data: [
+              { y:40, color:'#cd1e1e', name:'Vodafone India' },
+              { y:10, color:'#b6a91c', name:'Airtel' },
+              { y:15, color:'#48c5a3', name:'Idea' },
+              { y:20, color:'#23a9d5', name:'Bsnl' },
+              { y:10, color:'#237fd5', name:'Reliance Jio' },
+              { y:5, color:'#e6d734', name:'Telenor' }
+              
+              ],
+              center: [50, 40],
+              size: 100,
+
+          }, {
+            type: 'pie',
+              name: 'Telstra',
+                data: [
+              { y:40, color:'#cd1e1e', name:'Vodafone India' },
+              { y:10, color:'#b6a91c', name:'Airtel' },
+              { y:15, color:'#48c5a3', name:'Idea' },
+              { y:20, color:'#23a9d5', name:'Bsnl' },
+              { y:10, color:'#237fd5', name:'Reliance Jio' },
+              { y:5, color:'#e6d734', name:'Telenor' }
+              ],
+        center: [160, 40],
+        size: 100
+          }, {
+            type: 'pie',
+              name: 'Optus',
+                 data: [
+              { y:40, color:'#cd1e1e', name:'Vodafone India' },
+              { y:10, color:'#b6a91c', name:'Airtel' },
+              { y:15, color:'#48c5a3', name:'Idea' },
+              { y:20, color:'#23a9d5', name:'Bsnl' },
+              { y:10, color:'#237fd5', name:'Reliance Jio' },
+              { y:5, color:'#e6d734', name:'Telenor' }
+              ],
+        center: [270, 40],
+        size: 100
+         
+      }],
+    
+  });
+</script>
+
+<!-- For pie-dag1 Ends-->
+
+<!-- For pie-dag2 Starts-->
+<script type="text/javascript">
+  // Create the chart
+  Highcharts.chart('pie-dag2', {
+      chart: {
+          type: 'pie',
+          margin: [20, 100, 0, 0],
+        spacingTop: 0,
+        spacingBottom: 0,
+        spacingLeft: 0,
+        spacingRight: 0
+      },
+      title: {
+          text: '',
+          align: 'left',
+          useHTML: true
+      },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'center',
+          verticalAlign: 'middle',
+          useHTML: true
+          // symbolHeight: 20,
+          // symbolWidth: 20,
+          // symbolRadius: 0
+      },
+      // subtitle: {
+      //     text: 'Click the slices to view versions. Source: netmarketshare.com.'
+      // },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: false,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          },
+           pie: {
+            size:'100%',
+            center: [40, 30],
+            allowPointSelect: true,
+            cursor: 'pointer',
+            symbolWidth: 10,
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+      },
+      series: [{
+          // name: 'Brands',
+          colorByPoint: true,
+          data: [{
+              name: 'VF NZ',
+              y: 5,
+              drilldown: 'VF NZ',
+              color: '#cd1e1e'
+          }, {
+              name: '2degrees',
+              y: 13,
+              drilldown: '2degrees',
+              color: '#e6d734'
+          }]
+      }],
+      drilldown: {
+          series: [{
+              name: 'VF NZ',
+              id: 'VF NZ',
+              data: [
+                  ['v11.0', 24.13],
+                  ['v8.0', 17.2],
+                  ['v9.0', 8.11],
+                  ['v10.0', 5.33],
+                  ['v6.0', 1.06],
+                  ['v7.0', 0.5]
+              ]
+          }, {
+              name: '2degrees',
+              id: '2degrees',
+              data: [
+                  ['v35', 2.76],
+                  ['v36', 2.32],
+                  ['v37', 2.31],
+                  ['v34', 1.27],
+                  ['v38', 1.02],
+                  ['v31', 0.33],
+                  ['v33', 0.22],
+                  ['v32', 0.15]
+              ]
+          }]
+      }
+  });
+</script>
+<!-- For pie-dag2 Ends-->
+
+<!-- For pie-dag3 Starts-->
+<script type="text/javascript">
+  // Create the chart
+  Highcharts.chart('pie-dag3', {
+      chart: {
+          type: 'pie',
+          margin: [20, 100, 0, 0],
+        spacingTop: 0,
+        spacingBottom: 0,
+        spacingLeft: 0,
+        spacingRight: 0
+      },
+      title: {
+          text: '',
+          align: 'left',
+          useHTML: true
+      },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'center',
+          verticalAlign: 'middle',
+          useHTML: true
+          // symbolHeight: 20,
+          // symbolWidth: 20,
+          // symbolRadius: 0
+      },
+      
+      // subtitle: {
+      //     text: 'Click the slices to view versions. Source: netmarketshare.com.'
+      // },
+      plotOptions: {
+          series: {
+              dataLabels: {
+                  enabled: false,
+                  format: '{point.name}: {point.y:.1f}%'
+              }
+          },
+           pie: {
+            size:'100%',
+            center: [40, 30],
+            allowPointSelect: true,
+            cursor: 'pointer',
+            symbolWidth: 10,
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+      },
+
+      tooltip: {
+          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+      },
+      series: [{
+          // name: 'Brands',
+          colorByPoint: true,
+          data: [{
+              name: 'Vodafone India',
+              y: 56.33,
+              drilldown: 'Vodafone India',
+              color: '#cd1e1e'
+          }, {
+              name: 'Airtel',
+              y: 24.03,
+              drilldown: 'Airtel',
+              color: '#e6d734'
+          }, {
+              name: 'Idea',
+              y: 10.38,
+              drilldown: 'Idea',
+              color: '#b6a91c'
+          },
+          {
+              name: 'Jio',
+              y: 12.38,
+              drilldown: 'Jio',
+              color: '#48c5a3'
+          },
+          {
+              name: 'Aircel',
+              y: 12.38,
+              drilldown: 'Aircel',
+              color: '#23a9d5'
+          },
+          {
+              name: 'Tata',
+              y: 5.38,
+              drilldown: 'Tata',
+              color: '#237fd5'
+          }]
+      }],
+      drilldown: {
+          series: [{
+              name: 'Vodafone India',
+              id: 'Vodafone India',
+              data: [
+                  ['v11.0', 24.13],
+                  ['v8.0', 17.2],
+                  ['v9.0', 8.11],
+                  ['v10.0', 5.33],
+                  ['v6.0', 1.06],
+                  ['v7.0', 0.5]
+              ]
+          }, {
+              name: 'Airtel',
+              id: 'Airtel',
+              data: [
+                  ['v40.0', 5],
+                  ['v41.0', 4.32],
+                  ['v42.0', 3.68],
+                  ['v39.0', 2.96],
+                  ['v36.0', 2.53],
+                  ['v43.0', 1.45],
+                  ['v31.0', 1.24],
+                  ['v35.0', 0.85],
+                  ['v38.0', 0.6],
+                  ['v32.0', 0.55],
+                  ['v37.0', 0.38],
+                  ['v33.0', 0.19],
+                  ['v34.0', 0.14],
+                  ['v30.0', 0.14]
+              ]
+          }, {
+              name: 'Idea',
+              id: 'Idea',
+              data: [
+                  ['v35', 2.76],
+                  ['v36', 2.32],
+                  ['v37', 2.31],
+                  ['v34', 1.27],
+                  ['v38', 1.02],
+                  ['v31', 0.33],
+                  ['v33', 0.22],
+                  ['v32', 0.15]
+              ]
+          },
+          {
+              name: 'Jio',
+              id: 'Jio',
+              data: [
+                  ['v35', 2.76],
+                  ['v36', 2.32],
+                  ['v37', 2.31],
+                  ['v34', 1.27],
+                  ['v38', 1.02],
+                  ['v31', 0.33],
+                  ['v33', 0.22],
+                  ['v32', 0.15]
+              ]
+          },
+          {
+              name: 'Aircel',
+              id: 'Aircel',
+              data: [
+                  ['v35', 2.76],
+                  ['v36', 2.32],
+                  ['v37', 2.31],
+                  ['v34', 1.27],
+                  ['v38', 1.02],
+                  ['v31', 0.33],
+                  ['v33', 0.22],
+                  ['v32', 0.15]
+              ]
+          },
+          {
+              name: 'Tata',
+              id: 'Tata',
+              data: [
+                  ['v35', 2.76],
+                  ['v36', 2.32],
+                  ['v37', 2.31],
+                  ['v34', 1.27],
+                  ['v38', 1.02],
+                  ['v31', 0.33],
+                  ['v33', 0.22],
+                  ['v32', 0.15]
+              ]
+          }]
+      }
+  });
+</script>
+<!-- For pie-dag3 Ends-->
+
+
+    
+
+    </body>
+</html>

@@ -1,0 +1,3703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Active Intelligence Workbench</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <link href="css/styles.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header__logo">
+                            <img src="images/logo1.png" class="img-responsive">
+                        </div>
+                        <div class="page-header__text">
+                            Active Intelligence Workbench
+                        </div>
+                        <div class="page-header-right">
+                            <div class="selector">
+                                <span class="text">This Quarter</span> <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                            </div>
+                            <div class="profile">
+                                <div class="avatar">
+                                    <img src="./images/profile.png">
+                                </div>
+                                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-breadcrumb">
+            <a href="aiwb-dashboard.html" class="link">Active Intelligence Workbench</a>
+            <span class="separator">></span>
+            <a href="roaming/wholesale.html" class="link">Wholesale</a>
+            <span class="separator">></span>
+            <a href="" class="link">Partner Agreement</a>
+
+            <div class="additional-link">
+                <a href="wholesale/wholesale-details-expanded/wholesale-details-expanded.html" class="btn btn-default">Wholesale Positions</a>
+            </div>
+
+        </div>
+        <div class="page-container breadcrumb-offset">
+            <div class="page-sidebar">
+                <label class="page-sidebar__top">
+                    <div class="arrow-right"></div>
+                    <div class="page-sidebar__top-wrapper">
+                        <div class="partner-logo">
+                            <img src="images/etisalat-logo.png" alt="Ooredoo">
+                        </div>
+                        <div class="partner-name">
+                            Etisalat Group
+                        </div>
+                        <div class="partner-select">
+                            <input class="styled-checkbox" id="select-all-home-partners" type="checkbox" value="value1" checked="true">
+                            <label for="select-all-home-partners">Select All</label>
+                        </div>
+                    </div>
+                    <div class="vs-text">
+                        vs.
+                    </div>
+                </label>
+                <div class="sidebar-content">
+                    <div id="tabs" class="custom-tabs">
+                        <ul>
+                            <li><a href="#group">Group</a></li>
+                            <li><a href="#country">Country</a></li>
+                        </ul>
+                        <div id="group">
+                            <div class="tab-content">
+                                <h4>Other Groups (25)</h4>
+                                <div class="tab-content__selection select-all">
+                                    <input class="styled-checkbox" id="select-all-other-partners" type="checkbox">
+                                    <label for="select-all-other-partners">Select All</label>
+                                </div>
+                                <div id="other-partners">
+                                    <div class="tab-content__selection">
+                                        <input class="styled-checkbox" id="other-vodafone" type="checkbox" checked="true">
+                                        <label for="other-vodafone">
+                                            Vodafone
+                                            <div class="tab-content__selection-stats">
+                                                <p>I/B Rev $1.3 M | O/B Cost $100 K</p>
+                                            </div>
+                                            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseVodafone" aria-expanded="false" aria-controls="collapseVodafone">
+                                                5 OpCos <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                            </button>
+                                            <div class="collapse group-partner" id="collapseVodafone">
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-uk" type="checkbox" checked="true">
+                                                    <label for="other-uk">UK</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-qatar" type="checkbox" checked="true">
+                                                    <label for="other-qatar">Italy</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-algeria" type="checkbox" checked="true">
+                                                    <label for="other-algeria">Germany</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-indonesia" type="checkbox" checked="true">
+                                                    <label for="other-indonesia">Romania</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-tunisia" type="checkbox" checked="true">
+                                                    <label for="other-tunisia">Netherlands</label>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tab-content__selection">
+                                        <input class="styled-checkbox" id="select-dt" type="checkbox" value="value1">
+                                        <label for="select-dt">
+                                            DT
+                                            <div class="tab-content__selection-stats">
+                                                <p>I/B Rev $1.3 M | O/B Cost $100 K</p>
+                                            </div>
+                                            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseDT" aria-expanded="false" aria-controls="collapseDT">
+                                                5 OpCos <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                            </button>
+                                            <div class="collapse group-partner" id="collapseDT">
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-germany" type="checkbox">
+                                                    <label for="other-germany">Germany</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-qatar" type="checkbox" value="value1">
+                                                    <label for="other-qatar">UAE</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-algeria" type="checkbox" value="value1">
+                                                    <label for="other-algeria">Algeria</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-indonesia" type="checkbox" value="value1">
+                                                    <label for="other-indonesia">Indonesia</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="other-tunisia" type="checkbox" value="value1">
+                                                    <label for="other-tunisia">Tunisia</label>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tab-content__selection">
+                                        <input class="styled-checkbox" id="select-china" type="checkbox" value="value1">
+                                        <label for="select-china">
+                                            China Mobile
+                                            <div class="tab-content__selection-stats">
+                                                <p>I/B Rev $1.3 M | O/B Cost $100 K</p>
+                                            </div>
+                                            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseChina" aria-expanded="false" aria-controls="collapseChina">
+                                                5 OpCos <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                            </button>
+                                            <div class="collapse group-partner" id="collapseChina">
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Germany</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">UAE</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Algeria</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Indonesia</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Tunisia</label>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tab-content__selection">
+                                        <input class="styled-checkbox" id="select-at" type="checkbox" value="value1">
+                                        <label for="select-at">
+                                            AT&T
+                                            <div class="tab-content__selection-stats">
+                                                <p>I/B Rev $1.3 M | O/B Cost $100 K</p>
+                                            </div>
+                                            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseAT" aria-expanded="false" aria-controls="collapseAT">
+                                                5 OpCos <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                            </button>
+                                            <div class="collapse group-partner" id="collapseAT">
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Germany</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">UAE</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Algeria</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Indonesia</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="styled-checkbox" id="select-all-partners" type="checkbox" value="value1">
+                                                    <label for="select-all-partners">Tunisia</label>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="country">
+                            <div class="tab-content">
+                                <div class="form-group">
+                                    <label>Please select a country:</label>
+                                    <select class="form-control">
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Åland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia, Plurinational State of</option>
+                                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, the Democratic Republic of the</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Côte d'Ivoire</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CW">Curaçao</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                        <option value="FO">Faroe Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GG">Guernsey</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard Island and McDonald Islands</option>
+                                        <option value="VA">Holy See (Vatican City State)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran, Islamic Republic of</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IM">Isle of Man</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JE">Jersey</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea, Democratic People's Republic of</option>
+                                        <option value="KR">Korea, Republic of</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao People's Democratic Republic</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macao</option>
+                                        <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia, Federated States of</option>
+                                        <option value="MD">Moldova, Republic of</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestinian Territory, Occupied</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">UAE</option>
+                                        <option value="RE">Réunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="BL">Saint Barthélemy</option>
+                                        <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="MF">Saint Martin (French part)</option>
+                                        <option value="PM">Saint Pierre and Miquelon</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SX">Sint Maarten (Dutch part)</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="SS">South Sudan</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TW">Taiwan, Province of China</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic of</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VG">Virgin Islands, British</option>
+                                        <option value="VI">Virgin Islands, U.S.</option>
+                                        <option value="WF">Wallis and Futuna</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                </div>
+                                <div class="major-partners">
+                                    <h5>Top 5 Partners</h5>
+                                    <ul>
+                                        <li><a href="#">UAE</a></li>
+                                        <li><a href="#">Germany</a></li>
+                                        <li><a href="#">Algeria</a></li>
+                                        <li><a href="#">Indonesia</a></li>
+                                        <li><a href="#">Maldives</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-navigation page-topbar">
+                <div class="container-fluid">
+                    <div class="page-navigation-container" id="home-partners">
+                        <label class="topbar-card">
+                            <div class="topbar-card__heading">
+                                <input class="styled-checkbox" id="home-qatar" type="checkbox" checked="true">
+                                <label for="home-qatar">UAE</label>
+                            </div>
+                            <div class="topbar-card__logo">
+                                <img src="images/ae.svg" alt="Etisalat UAE">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-navigation__card-data">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                I/B Rev
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                O/B Cost
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red"></li>
+                                                    <li class="status-red"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="topbar-card">
+                            <div class="topbar-card__heading">
+                                <input class="styled-checkbox" id="qatar-top-selection" type="checkbox" value="value1" checked="true">
+                                <label for="qatar-top-selection">Egypt</label>
+                            </div>
+                            <div class="topbar-card__logo">
+                                <img src="images/eg.svg" alt="Etisalat Egypt">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-navigation__card-data">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                I/B Rev
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                O/B Cost
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red"></li>
+                                                    <li class="status-red"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="topbar-card">
+                            <div class="topbar-card__heading">
+                                <input class="styled-checkbox" id="home-indonesia" type="checkbox" checked="true">
+                                <label for="home-indonesia">Morocco</label>
+                            </div>
+                            <div class="topbar-card__logo">
+                                <img src="images/ma.svg" alt="Oredoo Morocco">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-navigation__card-data">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                I/B Rev
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                O/B Cost
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red"></li>
+                                                    <li class="status-red"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="topbar-card">
+                            <div class="topbar-card__heading">
+                                <input class="styled-checkbox" id="home-tunisia" type="checkbox"checked="true">
+                                <label for="home-tunisia">Saudi Arabia</label>
+                            </div>
+                            <div class="topbar-card__logo">
+                                <img src="images/sa.svg" alt="Etisalat Saudi Arabia">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-navigation__card-data">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                I/B Rev
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                O/B Cost
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red"></li>
+                                                    <li class="status-red"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="topbar-card">
+                            <div class="topbar-card__heading">
+                                <input class="styled-checkbox" id="home-maldives" type="checkbox"checked="true">
+                                <label for="home-maldives">Sri Lanka</label>
+                            </div>
+                            <div class="topbar-card__logo">
+                                <img src="images/lk.svg" alt="Etisalat Sri Lanka">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="page-navigation__card-data">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                I/B Rev
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-red lit-red"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                O/B Cost
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="status-lights">
+                                                    <li class="status-red"></li>
+                                                    <li class="status-red"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-yellow lit-yellow"></li>
+                                                    <li class="status-green"></li>
+                                                    <li class="status-green"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="page-master combination" id="combination-1">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">I/B REVENUE</span>
+                                    <!---->
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph1"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >$1.1M</span></li>
+                                                <li><span class="data-tag">Home</span><span>$7.3M</span></li>
+                                                <li><span class="data-tag">International</span><span>$73.3K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8 border-separator-right">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph2"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph3"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">O/B COST</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph4"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >$74.1K</span></li>
+                                                <li><span class="data-tag">Home</span><span>$4.9M</span></li>
+                                                <li><span class="data-tag">International</span><span>$49.3K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8 border-separator-right">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph5"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph6"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">I/B TRAFFIC</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph7"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >1.2M</span></li>
+                                                <li><span class="data-tag">Home</span><span>8.0M</span></li>
+                                                <li><span class="data-tag">International</span><span>80.0K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph8"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph9"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">O/B TRAFFIC</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph10"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >76.0K</span></li>
+                                                <li><span class="data-tag">Home</span><span>5.6M</span></li>
+                                                <li><span class="data-tag">International</span><span>50.6K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph11"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph12"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">REVENUE DISTR.</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="data-card-body-heading">TOP 5 CONTRIBUTORS</div>
+                                    <div class="" id="graph13"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">TRAFFIC DISTR.</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="data-card-body-heading">TOP 5 CONTRIBUTORS</div>
+                                    <div class="" id="graph14"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-master combination" id="combination-2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">I/B REVENUE</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph1-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >$61.1K</span></li>
+                                                <li><span class="data-tag">Home</span><span>$407.4K</span></li>
+                                                <li><span class="data-tag">International</span><span>$4.7M</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8 border-separator-right">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph2-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph3-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">O/B COST</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph4-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >$43.2K</span></li>
+                                                <li><span class="data-tag">Home</span><span>$288K</span></li>
+                                                <li><span class="data-tag">International</span><span>$28.8K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8 border-separator-right">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph5-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph6-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">I/B TRAFFIC</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph7-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >122.2K</span></li>
+                                                <li><span class="data-tag">Home</span><span>814.9K</span></li>
+                                                <li><span class="data-tag">International</span><span>81.4K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph8-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph9-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">O/B TRAFFIC</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph10-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >86.4K</span></li>
+                                                <li><span class="data-tag">Home</span><span>576K</span></li>
+                                                <li><span class="data-tag">International</span><span>57.6K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph11-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph12-a"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">REVENUE DISTR.</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="data-card-body-heading">TOP 5 CONTRIBUTORS</div>
+                                    <div class="" id="graph13-a"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">TRAFFIC DISTR.</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="data-card-body-heading">TOP 5 CONTRIBUTORS</div>
+                                    <div class="" id="graph14-a"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-master combination" id="combination-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">I/B REVENUE</span>
+                                    <!---->
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph1-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >$54.7K</span></li>
+                                                <li><span class="data-tag">Home</span><span>$3.6M</span></li>
+                                                <li><span class="data-tag">International</span><span>$36.4K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8 border-separator-right">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph2-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph3-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">O/B COST</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph4-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >$36.8K</span></li>
+                                                <li><span class="data-tag">Home</span><span>$2.4M</span></li>
+                                                <li><span class="data-tag">International</span><span>$24.5K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8 border-separator-right">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph5-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph6-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">I/B TRAFFIC</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph7-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >59.7K</span></li>
+                                                <li><span class="data-tag">Home</span><span>3.9M</span></li>
+                                                <li><span class="data-tag">International</span><span>39.8K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph8-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph9-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">O/B TRAFFIC</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph10-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <ul class="data-card-list">
+                                                <li><span class="data-tag">Local</span><span >37.8K</span></li>
+                                                <li><span class="data-tag">Home</span><span>2.5M</span></li>
+                                                <li><span class="data-tag">International</span><span>25.2K</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder green-map">
+                                                <div class="graph" id="graph11-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-separator-bottom">
+                                        <div class="col-xs-8">
+                                            <div class="graph-holder">
+                                                <div class="graph" id="graph12-b"></div>
+                                                <div class="bench-marker"></div>
+                                                <div class="eoc-marker"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 border-separator-left">
+                                            <div class="single-data">
+                                                Roaming Data
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">REVENUE DISTR.</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="data-card-body-heading">TOP 5 CONTRIBUTORS</div>
+                                    <div class="" id="graph13-b"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="data-card">
+                                <div class="data-card-header">
+                                    <span class="data-card-heading">TRAFFIC DISTR.</span>
+
+                                </div>
+                                <div class="data-card-body">
+                                    <div class="data-card-body-heading">TOP 5 CONTRIBUTORS</div>
+                                    <div class="" id="graph14-b"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-master combination" id="combination-4">
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="slick/slick.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/series-label.js"></script>
+        <script src="js/exporting.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#combination-1').show();
+                $('#other-vodafone').click(function () {
+                    $('#collapseVodafone .styled-checkbox').prop('checked', $(this).prop('checked'));
+                });
+                $('#other-uk').click(function () {
+                    $('.combination').hide();
+                    $('#combination-2').show();
+                });
+                $('#home-qatar').click(function () {
+                    $('.combination').hide();
+                    $('#combination-3').show();
+                });
+                $('#other-qatar').click(function () {
+                    $('.combination').hide();
+                    $('#combination-4').show();
+                });
+                $("#tabs").tabs();
+                $("#select-all-home-partners").click(function () {
+                    $("#home-partners .styled-checkbox").prop('checked', $(this).prop('checked'));
+                });
+                $("#select-all-other-partners").click(function () {
+                    $("#other-partners .styled-checkbox").prop('checked', $(this).prop('checked'));
+                });
+
+                $('.page-navigation-container').slick({
+                    infinite: false,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    responsive: [{
+                            breakpoint: 1250,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 1096,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 930,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        }
+                    ],
+                    dots: false,
+                    arrows: false
+                });
+            });
+        </script>
+
+        // combination 1
+        <script type = "text/javascript" >
+            Highcharts.setOptions({
+                lang: {
+                    decimalPoint: '.',
+                    thousandsSep: ','
+                }
+            });
+            Highcharts.chart('graph1', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10,
+                            style: {
+                                textOutline: false
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [10622494]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [9164280]
+                    }
+                ]
+            });
+            Highcharts.chart('graph2', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [670167]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [558071]
+                    }
+                ]
+            });
+            Highcharts.chart('graph3', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [12297686]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [9297686]
+                    }
+                ]
+            });
+
+            Highcharts.chart('graph4', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [7469317]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [6169317]
+                    }
+                ]
+            });
+            Highcharts.chart('graph5', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [400869]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [340869]
+                    }
+                ]
+            });
+            Highcharts.chart('graph6', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [7470519]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [6471719]
+                    }
+                ]
+            });
+
+            Highcharts.chart('graph7', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [14001760]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [10001760]
+                    }
+                ]
+            });
+            Highcharts.chart('graph8', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [6734306]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [5034306]
+                    }
+                ]
+            });
+            Highcharts.chart('graph9', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [22697080]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [18697000]
+                    }
+                ]
+            });
+
+            Highcharts.chart('graph10', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [9833509]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [6333509]
+                    }
+                ]
+            });
+            Highcharts.chart('graph11', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [5608213]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [3301613]
+                    }
+                ]
+            });
+            Highcharts.chart('graph12', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [18765675]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [13765675]
+                    }
+                ]
+            });
+            Highcharts.chart('graph13', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    reversed: true
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: [{
+                        categories: ['Spain', 'Italy', 'UK', 'Germany', 'Portugal'],
+                        reversed: false,
+                        labels: {
+                            step: 1
+                        }
+                    }, {
+                        opposite: true,
+                        reversed: false,
+                        categories: ['Spain', 'Italy', 'UK', 'Germany', 'Portugal'],
+                        linkedTo: 0,
+                        labels: {
+                            step: 1
+                        }
+                    }],
+                yAxis: {
+                    title: {
+                        text: null
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                        name: 'Inbound Revenue',
+                        data: [7016457, 2591560, 2479925, 1682750, 1561161]
+                    }, {
+                        name: 'Outbound Cost',
+                        data: [-4675093, -1569153, -1420729, -1261353, -117425]
+                    }]
+            });
+            Highcharts.chart('graph14', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['UK', 'Germany', 'Italy', 'Spain', 'Australia'],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'No. of Roamers'
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                        name: 'Inbound Roamers',
+                        data: [2047609, 1819050, 1691391, 1121359, 804402]
+                    }, {
+                        name: 'Outbound Roamers',
+                        data: [1447331, 929440, 915000, 787098, 603038]
+                    }]
+            });
+        </script>
+
+        <script type="text/javascript">
+            Highcharts.chart('graph1-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [762249]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [509356]
+                    }
+                ]
+            });
+            Highcharts.chart('graph2-a', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [69723]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [42771]
+                    }
+                ]
+            });
+            Highcharts.chart('graph3-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [711936]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [491735]
+                    }
+                ]
+            });
+            Highcharts.chart('graph4-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [410033]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [360033]
+                    }
+                ]
+            });
+            Highcharts.chart('graph5-a', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [78230]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [32730]
+                    }
+                ]
+            });
+            Highcharts.chart('graph6-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [448090]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [280017]
+                    }
+                ]
+            });
+            Highcharts.chart('graph7-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [1248903]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [1018711]
+                    }
+                ]
+            });
+            Highcharts.chart('graph8-a', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [792916]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [611010]
+                    }
+                ]
+            });
+            Highcharts.chart('graph9-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [2761405]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [2458675]
+                    }
+                ]
+            });
+            Highcharts.chart('graph10-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [856040]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [720065]
+                    }
+                ]
+            });
+            Highcharts.chart('graph11-a', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [527567]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [467567]
+                    }
+                ]
+            });
+            Highcharts.chart('graph12-a', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [{
+                        name: 'Forecast',
+                        data: [1978986]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [1400086]
+                    }
+                ]
+            });
+            Highcharts.chart('graph13-a', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    reversed: true
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: [{
+                        categories: ['Vodafone', 'EE', '3', 'O2'],
+                        reversed: false,
+                        labels: {
+                            step: 1
+                        }
+                    }, {
+                        opposite: true,
+                        reversed: false,
+                        categories: ['Vodafone', 'EE', '3', 'O2'],
+                        linkedTo: 0,
+                        labels: {
+                            step: 1
+                        }
+                    }],
+                yAxis: {
+                    title: {
+                        text: null
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                        name: 'Inbound Revenue',
+                        data: [1043861, 566130, 341541, 320469]
+                    }, {
+                        name: 'Outbound Cost',
+                        data: [-672779, -554016, -167457, -181471]
+                    }]
+            });
+            Highcharts.chart('graph14-a', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Vodafone', 'EE', '3', 'O2'],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'No. of Roamers'
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                        name: 'Inbound Roamers',
+                        data: [1018711, 700200, 305000, 252780]
+                    }, {
+                        name: 'Outbound Roamers',
+                        data: [720065, 465288, 85255, 103019]
+                    }]
+            });
+        </script>
+
+        <script type="text/javascript">
+            Highcharts.chart('graph1-b', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [7559343]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [4559343]
+                    }]
+            });
+            Highcharts.chart('graph2-b', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [326641]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [286641]
+                    }
+                ]
+            });
+            Highcharts.chart('graph3-b', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [4530299]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [3330299]
+                    }
+                ]
+            });
+            Highcharts.chart('graph4-b', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [6569312]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [3069312]
+                    }
+                ]
+            });
+            Highcharts.chart('graph5-b', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [345080]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [175080]
+                    }
+                ]
+            });
+            Highcharts.chart('graph6-b', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [4518078]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [2318078]
+                    }
+                ]
+            });
+            Highcharts.chart('graph7-b', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [6476000]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [4976000]
+                    }
+                ]
+            });
+            Highcharts.chart('graph8-b', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [3685765]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [2585765]
+                    }
+                ]
+            });
+            Highcharts.chart('graph9-b', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [8997230]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [6697000]
+                    }
+                ]
+            });
+            Highcharts.chart('graph10-b', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Voice']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [9833509]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [6333509]
+                    }
+                ]
+            });
+            Highcharts.chart('graph11-b', {
+                colors: ['#F4F4F4', '#25CC68'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SMS']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [5608213]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [3301613]
+                    }
+                ]
+            });
+            Highcharts.chart('graph12-b', {
+                colors: ['#F4F4F4', '#FA566C'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Data']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            align: 'right',
+                            color: '#2A2526',
+                            x: -10, style: {textOutline: false}
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Forecast',
+                        data: [18765675]
+                    },
+                    {
+                        name: 'Actual',
+                        data: [13765675]
+                    }
+                ]
+            });
+            Highcharts.chart('graph13-b', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    reversed: true
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: [{
+                        categories: ['Vodafone', 'EE', '3', 'O2'],
+                        reversed: false,
+                        labels: {
+                            step: 1
+                        }
+                    }, {
+                        opposite: true,
+                        reversed: false,
+                        categories: ['Vodafone', 'EE', '3', 'O2'],
+                        linkedTo: 0,
+                        labels: {
+                            step: 1
+                        }
+                    }],
+                yAxis: {
+                    title: {
+                        text: null
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                        name: 'Inbound Revenue',
+                        data: [1043861, 566130, 341541, 320469]
+                    }, {
+                        name: 'Outbound Cost',
+                        data: [-672779, -554016, -167457, -181471]
+                    }]
+            });
+            Highcharts.chart('graph14-b', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['Vodafone', 'EE', '3', 'O2'],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'No. of Roamers'
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                        name: 'Inbound Roamers',
+                        data: [1018711, 700200, 305000, 252780]
+                    }, {
+                        name: 'Outbound Roamers',
+                        data: [720065, 465288, 85255, 103019]
+                    }]
+            });
+        </script>
+        <!-- <script type="text/javascript">
+        Highcharts.chart('graph13-b', {
+            colors: ['#76DDFB', '#2073AD'],
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                reversed: true
+            },
+            exporting: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: [{
+                categories: ['Spain', 'Italy', 'UK', 'Germany', 'Portugal'],
+                reversed: false,
+                labels: {
+                    step: 1
+                }
+            }, {
+                opposite: true,
+                reversed: false,
+                categories: ['Spain', 'Italy', 'UK', 'Germany', 'Portugal'],
+                linkedTo: 0,
+                labels: {
+                    step: 1
+                }
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                }
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                name: 'Inbound',
+                data: [3039722, 1080269, 1043861, 701257, 694601]
+            }, {
+                name: 'Outbound',
+                data: [-672779, -554016, -167457, -181471]
+            }]
+        }); <
+        /script> <
+        script type = "text/javascript" >
+            Highcharts.chart('graph14-b', {
+                colors: ['#76DDFB', '#2073AD'],
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    reversed: true
+                },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: [{
+                    categories: ['UK', 'Germany', 'Italy', 'Spain', 'Greece'],
+                    reversed: false,
+                    labels: {
+                        step: 1
+                    }
+                }, {
+                    opposite: true,
+                    reversed: false,
+                    categories: ['UK', 'Germany', 'Italy', 'Spain', 'Greece'],
+                    linkedTo: 0,
+                    labels: {
+                        step: 1
+                    }
+                }],
+                yAxis: {
+                    title: {
+                        text: null
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                    name: 'Inbound',
+                    data: [1018711, 905000, 841488, 557890, 344356]
+                }, {
+                    name: 'Outbound',
+                    data: [-720065, -465288, -85255, -103019]
+                }]
+            }); 
+            </script> -->
+    </body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>IOT Analytics</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+      <link rel="stylesheet" type="text/css" href="css/main.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   </head>
+   <body>
+      <div>
+         <div class="sidebar">
+            <ul>
+               <li>
+                  <span class="black-ham">
+                  <span class="icon-hamburger">
+                  <span class="path1"></span><span class="path2"></span>
+                  </span>
+                  <span>
+               </li>
+               <li class="active">
+                  <a href="#">
+                  <span class="icon">
+                  <span class="icon-Dashboard"> </span>
+                  </span>
+                  <span class="text">Dashboard</span>
+                  </a>
+               </li>
+               <li >
+                  <a href="iot_analytics.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">IOT Analytics</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Report</span>
+                  </a>	
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-help">
+                  </span></span>
+                  <span class="text">Support?FAQ</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-section">
+            <div class="header">
+               <div class="pull-left search">
+                  <span class="magnifier"><span class="icon-Search">
+                  </span></span>
+                  <input type="text" name="" placeholder="search">
+               </div>
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     <span class="bellicon">
+                     <span class="icon-notification"> </span>
+                     <span class="badge">5</span>
+                     </span>
+                     </a>
+                     <ul class="dropdown-menu notification">
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://via.placeholder.com/30x30" />
+                     <span>Vipin</span> <span class="caret"></span></a>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <div class="main_body container-fluid">
+               <div class="row">
+                  <div class="col-md-12 marginTop">
+                     <button type="button" class="btn btn-primary ">This Month</button>
+                     <button type="button" class="btn btn-light ">This Quartery</button>
+                     <button type="button" class="btn btn-light ">This Year</button>
+                     <button type="button" class="btn btn-light ">Custom</button>
+                  </div>
+                  <div class="col-md-6 wholesale marginTop">
+                     <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#prepaidtab">Revenue</a></li>
+                        <li><a data-toggle="tab" href="#postpaidtab">Subscribers</a></li>
+                       
+                      </ul>
+                     
+                      <div class="tab-content">
+                        <div id="prepaidtab" class="tab-pane fade in active">
+                          <div style = " height:360px;"id = "iotrev"></div>
+                         
+                        </div>
+                        <div id="postpaidtab" class="tab-pane fade">
+                          <div style = " height:360px;" id = "iotsubs"></div>
+                         
+                        </div>
+                      </div>
+                </div>
+                  <div class="col-md-6 marginTop" >
+                        <div id="iotpie" ></div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12"><h2>Top Customers by Revenue
+                  </h2></div>
+               </div>
+               <div class="row">
+                  
+                  <div class="col-md-12 table-responsive custom marginTop">
+                      <table class="table">
+                                                <thead>
+                                                   <tr>
+                                                      <th rowspan="2">CUSTOMER</th>
+                                                      <th rowspan="2">TOTAL CONNECTION</th>
+                                                      <th rowspan="2">ACTIVE CONNECTIONS</th>
+                                                      <th rowspan="2">REVENUE</th>
+                                                      <th rowspan="2">ARPU</th>
+                                                      <th  style ="text-align: center;  "rowspan="1" colspan="2">QoQ</th>
+                                                   </tr>
+                                                   <tr>
+                                                      <th colspan ="1" rowspan="1">ACTUAL</th>
+                                                      <th colspan ="1" rowspan="1">FORECASTED</th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Gx. Enterprise</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>100</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>20</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>$ 342.9K</div>
+                                                      </td>
+                                                      <td>
+                                                        <div >$ 50</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >12%</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >10%</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>AUDI</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>120</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>30</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>$ 442.9K</div>
+                                                      </td>
+                                                      <td>
+                                                        <div >$ 60</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >13%</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >11%</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Rx Home Security</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>110</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>30</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>$ 362.9K</div>
+                                                      </td>
+                                                      <td>
+                                                        <div >$ 50</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >10%</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >9%</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>German. Enterprise</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>105</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>60</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>$ 242.9K</div>
+                                                      </td>
+                                                      <td>
+                                                        <div >$ 70</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >12%</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >9%</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Trans. Enterprise</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>200</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>10</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>$ 348.9K</div>
+                                                      </td>
+                                                      <td>
+                                                        <div >$ 60</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >12%</div>
+                                                      </td>
+                                                      <td>
+                                                         <div >10%</div>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="js/jQuery-plugin-progressbar.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+         	$(".progress-bar").loading();
+
+
+ 			$(".setsize").each(function() {
+       			 $(this).height($(this).width());
+    		});
+			});
+			$(window).on('resize', function(){
+    		$(".setsize").each(function() {
+        	$(this).height($(this).width());
+    		});
+
+
+         })
+         $(function() {
+         	
+         
+             var start = moment().subtract(29, 'days');
+             var end = moment();
+         
+             function cb(start, end) {
+                 $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+             }
+             $('#reportrange').daterangepicker({
+                 startDate: start,
+                 endDate: end,
+                 ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                 }
+             }, cb);
+             cb(start, end);
+         });
+         
+      </script>
+      <script type="text/javascript">
+         
+Highcharts.chart('iotpie', {
+         exporting: { enabled: false },
+      credits: {enabled:false},
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Service Distribution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                        enabled: true,
+                         format: '{point.percentage:.0f} %',
+                         distance: -50,
+                         filter: {
+                             property: 'percentage',
+                             operator: '>',
+                             value: 4
+                         },
+                         style:{
+                           textOutline:false
+                         }
+            },
+            showInLegend: true
+        }
+    },
+    
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Auto',
+            y: 60,
+            color: '#9ACFFF',
+        }, {
+            name: 'Home',
+            y: 40,
+            sliced: true,
+            selected: true,
+            color: '#8AE7AB',
+        }, {
+            name: 'Sign',
+            y: 10,
+            color: '#C4A2E9',
+        }]
+    }]
+});
+      </script>
+      <script type="text/javascript">
+         
+Highcharts.chart('postpaid', {
+
+    title: {
+        text: ''
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        title: {
+            text: 'Roamers Count'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },
+            enableMouseTracking: false
+        }
+    },
+
+    series: [{
+        name: 'Total Retail',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Postpaid',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    },  {
+        name: 'Prepaid',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+       <script type="text/javascript">
+         
+Highcharts.chart('iotsubs', {
+
+    title: {
+        text: ''
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Q1','Q2','Q3','Q4']
+    },
+    yAxis: {
+        title: {
+            text: 'Subscribers Count '
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },
+            marker: {
+               enabled:false,
+                lineWidth: 1,
+                lineColor: '#666666'
+            },
+            
+            enableMouseTracking: false
+        }
+    },
+
+    series: [{
+        name: 'Total Subscribers in K',
+        data: [470000,520000,340000,440000]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+       <script type="text/javascript">
+         
+Highcharts.chart('iotrev', {
+
+    title: {
+        text: ''
+    },
+exporting: { enabled: false },
+    credits: {enabled:false},
+    subtitle: {
+        text: ''
+    },
+   xAxis: {
+        categories: ['Q1','Q2','Q3','Q4']
+    },
+    yAxis: {
+        title: {
+            text: 'Revenue in $'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: false
+            },
+            marker: {
+               enabled:false,
+                lineWidth: 1,
+                lineColor: '#666666'
+            },
+            enableMouseTracking: false
+        }
+    },
+
+    series: [{
+        name: 'Total Revenue',
+        data: [1100000,1200000,1400000,1300000]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+      </script>
+   </body>
+</html>

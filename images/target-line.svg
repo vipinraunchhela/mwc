@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="57px" viewBox="0 0 27 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>target-line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="03-AIWB-Retail-3rd-Level" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03-C-AIWB-Retail-3rd-Level" transform="translate(-520.000000, -399.000000)">
+            <g id="target-line" transform="translate(520.000000, 396.000000)">
+                <text id="Target" font-family="OpenSans-Bold, Open Sans" font-size="8" font-weight="bold" letter-spacing="0.399999976" fill="#2A2526">
+                    <tspan x="0" y="9">Target</tspan>
+                </text>
+                <path d="M13,14.989141 L13,61.0391944" id="Line-5" stroke="#7E7678" stroke-linecap="square" stroke-dasharray="3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

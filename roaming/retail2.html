@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Outbound Roamer</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+    <body class="rll2">
+        <div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href="../aiwb-dashboard.html" class="home-link">
+                            <span class="black-ham">
+                                <span class="home-icon"></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="retail.html">
+                            <span class="icon">
+                                <span class="icon-Dashboard"> </span>
+                            </span>
+                            <span class="text">Retail Roaming</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="retail2.html">
+                            <span class="icon">
+                                <span class="icon-My-ticket"> </span>
+                            </span>
+                            <span class="text">Outbound Roamer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="../iot/index.html">
+                            <span class="icon">
+                                <span class="icon-My-ticket"> </span>
+                            </span>
+                            <span class="text">IOT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <form name="myform" action="http://tyche.mobileum.com:6080/rra/out" method="POST" >
+                            <input type="hidden" class="form-control " name="username" value="RAtest">
+                            <input type="hidden" class="form-control " name="password" value="passw0rd">                                    
+                            <a href="http://tyche.mobileum.com:6080/rra/out"  onclick="document.forms['myform'].submit(); return false;">
+                                <span class="icon"><span class="icon-Report">
+                                    </span></span>
+                                <span class="text">RRRA</span>
+                            </a>
+                        </form>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="main-section">
+
+                <div class="header header-new">
+                    <div class="site-logo">
+                        <img src="../aiwb/icons/mobileum-logo.png" alt="">
+                    </div>
+                    <div class="head-right">
+                        <div class="search">
+                            <span class="magnifier">
+                                <span class="icon-Search"></span>
+                            </span>
+                            <input type="text" name="search" placeholder="">
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="bellicon">
+                                        <span class="icon-notification"> </span>
+                                        <span class="badge">5</span>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu notification">
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="icons/alex.png">
+                                    <span>Alex Sanders</span> <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_body container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 marginTop">
+                            <button type="button" class="btn btn-primary ">This Month</button>
+                            <button type="button" class="btn btn-light ">This Quarter</button>
+                            <button type="button" class="btn btn-light ">This Year</button>
+                            <button type="button" class="btn btn-light ">Custom</button>
+                        </div>
+
+
+                        <div class="row col-md-12 marginTop">
+                            <div class="col-md-6">
+                                <h2>Travel Patterns</h2>
+                                <div id="travelpattern" style="min-width: 310px; height: 450px; margin: 0 auto"></div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <!--- begin of prepaid and postpaid tab -->
+                                <div class="marginTop wholesale">
+                                    <h2>Usage Pattern</h2>
+                                    <div class="col-md-8">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a data-toggle="tab" href="#prepaidbox">MO MOU </a></li>
+                                            <li><a data-toggle="tab" href="#Postpaidbox">MT MOU</a></li>
+                                            <li><a data-toggle="tab" href="#databox">Data</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Prepaid
+                                                <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Prepaid</a></li>
+                                                <li><a href="#">Postpaid</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actionbtns">
+                                        <div class="tab-content">
+                                            <div id="prepaidbox" class="tab-pane fade in active">
+                                                <div id="prepaid" style="min-width: 310px; height: 410px; margin: 0 auto"></div>
+                                            </div>
+                                            <div id="Postpaidbox" class="tab-pane fade">
+                                                <div id="postpaid" style="min-width: 310px; height: 410px; margin: 0 auto"></div>
+                                            </div>
+                                            <div id="databox" class="tab-pane fade">
+                                                <div id="data" style="min-width: 310px; height: 410px; margin: 0 auto"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--- end of tab -->
+                            </div>
+                        </div>
+
+
+
+                        <div class="row col-md-12 marginTop">
+
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <h2>Campaign Adoption</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="dropdown">
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ALL
+                                                <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">ALL</a></li>
+                                                <li><a href="#">RLAH</a></li>
+                                                <li><a href="#">Unlimited Day Pass</a></li>
+                                                <li><a href="#">Unlimited Week Pass</a></li>
+                                                <li><a href="#">500 MB Day Pass</a></li>
+                                                <li><a href="#">3 GB Week Pass</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row marginTop">
+
+                                    <div id="campadoption" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <!--- begin of prepaid and postpaid tab -->
+                                <div class="marginTop wholesale">
+                                    <h2>Conversion per Campaign Channel</h2>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#channel1">Prepaid </a></li>
+                                        <li><a data-toggle="tab" href="#channel2">Postpaid</a></li>
+                                    </ul>
+                                    <div class="actionbtns">
+                                        <div class="tab-content">
+                                            <div id="channel1" class="tab-pane fade in active">
+
+                                                <div id="channelaff1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                            </div>
+                                            <div id="channel2" class="tab-pane fade">
+                                                <div id="channelaff2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--- end of tab -->
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/jQuery-plugin-progressbar.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- high chart for prepaid and postpaid -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- high chart -->
+<!-- high chart for travel pattern -->
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<!-- high chart -->
+
+
+
+
+
+<script type="text/javascript">
+                                $(document).ready(function () {
+                                    $(".progress-bar").loading();
+                                })
+                                $(function () {
+
+
+                                    var start = moment().subtract(29, 'days');
+                                    var end = moment();
+
+                                    function cb(start, end) {
+                                        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                    }
+                                    $('#reportrange').daterangepicker({
+                                        startDate: start,
+                                        endDate: end,
+                                        ranges: {
+                                            'Today': [moment(), moment()],
+                                            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                            'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                        }
+                                    }, cb);
+                                    cb(start, end);
+                                });
+
+                                // prepaid 
+
+                                Highcharts.chart('prepaid', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true,
+                                                format: '{point.percentage:.0f} %',
+                                                distance: -50,
+                                                filter: {
+                                                    property: 'percentage',
+                                                    operator: '>',
+                                                    value: 4
+                                                }
+                                            },
+                                            showInLegend: true
+                                        }
+                                    },
+
+                                    series: [{
+                                            name: 'Brands',
+                                            colorByPoint: true,
+                                            data: [{
+                                                    name: 'Silent',
+                                                    y: 60,
+                                                    color: '#9ACFFF',
+                                                }, {
+                                                    name: '1-10 ',
+                                                    y: 40,
+                                                    sliced: true,
+                                                    selected: true,
+                                                    color: '#8AE7AB',
+                                                }, {
+                                                    name: '11-50',
+                                                    y: 10,
+                                                    color: '#C4A2E9',
+                                                }, {
+                                                    name: '51-100',
+                                                    y: 5
+                                                }, {
+                                                    name: '100+',
+                                                    y: 5,
+                                                    color: '#F4C28B',
+                                                }]
+                                        }]
+                                });
+
+
+
+
+
+// postpaid
+
+
+
+// Create the chart
+                                Highcharts.chart('postpaid', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: false
+                                            },
+                                            showInLegend: true, dataLabels: {
+                                                enabled: true,
+                                                format: '{point.percentage:.0f} %',
+                                                distance: -50,
+                                                filter: {
+                                                    property: 'percentage',
+                                                    operator: '>',
+                                                    value: 4
+                                                }
+                                            }
+                                        }
+                                    },
+
+                                    series: [{
+                                            name: 'Brands',
+                                            colorByPoint: true,
+                                            data: [{
+                                                    name: 'Silent',
+                                                    y: 51,
+                                                    color: '#9ACFFF',
+                                                }, {
+                                                    name: '1-10',
+                                                    y: 42,
+                                                    sliced: true,
+                                                    selected: true,
+                                                    color: '#8AE7AB',
+                                                }, {
+                                                    name: '11-50',
+                                                    y: 8,
+                                                    color: '#C4A2E9',
+                                                }, {
+                                                    name: '51-100',
+                                                    y: 6
+                                                }, {
+                                                    name: '100+',
+                                                    y: 3,
+                                                    color: '#F4C28B',
+                                                }]
+                                        }]
+                                });
+
+
+                                Highcharts.chart('data', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+
+                                            dataLabels: {
+                                                enabled: true,
+                                                format: '{point.percentage:.0f} %',
+                                                distance: -50,
+                                                filter: {
+                                                    property: 'percentage',
+                                                    operator: '>',
+                                                    value: 4
+                                                }
+                                            },
+                                            showInLegend: true
+                                        }
+                                    },
+
+                                    series: [{
+                                            name: 'Brands',
+                                            colorByPoint: true,
+                                            data: [{
+                                                    name: 'Silent',
+                                                    y: 43,
+                                                    color: '#9ACFFF',
+                                                }, {
+                                                    name: '1-50 MB',
+                                                    y: 33,
+                                                    sliced: true,
+                                                    selected: true,
+                                                    color: '#8AE7AB',
+                                                }, {
+                                                    name: '51-200',
+                                                    y: 14,
+                                                    color: '#C4A2E9',
+                                                }, {
+                                                    name: '201-500',
+                                                    y: 7
+                                                }, {
+                                                    name: '500+',
+                                                    y: 3,
+                                                    color: '#F4C28B',
+                                                }]
+                                        }]
+                                });
+
+// travel pattens 
+
+
+                                Highcharts.chart('campadoption', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        type: 'area'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    subtitle: {
+                                        text: ''
+                                    },
+                                    xAxis: {
+                                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                                        tickmarkPlacement: 'on',
+                                        title: {
+                                            enabled: false
+                                        }
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: 'Percent'
+                                        },
+                                        labels: {
+                                            formatter: function () {
+                                                return this.value / 100 + '%';
+                                            }
+                                        }
+                                    },
+                                    tooltip: {
+                                        split: false,
+                                        valueSuffix: ' millions'
+                                    },
+                                    plotOptions: {
+                                        area: {
+                                            stacking: 'normal',
+                                            lineColor: '#666666',
+                                            lineWidth: '.1',
+                                            marker: {
+                                                enabled: false,
+                                                lineWidth: 0,
+                                                lineColor: ''
+                                            }
+                                        }
+                                    },
+                                    series: [{
+                                            name: 'Postpaid',
+                                            data: [106, 107, 231, 213, 121, 167, 266],
+                                            color: '#8AE7AB'
+                                        }, {
+                                            name: 'Prepaid',
+                                            data: [163, 103, 276, 178, 247, 229, 228],
+                                            color: '#C4A2E9'
+
+                                        }]
+                                });
+
+// travel pattens 
+
+                                Highcharts.chart('travelpattern', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        type: 'column'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    xAxis: {
+                                        categories: ['Rare', 'Regular', 'Frequent']
+                                    },
+                                    yAxis: {
+                                        min: 0,
+                                        title: {
+                                            text: 'Value in K'
+                                        },
+                                        stackLabels: {
+                                            enabled: true,
+                                            style: {
+                                                fontWeight: '',
+                                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                            }
+                                        }
+                                    },
+                                    legend: {
+                                        align: 'right',
+                                        x: -30,
+                                        verticalAlign: 'top',
+                                        y: 25,
+                                        floating: true,
+                                        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                        borderColor: '#CCC',
+                                        borderWidth: 1,
+                                        shadow: false
+                                    },
+                                    tooltip: {
+                                        headerFormat: '<b>{point.x}</b><br/>',
+                                        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                    },
+                                    plotOptions: {
+                                        column: {
+                                            stacking: 'normal',
+                                            dataLabels: {
+                                                enabled: false,
+                                                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                            }
+                                        }
+                                    },
+                                    series: [{
+                                            name: 'Prepaid',
+                                            data: [115, 63, 25],
+                                            color: '#8AE7AB'
+                                        }, {
+                                            name: 'Postpaid',
+                                            data: [135, 62, 15],
+                                            color: '#9ACFFF'
+
+                                        }]
+                                });
+
+
+
+// channel Affiliate
+                                Highcharts.chart('channelaff1', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        type: 'column'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    xAxis: {
+                                        type: 'category'
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: ' % market share'
+                                        },
+                                        formatter: function () {
+                                            return this.value + '%';
+                                        }
+
+                                    },
+                                    legend: {
+                                        enabled: false
+                                    },
+                                    plotOptions: {
+                                        series: {
+                                            borderWidth: 0,
+                                            dataLabels: {
+                                                enabled: true,
+                                                format: '{point.y:.1f}%'
+                                            }
+                                        }
+                                    },
+
+                                    tooltip: {
+                                        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                                        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+                                    },
+
+                                    series: [{
+                                            name: 'Brands',
+                                            exporting: {enabled: false},
+                                            credits: {enabled: false},
+                                            colorByPoint: true,
+                                            data: [{
+                                                    name: 'SMS',
+                                                    y: 56.33,
+                                                    drilldown: 'SMS',
+                                                    color: '#9ACFFF'
+                                                }, {
+                                                    name: 'Email',
+                                                    y: 24.03,
+                                                    drilldown: 'Email',
+                                                    color: '#8AE7AB'
+                                                }, {
+                                                    name: 'USSD',
+                                                    y: 10.38,
+                                                    drilldown: 'USSD',
+                                                    color: '#C4A2E9'
+                                                }, {
+                                                    name: 'Customer Support',
+                                                    y: 4.77,
+                                                    drilldown: 'Customer Support',
+                                                    color: '#F4C28B'
+                                                }, {
+                                                    name: 'App',
+                                                    y: 0.91,
+                                                    drilldown: 'App',
+                                                    color: '#FFABBC'
+                                                }]
+                                        }],
+                                    drilldown: {
+                                        series: [{
+                                                name: 'Microsoft Internet Explorer',
+                                                id: 'Microsoft Internet Explorer',
+                                                data: [
+                                                    [
+                                                        'v11.0',
+                                                        24.13
+                                                    ],
+                                                    [
+                                                        'v8.0',
+                                                        17.2
+                                                    ],
+                                                    [
+                                                        'v9.0',
+                                                        8.11
+                                                    ],
+                                                    [
+                                                        'v10.0',
+                                                        5.33
+                                                    ],
+                                                    [
+                                                        'v6.0',
+                                                        1.06
+                                                    ],
+                                                    [
+                                                        'v7.0',
+                                                        0.5
+                                                    ]
+                                                ]
+                                            }, {
+                                                name: 'Chrome',
+                                                id: 'Chrome',
+                                                data: [
+                                                    [
+                                                        'v40.0',
+                                                        5
+                                                    ],
+                                                    [
+                                                        'v41.0',
+                                                        4.32
+                                                    ],
+                                                    [
+                                                        'v42.0',
+                                                        3.68
+                                                    ],
+                                                    [
+                                                        'v39.0',
+                                                        2.96
+                                                    ],
+                                                    [
+                                                        'v36.0',
+                                                        2.53
+                                                    ],
+                                                    [
+                                                        'v43.0',
+                                                        1.45
+                                                    ],
+                                                    [
+                                                        'v31.0',
+                                                        1.24
+                                                    ],
+                                                    [
+                                                        'v35.0',
+                                                        0.85
+                                                    ],
+                                                    [
+                                                        'v38.0',
+                                                        0.6
+                                                    ],
+                                                    [
+                                                        'v32.0',
+                                                        0.55
+                                                    ],
+                                                    [
+                                                        'v37.0',
+                                                        0.38
+                                                    ],
+                                                    [
+                                                        'v33.0',
+                                                        0.19
+                                                    ],
+                                                    [
+                                                        'v34.0',
+                                                        0.14
+                                                    ],
+                                                    [
+                                                        'v30.0',
+                                                        0.14
+                                                    ]
+                                                ]
+                                            }, {
+                                                name: 'Firefox',
+                                                id: 'Firefox',
+                                                data: [
+                                                    [
+                                                        'v35',
+                                                        2.76
+                                                    ],
+                                                    [
+                                                        'v36',
+                                                        2.32
+                                                    ],
+                                                    [
+                                                        'v37',
+                                                        2.31
+                                                    ],
+                                                    [
+                                                        'v34',
+                                                        1.27
+                                                    ],
+                                                    [
+                                                        'v38',
+                                                        1.02
+                                                    ],
+                                                    [
+                                                        'v31',
+                                                        0.33
+                                                    ],
+                                                    [
+                                                        'v33',
+                                                        0.22
+                                                    ],
+                                                    [
+                                                        'v32',
+                                                        0.15
+                                                    ]
+                                                ]
+                                            }, {
+                                                name: 'Safari',
+                                                id: 'Safari',
+                                                data: [
+                                                    [
+                                                        'v8.0',
+                                                        2.56
+                                                    ],
+                                                    [
+                                                        'v7.1',
+                                                        0.77
+                                                    ],
+                                                    [
+                                                        'v5.1',
+                                                        0.42
+                                                    ],
+                                                    [
+                                                        'v5.0',
+                                                        0.3
+                                                    ],
+                                                    [
+                                                        'v6.1',
+                                                        0.29
+                                                    ],
+                                                    [
+                                                        'v7.0',
+                                                        0.26
+                                                    ],
+                                                    [
+                                                        'v6.2',
+                                                        0.17
+                                                    ]
+                                                ]
+                                            }, {
+                                                name: 'Opera',
+                                                id: 'Opera',
+                                                data: [
+                                                    [
+                                                        'v12.x',
+                                                        0.34
+                                                    ],
+                                                    [
+                                                        'v28',
+                                                        0.24
+                                                    ],
+                                                    [
+                                                        'v27',
+                                                        0.17
+                                                    ],
+                                                    [
+                                                        'v29',
+                                                        0.16
+                                                    ]
+                                                ]
+                                            }]
+                                    }
+                                });
+
+// channel Affiliate
+                                Highcharts.chart('channelaff2', {
+                                    exporting: {enabled: false},
+                                    credits: {enabled: false},
+                                    chart: {
+                                        type: 'column'
+                                    },
+                                    title: {
+                                        text: ''
+                                    },
+                                    xAxis: {
+                                        type: 'category'
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: '% market share'
+                                        }
+
+                                    },
+                                    legend: {
+                                        enabled: false
+                                    },
+                                    plotOptions: {
+                                        series: {
+                                            borderWidth: 0,
+                                            dataLabels: {
+                                                enabled: true,
+                                                format: '{point.y:.1f}%'
+                                            }
+                                        }
+                                    },
+
+                                    tooltip: {
+                                        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                                        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+                                    },
+
+                                    series: [{
+                                            name: 'Brands',
+                                            exporting: {enabled: false},
+                                            credits: {enabled: false},
+                                            colorByPoint: true,
+                                            data: [{
+                                                    name: 'SMS',
+                                                    y: 54.5,
+                                                    drilldown: 'SMS',
+                                                    color: '#9ACFFF'
+                                                }, {
+                                                    name: 'App',
+                                                    y: 25.5,
+                                                    drilldown: 'App',
+                                                    color: '#FFABBC'
+                                                }, {
+                                                    name: 'Customer Support',
+                                                    y: 15,
+                                                    drilldown: 'Customer Support',
+                                                    color: '#F4C28B'
+                                                }, {
+                                                    name: 'Email',
+                                                    y: 10.1,
+                                                    drilldown: 'Email',
+                                                    color: '#8AE7AB'
+                                                }, {
+                                                    name: 'USSD',
+                                                    y: 5.9,
+                                                    drilldown: 'USSD',
+                                                    color: '#C4A2E9'
+                                                }]
+                                        }],
+                                    drilldown: {
+                                        series: [{
+                                                name: 'Microsoft Internet Explorer',
+                                                id: 'Microsoft Internet Explorer',
+                                                data: [
+                                                    [
+                                                        'v11.0',
+                                                        24.13
+                                                    ],
+                                                    [
+                                                        'v8.0',
+                                                        17.2
+                                                    ],
+                                                    [
+                                                        'v9.0',
+                                                        8.11
+                                                    ],
+                                                    [
+                                                        'v10.0',
+                                                        5.33
+                                                    ],
+                                                    [
+                                                        'v6.0',
+                                                        1.06
+                                                    ],
+                                                    [
+                                                        'v7.0',
+                                                        0.5
+                                                    ]
+                                                ]
+                                            }]
+                                    }
+                                });
+
+
+</script>
+</body>
+</html>

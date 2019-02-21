@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Wholesale</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+      <link rel="stylesheet" type="text/css" href="css/main.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   </head>
+   <body>
+      <div>
+         <div class="sidebar">
+            <ul>
+               <li>
+                  <span class="black-ham">
+                  <span class="icon-hamburger">
+                  <span class="path1"></span><span class="path2"></span>
+                  </span>
+                  <span>
+               </li>
+               <li class="active">
+                  <a href="#">
+                  <span class="icon">
+                  <span class="icon-Dashboard"> </span>
+                  </span>
+                  <span class="text">Dashboard</span>
+                  </a>
+               </li>
+               <li >
+                  <a target="_blank"  href="https://datastudio.google.com/embed/u/0/reporting/1OHjuECt7mZBiXGuEG8z4k91jO_YNWMlL/page/efUN">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">Wholesale Analytics</span>
+                  </a>
+               </li>
+               <li>
+                  <a target="_blank" href="http://115.112.115.75:8031/imas">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Steering Analytics</span>
+                  </a>
+               </li>
+                <li>
+                  <a target="_blank" href="http://galadriel.mobileum.com:8080">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Interconnect Partner Management</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-help">
+                  </span></span>
+                  <span class="text">Support?FAQ</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-section">
+            <div class="header">
+               <div class="pull-left search">
+                  <span class="magnifier"><span class="icon-Search">
+                  </span></span>
+                  <input type="text" name="" placeholder="search">
+               </div>
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     <span class="bellicon">
+                     <span class="icon-notification"> </span>
+                     <span class="badge">5</span>
+                     </span>
+                     </a>
+                     <ul class="dropdown-menu notification">
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <div class="notification_text">
+                                 <span class="status icon-Assigned"></span>
+                                 Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                              </div>
+                              <div class="timeblock">5min ago</div>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://via.placeholder.com/30x30" />
+                     <span>Vipin</span> <span class="caret"></span></a>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <div class="main_body container-fluid">
+               <div class="row">
+                  <div class="col-md-12 marginTop">
+                     <button type="button" class="btn btn-primary ">This Month</button>
+                     <button type="button" class="btn btn-light ">This Quarter</button>
+                     <button type="button" class="btn btn-light ">This Year</button>
+                     <button type="button" class="btn btn-light ">Custom</button>
+                  </div>
+                  <div class="col-md-12 marginTop wholesale">
+                     <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#inboundtab" >Inbound Revenue</a></li>
+                        <li><a data-toggle="tab" href="#outboundtab">Outbound Cost</a></li>
+                     </ul>
+                     <div class="actionbtns">
+                        <div class="tab-content">
+                           <div id="inboundtab" class="tab-pane fade in active">
+                              <div class="col-md-8">
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          <i class="fa fa-dollar main"></i>
+                                          5.3M
+                                       </div>
+                                       <div class="text-center">I/B Revenue</div>
+                                    </div>
+                                 </div>
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          <i class="fa fa-dollar main"></i>
+                                          13.6M
+                                       </div>
+                                       <div class="text-center">Target</div>
+                                    </div>
+                                 </div>
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          5.5%
+                                       </div>
+                                       <div class="text-center">CAGR</div>
+                                    </div>
+                                 </div>
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          5.5<img src="./icon/green.svg">
+                                       </div>
+                                       <div class="text-center">Position</div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="col-md-12">
+                                          <h2>Top Inbound Partners
+                                          </h2>
+                                          <div class="table-responsive custom">
+                                             <table class="table">
+                                                <thead>
+                                                   <tr>
+                                                      <th>Country</th>
+                                                      <th>Partner</th>
+                                                      <th>I/B Revenue</th>
+                                                      <th>O/B Cost</th>
+                                                      <th>Quality Score</th>
+                                                      <th>Forecast <br>Commitment Level</th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>United Arab Emirates</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Etisalat United Arab Emirates</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>342.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>342.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">55</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">140</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Sweden</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Telenor Sverige AB</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>302.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>302.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">67</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">110</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Germany (Federal Republic of)</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>T-Mobile Deutschland GmbH</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>202.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>202.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">49</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">90</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>France</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Orange France</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>272.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>272.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">41</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">95</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Netherlands (Kingdom of the)</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>T-Mobile Netherlands BV</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">81</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">125</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Germany (Federal Republic of)</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>E-Plus Germany</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">77</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">110</div>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 " >
+                                 <div>
+                                    <h2>Top 10 Partners
+                                    </h2>
+                                 </div>
+                                 <div id ="piechart2"></div>
+                              </div>
+                           </div>
+                           <div id="outboundtab" class="tab-pane fade">
+                             <div class="col-md-8">
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          <i class="fa fa-dollar main"></i>
+                                          5.3M
+                                       </div>
+                                       <div class="text-center">I/B Revenue</div>
+                                    </div>
+                                 </div>
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          <i class="fa fa-dollar main"></i>
+                                          13.6M
+                                       </div>
+                                       <div class="text-center">Target</div>
+                                    </div>
+                                 </div>
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          5.5%
+                                       </div>
+                                       <div class="text-center">CAGR</div>
+                                    </div>
+                                 </div>
+                                 <div class="box_blocks_big" >
+                                    <div class="front">
+                                       <div class="mainNumber text-center">
+                                          5.5<img src="./icon/green.svg">
+                                       </div>
+                                       <div class="text-center">Position</div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="col-md-12">
+                                          <h2>Top Outbound Partners
+                                          </h2>
+                                          <div class="table-responsive custom">
+                                             <table class="table">
+                                                <thead>
+                                                   <tr>
+                                                      <th>Country</th>
+                                                      <th>Partner</th>
+                                                      <th>I/B Revenue</th>
+                                                      <th>O/B Cost</th>
+                                                      <th>Quality Score</th>
+                                                      <th>Forecast <br>Commitment Level</th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Norway</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Telenor Norge AS</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>342.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>342.9K</div>
+                                                      </td>
+                                                      <td>
+                                                        <div class = "red">49</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">110</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Iraq (Republic of)</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Asia Cell Telecommunications</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>362.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>362.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class = "green">74</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">130</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Russian Federation</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>MTS Russia</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>202.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>202.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class = "green">78</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">95</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Morocco (Kingdom of)</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Maroc Telecom</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>272.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>272.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">48</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="red">80</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>France</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Bouygues Telecom France</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">80</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">120</div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class=""><strong>Greece</strong></div>
+                                                      </td>
+                                                      <td>
+                                                         <div>Cosmote Greece</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div>472.9K</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">61</div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="green">130</div>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                               <div class="col-md-4 " >
+                                 <div>
+                                    <h2>Top 10 Partners
+                                    </h2>
+                                 </div>
+                                 <div id ="piechart"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="js/jQuery-plugin-progressbar.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+         	$(".progress-bar").loading();
+
+
+    			$(".setsize").each(function() {
+          			 $(this).height($(this).width());
+       		});
+
+            $(window).on('resize', function(){
+               $(".setsize").each(function() {
+                  $(this).height($(this).width());
+               });
+            });
+
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+         
+             function cb(start, end) {
+                 $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+             }
+             $('#reportrange').daterangepicker({
+                 startDate: start,
+                 endDate: end,
+                 ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                 }
+             }, cb);
+             cb(start, end);
+			});
+			
+         
+         
+      </script>
+      <script type="text/javascript">
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+   chart.reflow();
+   chart2.reflow();
+})
+
+         </script>
+      <script type="text/javascript">
+         chart = new Highcharts.Chart("piechart",{
+            exporting:{
+               enabled:false
+            },
+            credits:{
+               enabled:false
+            },
+            chart: {
+                renderTo: 'container',
+                type: 'pie'
+            },
+            legend: {
+               align: 'right',
+               verticalAlign: 'top',
+               layout: 'vertical',
+               x: 0,
+               y: 100
+               },
+            title: {
+                text: ''
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false,
+                    dataLabels: {
+                        enabled: true,
+                         format: '{point.percentage:.0f} %',
+                         distance: -30,
+                         filter: {
+                             property: 'percentage',
+                             operator: '>',
+                             value: 4
+                         },
+                         style:{
+                           textOutline:false
+                         }
+            }                     
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+                }
+            },
+            series: [{
+                name: 'Browsers',
+                data: [["Etisalat UAE",5.8],["Orange France",5.7],["Telecom Italia",4.2]
+                ,["Cingular ",7],["T-Mobile USA",7],["Telecom Italia",7],
+                ["MegaFon",4.1],["O2 Germany",3.4],["Others",69.4]],
+                colors:['#9ACFFF','#8AE7AB','#C4A2E9','#F4C28B','#FFABBC','#F44343','#4CA2E9','#f2b354','#ff795f'],
+                size: '100%',
+                innerSize: '65%',
+                showInLegend:true
+            }]
+        });
+      </script>
+         
+<script type="text/javascript">
+
+         chart2 = new Highcharts.Chart("piechart2",{
+            exporting:{
+               enabled:false
+            },
+            credits:{
+               enabled:false
+            },
+            chart: {
+                renderTo: 'container',
+                type: 'pie'
+            },
+            legend: {
+               align: 'right',
+               verticalAlign: 'top',
+               layout: 'vertical',
+               x: 0,
+               y: 100
+               },
+            title: {
+                text: ''
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false,
+                    dataLabels: {
+                        enabled: true,
+                         format: '{point.percentage:.0f} %',
+                         distance: -30,
+                         filter: {
+                             property: 'percentage',
+                             operator: '>',
+                             value: 4
+                         },
+                         style:{
+                           textOutline:false
+                         }
+            }                     
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+                }
+            },
+            series: [{
+                name: 'Browsers',
+                data: [["Etisalat UAE",5.8],["Orange France",5.9],["Telecom Italia",4.2]
+                ,["Cingular ",7],["T-Mobile USA",7],["Telecom Italia",7],
+                ["MegaFon",4.1],["O2 Germany",3.4],["Others",67.4]],
+                colors:['#9ACFFF','#8AE7AB','#C4A2E9','#F4C28B','#FFABBC','#F44343','#4CA2E9','#f2b354','#ff795f'],
+                size: '100%',
+                innerSize: '65%',
+                showInLegend:true
+            }]
+        });
+      </script>
+   </body>
+</html>

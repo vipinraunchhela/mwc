@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Data Services</title>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/custom.js"></script>
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/laptop.css">
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/laptop.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+         <link rel="stylesheet" type="text/css" href="css/style-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/laptop-td.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="header-top"></div>
+            <div class="header-heading">
+                <div class="hea-head">
+                    <h2><a href="dashboard-cem.html">Roaming CEM Dashboard</a>  / <a href="dashboard-cem.html">Vodafone Australia</a> / Data Services</h2>
+                </div>
+                <div class="header-heading-icon">
+                    <ul>
+                        <li><a href=""><span class="icon1"></span></a></li>
+                        <li><a href="roaming-cem-dashboard.html"><span class="icon2"></span></a></li>
+                    </ul>
+                </div>
+            </div><!-- header-heading -->  
+        </header>
+
+        <!-- ===========header=========== -->
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="../aiwb-dashboard.html" class="home-link">
+                        <span class="black-ham">
+                            <span class="home-icon"></span>
+                        </span>
+                    </a>
+                </li>
+                <li >
+                    <a href="dashboard-cem.html">
+                        <span class="icon">
+                            <span class="icon-Dashboard"> </span>
+                        </span>
+                        <span class="text">Network Analytics</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><span class="icon-help">
+                            </span></span>
+                        <span class="text">Support?FAQ</span>
+                    </a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="main-section">
+                   
+            <section class="section-2">
+              <div class="section-2-flex">
+                <div class="section-2-box1">
+                  <h2><span class="icons-1"></span>Issue</h2>
+                  <div class="details-box">
+                    <h5><span>Issue :</span> Full Outage of Data Service in Vodafone Australia </h5>
+                    <h5><span>When : </span> 12:23:23 03 Feb 2019</h5>
+                    <h5><span>Subscribers Affected : </span> 1,052</h5>
+                    <h5><span>Engineer Handling : </span>    </h5>
+                    <h5><span>Time To Resolve : </span>  </h5>
+                  </div><!-- details-box -->
+                  <div class="table-scroll">
+                    <table>
+                      <tr>
+                        <td>03/02/19</td>
+                        <td>12:23:23 </td>
+                        <td>ALARM</td>
+                        <td>Critical</td>
+                        <td>QOS</td>
+                        <td>Vodafone</td>
+                        <td>All Data Services Lost </td>
+                      </tr>
+                      <tr>
+                        <td>27/01/19</td>
+                        <td>15:42:23   </td>
+                        <td>ALARM</td>
+                        <td>CLEAR</td>
+                        <td>Major</td>
+                        <td>Vodafone</td>
+                        <td>20% Fall In Data Usage</td>
+                      </tr>
+                      <tr>
+                        <td>27/01/19</td>
+                        <td>14:03:23</td>
+                        <td>ALARM</td>
+                        <td>Critical</td>
+                        <td>QOS</td>
+                        <td>Vodafone</td>
+                        <td>20% Fall In Data Usage</td>
+                      </tr>
+                      <tr>
+                        <td>27/01/19</td>
+                        <td>14:03:23</td>
+                        <td>ALARM</td>
+                        <td>Critical</td>
+                        <td>QOS</td>
+                        <td>Vodafone</td>
+                        <td>20% Fall In Data Usage</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </div><!-- section-2-box1 -->
+                <div class="section-2-box1">
+                  <h2><span></span>Data SSI Score Trend - Australia</h2>
+                  <div id="data-rcx"></div>
+                </div>
+                <div class="section-2-box1">
+                  <h2><span class="icons-2"></span>Analysis</h2>
+                  <div class="analysis-box">
+                    <h5><span>Fault :</span> Invalid Parameter in Session Setup Message</h5>
+                    <div class="flexs-para">
+                      <div class="heading">
+                        <span>Possible Causes :</span>
+                      </div><!-- heading -->
+                      <div class="detials">
+                        <h5>Vodafone Australia Configuration Issue ?</h5>
+                        <h5>Vodafone Australia Recent Software Upgrade ?</h5>
+                      </div><!-- detials -->
+                    </div><!-- flexs-para -->
+                    <h5><span>Previous Occurrence :</span> 14 Nov 2018</h5>
+                    <h5><span>Previous Cause :</span> Mis-configuration Issue</h5>
+                    <h5><span>Previous Outage Time :</span> 07:23:16</h5>
+                    <div class="center-btns">
+                      <a href="">VIEW MSG TRACE</a>
+                      <a href="">EXPORT MSG TRACE</a>
+                    </div> 
+                  </div><!-- analysis-box -->
+                </div>
+                <div class="section-2-box1">
+                  <h2><span></span>Premium Roamer Distribution - Australia</h2>
+                  <div id="premium"></div>
+                </div>
+                <div class="section-2-box1">
+                  <h2><span></span>Non-Premium Roamer Distribution - Australia</h2>
+                  <div id="non-premium"></div>
+                </div>
+                <div class="section-2-box1">
+                  <h2><span class="icons-3"></span>Actions</h2>
+                  <div class="actions-box">
+                    <div class="actions-box-flex">
+                      <div class="para">
+                        Steer the non-premium subscribers to a 
+                        non-preferred partner ?
+                      </div>
+                      <div class="btns">
+                        <a href="">STEER <span></span></a>
+                      </div>
+                    </div><!-- actions-box-flex -->
+                    <div class="actions-box-flex">
+                      <div class="para">
+                        Reach out to the affected subscribers ?
+                      </div>
+                      <div class="btns">
+                        <a href="">CAMPAIGN <span></span></a>
+                      </div>
+                    </div><!-- actions-box-flex -->
+                    <div class="actions-box-flex">
+                      <div class="para">
+                        Launch active tests in Vodafone Australia 
+                        network ?
+                      </div>
+                      <div class="btns">
+                        <a href="">TEST <span></span></a>
+                      </div>
+                    </div><!-- actions-box-flex -->
+                  </div><!-- actions-box -->
+                </div>
+              </div><!-- section-2-flex -->
+            </section><!-- section-2 -->
+
+
+
+         
+        </div>
+
+
+
+
+
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- JS For Highcharts -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+        <!-- For Data-RCX Starts-->
+        <script type="text/javascript">
+            Highcharts.chart('data-rcx', {
+
+                title: {
+                    text: ''
+                },
+                // subtitle: {
+                //     text: 'Source: thesolarfoundation.com'
+                // },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'R-CX Score'
+                    },
+                    tickInterval: 2,
+                    max: 10,
+
+                },
+                xAxis: {
+                    title: {
+                        text: 'TIME'
+                    },
+                    // tickInterval: 1,
+                    minRange: 1,
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        day: '00:00'
+                    },
+
+                    labels: {
+                        rotation: 0
+                    },
+
+                    tickInterval: 3 * 3600 * 1000,
+
+                },
+                legend: {
+                    // symbol: 'circle',
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    symbolHeight: 10,
+                    symbolWidth: 10,
+                    symbolRadius: 0,
+                    y: 0,
+                    padding: 3,
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false,
+                            enabled: false
+                        },
+                        marker: {
+                            enabled: true
+                        },
+                        pointStart: Date.UTC(2018, 01, 01, 07, 30),
+                        pointInterval: 10 * 1800 * 250
+                                // showInLegend: false,
+                                // pointStart: 21
+                    }
+                },
+
+                series: [{
+                        showInLegend: false,
+                        name: 'Vodafone Aus',
+                        data: [10, 9.5, 9.1, 9.0, 9.2, 0, 0, 0],
+                        color: '#f4341b',
+                        marker: {enabled: false}
+                    }, {
+                        showInLegend: false,
+                        name: 'Telstra',
+                        data: [8, 8.5, 8.2, 8.9, 8.8, 8.7, 8.9, 9.0],
+                        color: '#1d8acf',
+                        marker: {enabled: false}
+                    }, {
+                        showInLegend: false,
+                        name: 'Optus',
+                        data: [6, 6.5, 6.2, 6.1, 6.3, 6.4, 6.2, 6.1],
+                        color: '#f2be09',
+                        marker: {enabled: false}
+                    },
+                    {
+                        name: "Vodafone Australia",
+                        data: {},
+                        color: '#f4341b',
+                        marker: {symbol: 'circle', radius: 12}
+                    },
+                    {
+                        name: "Telstra",
+                        data: {},
+                        color: '#1d8acf',
+                        marker: {symbol: 'circle', radius: 12}
+                    },
+                    {
+                        name: "Optus",
+                        data: {},
+                        color: '#f2be09',
+                        marker: {symbol: 'circle', radius: 12}
+                    }],
+
+                responsive: {
+                    rules: [{
+                            condition: {
+                                maxWidth: 500
+                            },
+                            chartOptions: {
+                                legend: {
+                                    layout: 'horizontal',
+                                    align: 'center',
+                                    verticalAlign: 'bottom'
+                                }
+                            }
+                        }]
+                }
+
+            });
+        </script>
+        <!-- For Data-RCX Ends-->
+
+
+        <!-- For Premium Starts-->
+        <script type="text/javascript">
+            Highcharts.chart('premium', {
+
+                title: {
+                    text: ''
+                },
+                // subtitle: {
+                //     text: 'Source: thesolarfoundation.com'
+                // },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+
+                yAxis: {
+                    title: {
+                        text: '# Roamers'
+                    },
+                    tickInterval: 50,
+                },
+
+                xAxis: {
+                    title: {
+                        text: 'TIME'
+                    },
+                    // tickInterval: 1,
+                    minRange: 1,
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        day: '00:00'
+                    },
+
+                    labels: {
+                        rotation: 0
+                    },
+
+                    tickInterval: 3 * 3600 * 1000,
+
+                },
+
+                legend: {
+                    // symbol: 'circle',
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    symbolHeight: 10,
+                    symbolWidth: 10,
+                    symbolRadius: 0,
+                    y: 0,
+                    padding: 3
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false,
+                            enabled: false
+                        },
+                        marker: {
+                            enabled: true
+                        },
+                        pointStart: Date.UTC(2018, 01, 01, 10, 30),
+                        pointInterval: 10 * 1800 * 100
+
+                                // showInLegend: false,
+                                // pointStart: 21
+                    }
+                },
+
+                series: [{
+                        showInLegend: false,
+                        name: 'Vodafone Aus',
+                        data: [370, 240, 320, 330, 304, 0, 0, 0, 0],
+                        color: '#f4341b',
+                        marker: {enabled: false}
+                    }, {
+                        showInLegend: false,
+                        name: 'Telstra',
+                        data: [0, 0, 0, 0, 0, 350, 350, 344, 357],
+                        color: '#1d8acf',
+                        marker: {enabled: false}
+                    }, {
+                        showInLegend: false,
+                        name: 'Optus',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        color: '#f2be09',
+                        marker: {enabled: false}
+                    },
+                    {
+                        name: "Vodafone Australia",
+                        data: {},
+                        color: '#f4341b',
+                        marker: {symbol: 'circle', radius: 12}
+                    },
+                    {
+                        name: "Telstra",
+                        data: {},
+                        color: '#1d8acf',
+                        marker: {symbol: 'circle', radius: 12}
+                    },
+                    {
+                        name: "Optus",
+                        data: {},
+                        color: '#f2be09',
+                        marker: {symbol: 'circle', radius: 12}
+                    }],
+
+                responsive: {
+                    rules: [{
+                            condition: {
+                                maxWidth: 500
+                            },
+                            chartOptions: {
+                                legend: {
+                                    layout: 'horizontal',
+                                    align: 'center',
+                                    verticalAlign: 'bottom'
+                                }
+                            }
+                        }]
+                }
+            });
+        </script>
+        <!-- For Premium Ends-->
+
+
+        <!-- For Non-Premium Starts-->
+        <script type="text/javascript">
+            Highcharts.chart('non-premium', {
+
+                title: {
+                    text: ''
+                },
+                // subtitle: {
+                //     text: 'Source: thesolarfoundation.com'
+                // },
+                exporting: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'R-CX Score'
+                    },
+                    tickInterval: 50
+                },
+                xAxis: {
+                    title: {
+                        text: 'TIME'
+                    },
+                    // tickInterval: 1,
+                    minRange: 1,
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        day: '00:00'
+                    },
+
+                    labels: {
+                        rotation: 0
+                    },
+                    tickInterval: 3 * 3600 * 1000,
+                },
+                legend: {
+                    // symbol: 'circle',
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    symbolHeight: 10,
+                    symbolWidth: 10,
+                    symbolRadius: 0,
+                    y: 0,
+                    padding: 3,
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false,
+                            enabled: false
+                        },
+                        marker: {
+                            enabled: true
+                        },
+                        pointStart: Date.UTC(2006, 0, 01, 21),
+                        pointInterval: 3 * 3600 * 1000
+                                // showInLegend: false,
+                                // pointStart: 21
+                    }
+                },
+
+                series: [{
+                        showInLegend: false,
+                        name: 'Vodafone Aus',
+                        data: [370, 340, 320, 350, 320, 320],
+                        color: '#f4341b',
+                        marker: {enabled: false}
+                    }, {
+                        showInLegend: false,
+                        name: 'Telstra',
+                        data: [270, 220, 220, 255, 250, 220],
+                        color: '#1d8acf',
+                        marker: {enabled: false}
+                    }, {
+                        showInLegend: false,
+                        name: 'Optus',
+                        data: [50, 50, 50, 65, 60, 70],
+                        color: '#f2be09',
+                        marker: {enabled: false}
+                    },
+                    {
+                        name: "Vodafone Australia",
+                        data: {},
+                        color: '#f4341b',
+                        marker: {symbol: 'circle', radius: 12}
+                    },
+                    {
+                        name: "Telstra",
+                        data: {},
+                        color: '#1d8acf',
+                        marker: {symbol: 'circle', radius: 12}
+                    },
+                    {
+                        name: "Optus",
+                        data: {},
+                        color: '#f2be09',
+                        marker: {symbol: 'circle', radius: 12}
+                    }],
+
+                responsive: {
+                    rules: [{
+                            condition: {
+                                maxWidth: 500
+                            },
+                            chartOptions: {
+                                legend: {
+                                    layout: 'horizontal',
+                                    align: 'center',
+                                    verticalAlign: 'bottom'
+                                }
+                            }
+                        }]
+                }
+
+            });
+        </script>
+        <!-- For Non-Premium Ends-->
+    </body>
+</html>

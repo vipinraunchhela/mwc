@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sociales {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#timeline {
+  width: 800px;
+  overflow: auto;
+  margin: 40px auto;
+  position: relative;
+  background: url('../images/dot.gif') left 45px repeat-x;
+}
+
+#dates {
+  width: 800px;
+  height: 60px;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+#dates li {
+  list-style: none;
+  float: left;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  background: url('../images/biggerdot.png') center bottom no-repeat;
+}
+
+#dates a {
+  text-decoration: none;
+  position: relative;
+  top: -13px;
+  padding-top: 30px;
+  display: block;
+  color: inherit;
+  outline: none;
+}
+
+#dates a:after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  top: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+#dates .selected:after {
+  background: #fff;
+}
+
+#dates .selected:before {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  content: '';
+  background: #f96268;
+  border-radius: 50%;
+  top: 2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+#dates span {
+    display: block;
+    font-size: 12px;
+}
+#issues {
+  width: 1200px;
+  height: 350px;
+  overflow: hidden;
+}
+
+#issues li {
+  width: 800px;
+  height: 350px;
+  list-style: none;
+  float: left;
+}
+
+#grad_left,
+#grad_right {
+  width: 100px;
+  height: 350px;
+  position: absolute;
+  top: 0;
+}
+
+#grad_left {
+  left: 0;
+  background: url('../images/grad_left.png') repeat-y;
+}
+
+#grad_right {
+  right: 0;
+  background: url('../images/grad_right.png') repeat-y;
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 0;
+  font-size: 70px;
+  top: 170px;
+  width: 22px;
+  height: 38px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+#next:hover, #prev:hover {
+  background-position: 0 -76px;
+}
+
+#next {
+  right: 0;
+  background-image: url('../images/next.png');
+}
+
+#prev {
+  left: 0;
+  background-image: url('../images/prev.png');
+}
+
+#next.disabled,
+#prev.disabled {
+  opacity: 0.2;
+}
+
+#dates li:after {
+  content: '';
+  background: #ccc;
+  height: 1px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+

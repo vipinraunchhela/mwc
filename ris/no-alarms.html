@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>No Alarms</title>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/custom.js"></script>
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/laptop.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/laptop.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+      <link rel="stylesheet" type="text/css" href="css/main.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-top"></div>
+  <div class="header-heading">
+    <div class="hea-head">
+      <h2>Roaming CEM Dashboard</h2>
+    </div>
+    <div class="header-heading-icon">
+      <ul>
+        <li><a href=""><span class="icon1"></span></a></li>
+        <li><a href=""><span class="icon2"></span></a></li>
+      </ul>
+    </div>
+  </div><!-- header-heading -->  
+</header>
+
+<!-- ===========header=========== -->
+<div class="sidebar">
+            <ul>
+               <li>
+                  <span class="black-ham">
+                  <span class="icon-hamburger">
+                  <span class="path1"></span><span class="path2"></span>
+                  </span>
+                  <span>
+               </li>
+               <li>
+                  <a href="dashboard-cem.html">
+                  <span class="icon">
+                  <span class="icon-Dashboard"> </span>
+                  </span>
+                  <span class="text">Dashboard</span>
+                  </a>
+               </li>
+               <li >
+                  <a href="internal-cem.html">
+                  <span class="icon">
+                  <span class="icon-My-ticket"> </span>
+                  </span>
+                  <span class="text">Internal CEM</span>
+                  </a>
+               </li>
+               <li >
+                  <a href="roaming-cem-dashboard.html">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Roaming CEM</span>
+                  </a>
+               </li>
+               <li >
+                  <a href="data-service.html">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">Data Services</span>
+                  </a>
+               </li>
+               <li class="active">
+                  <a href="no-alarms.html">
+                  <span class="icon"><span class="icon-Report">
+                  </span></span>
+                  <span class="text">No Alarms</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                  <span class="icon"><span class="icon-help">
+                  </span></span>
+                  <span class="text">Support?FAQ</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-section">
+<main>
+  <div class="wrapper">
+
+    <div class="left-white-box">
+
+      <div class="filter-box">
+        <div class="heading">
+          <h2>Outbound Roamers</h2>
+        </div>
+        <div class="search">
+          <input type="text" name="lastname" class="search-bar" placeholder="Search Network Here...">
+        </div>
+        <div class="tabs-icons">
+          <ul>
+            <li><a href="javascript:void"><span class="icons1"></span></a></li>
+            <li><a href="javascript:void" class="table-grid-show"><span class="icons2"></span></a></li>
+            <li><a href="javascript:void" class="roamer-box-show active"><span class="icons3"></span></a></li>
+          </ul>
+        </div>
+      </div><!-- filter-box -->
+
+      <div class="roaming-pack">
+        <div class="roaming-pack-lside">
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-2.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Outbound Roamers</p>
+              <h3>86,783</h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="hr"></div>
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-3.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Network Outages</p>
+              <h3>2<span><img src="images/icons/icons-8.png" class="img-responsive" alt="mobileum"></span><i>2hrs ago</i></h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-4.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Affected Roamers</p>
+              <h3>342</h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="hr"></div>
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-5.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Service Outages</p>
+              <h3>6<span><img src="images/icons/icons-9.png" class="img-responsive" alt="mobileum"></span><i>12hrs ago</i></h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-7.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Affected Roamers</p>
+              <h3>872</h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+        </div><!-- roaming-pack-lside -->
+
+        <div class="roaming-pack-rside no-alarms-img">
+          
+          <!-- <div class="no-alarms-img">
+            <img src="images/no-alarms.png" alt="mobileum">
+          </div> -->
+
+        </div><!-- roaming-pack-rside -->
+
+      </div><!-- roaming-pack -->
+
+    </div><!-- left-white-box -->
+
+    <div class="right-white-box">
+
+      <div class="filter-box">
+        <div class="heading">
+          <h2>Inbound Roamers</h2>
+        </div>
+        <div class="search">
+          <input type="text" name="lastname" class="search-bar" placeholder="Search Network Here...">
+        </div>
+        <div class="tabs-icons">
+          <ul>
+            <li><a href="javascript:void"><span class="icons1"></span></a></li>
+            <li><a href="javascript:void" class="table-grid-show"><span class="icons2"></span></a></li>
+            <li><a href="javascript:void" class="roamer-box-show active"><span class="icons3"></span></a></li>
+          </ul>
+        </div>
+      </div><!-- filter-box -->
+
+      <div class="roaming-pack">
+        <div class="roaming-pack-lside">
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-21.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Inbound Roamers</p>
+              <h3>6,542</h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="hr"></div>
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-3.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Network Outages</p>
+              <h3>1<span><img src="images/icons/icons-8.png" class="img-responsive" alt="mobileum"></span><i>1hr ago</i></h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-4.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Affected Roamers</p>
+              <h3>172</h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="hr"></div>
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-5.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Service Outages</p>
+              <h3>4<span><img src="images/icons/icons-9.png" class="img-responsive" alt="mobileum"></span><i>10hrs ago</i></h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+
+          <div class="details-box-flex">
+            <div class="icons">
+              <img src="images/icons/icons-7.png" class="img-responsive" alt="mobileum">
+            </div><!--  -->
+            <div class="details">
+              <p>Affected Roamers</p>
+              <h3>469</h3>
+            </div><!--  -->
+          </div><!-- details-box-flex -->
+        </div><!-- roaming-pack-lside -->
+
+        <div class="roaming-pack-rside">
+          
+            <div class="back-m-scroll">
+
+              <div class="roamer-box-hide">
+                <div class="roamer-box">
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>18</h2>
+                      <img src="images/icons/icons-10.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                          <span class="sr-only">95% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Critical</p>
+                      <h6>Vodafone D2</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>20</h2>
+                      <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                          <span class="sr-only">95% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Critical</p>
+                      <h6>Orange Spain</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>12</h2>
+                      <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                          <span class="sr-only">95% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Critical</p>
+                      <h6>Metor</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>14</h2>
+                      <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                          <span class="sr-only">95% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Critical</p>
+                      <h6>Telstra</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>07</h2>
+                      <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                          <span class="sr-only">75% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Major</p>
+                      <h6>Telefonic UJ</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>11</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                          <span class="sr-only">75% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Major</p>
+                      <h6>STC</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>12</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                          <span class="sr-only">35% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Minor</p>
+                      <h6>Viva Kauwait</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>12</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                          <span class="sr-only">35% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Minor</p>
+                      <h6>SFR</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>25</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                          <span class="sr-only">35% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Minor</p>
+                      <h6>INWI</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>13</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                          <span class="sr-only">50% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Warning</p>
+                      <h6>Wind</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>12</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                          <span class="sr-only">50% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Warning</p>
+                      <h6>AT & T</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>16</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                          <span class="sr-only">50% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Warning</p>
+                      <h6>SALT</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>45</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                          <span class="sr-only">50% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Warning</p>
+                      <h6>As EMT</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                  <div class="roamer-box-details">
+                    <a href="internal-cem.html">
+                      <h2>45</h2>
+                      <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                       <div class="progress">
+                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                          <span class="sr-only">50% Complete</span>
+                        </div>
+                      </div> 
+                      <p>Warning</p>
+                      <h6>Vodafone Hary.. Vodafone Hary..</h6>
+                    </a>
+                  </div><!-- roamer-box-details -->
+                </div><!-- roamer-box -->
+              </div><!-- roamer-box-hide -->
+              
+              <div class="gb-horizontal-scroll">
+                <div class="table-grid">
+                  <table class="radius">
+                    <thead>
+                    <tr>
+                      <th>Network</th>
+                      <th>Affected <br> Roamers <span class="filter-icon"></span></th>
+                      <th>Service <br> Status  </th>
+                      <th>Alarm</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><a href="internal-cem.html">Vodafone</a></td>
+                      <td>45</td>
+                      <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                      <td><span class="icon progress-bar-red"></span>Critical</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">ACeS Regional Services Co....</a></td>
+                      <td>45</td>
+                      <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                      <td><span class="icon progress-bar-red"></span>Critical</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">ACeS Phillippines Cellular r...</a></td>
+                      <td>35</td>
+                      <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                      <td><span class="icon progress-bar-orange"></span>Major</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">AL Madar Telecomm Comp...</a></td>
+                      <td>25</td>
+                      <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                      <td><span class="icon progress-bar-red"></span>Critical</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">BTC Mobile EOOD (28403)</a></td>
+                      <td>18</td>
+                      <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                      <td><span class="icon progress-bar-blue"></span>Minor</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">BH Telecom Joint Stock C...</a></td>
+                      <td>18</td>
+                      <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                      <td><span class="icon progress-bar-red"></span>Critical</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">Claro Chile SA (730 03)</a></td>
+                      <td>18</td>
+                      <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                      <td><span class="icon progress-bar-blue"></span>Minor</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">Colombia Movil SA</a></td>
+                      <td>18</td>
+                      <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                      <td><span class="icon progress-bar-orange"></span>Major</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">Claro CR Telecomunicacie...</a></td>
+                      <td>16</td>
+                      <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                      <td><span class="icon progress-bar-blue"></span>Minor</td>
+                    </tr>
+                    <tr>
+                      <td><a href="internal-cem.html">Compania Dominicana de Compania Dominicana de...</a></td>
+                      <td>11</td>
+                      <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                      <td><span class="icon progress-bar-blue"></span>Minor</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div><!-- table-grid -->
+              </div><!-- gb-horizontal-scroll -->
+              
+            </div><!-- back-m-scroll -->
+          
+
+        </div><!-- roaming-pack-rside -->
+
+      </div><!-- roaming-pack -->
+
+    </div><!-- right-white-box -->
+
+  </div>
+</main><!-- main -->
+</div>
+<!-- ===========main=========== -->
+
+<footer class="footer-status">
+  <ul>
+    <li>Service Status</li>
+    <li><a href=""><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</a></li>
+    <li><a href=""><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Service Affected</a></li>
+    <li><a href=""><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In Service</a></li>
+    <li>Alarm Status</li>
+    <li><a href=""><span class="icon progress-bar-red"></span>Critical</a></li>
+    <li><a href=""><span class="icon progress-bar-orange"></span>Major</a></li>
+    <li><a href=""><span class="icon progress-bar-blue"></span>Minor</a></li>
+    <li><a href=""><span class="icon progress-bar-yellow"></span>Warning</a></li>
+  </ul>
+</footer><!-- footer-status -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>

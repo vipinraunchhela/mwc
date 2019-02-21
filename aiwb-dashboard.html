@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Roaming Business Advisor - Roaming</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+        <link href="css/styles.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+            <style type="text/css">
+                .sub-value { color: #628aa1; }
+            </style>
+    </head>
+
+    <body>
+        <div class="page-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header__logo">
+                            <img src="images/logo1.png" class="img-responsive">
+                        </div>
+                        <div class="page-header__text">
+                            <!-- Roaming Business Advisor -->
+                            Active Intelligence Workbench
+                        </div>
+                        <div class="page-header-right">
+                            <div class="dropdown selector">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">This Quarter
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a>This Month</a></li>
+                                    <li><a>This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="notes-wrapper">
+                                <img src="./images/add.png" class="notes-icon" is-open="false" />
+
+                                <div class="notes">
+                                    <div class="notes-header">
+                                        <span class="notes-title">Notes for AIWB Dashboard</span>
+                                        <span class="notes-save">Save</span>
+                                    </div>
+
+                                    <div class="notes-body">
+                                        <textarea autofocus="true" placeholder="Start writing your notes"></textarea>    
+                                        <!-- <span class="notes-placeholder">Start writing your notes</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile">
+                                <div class="avatar">
+                                    <img src="./images/profile.png">
+                                </div>
+                                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drawer" id="drawer-open"><span class="glyphicon glyphicon-triangle-bottom"></span></div>
+            </div>
+        </div>
+        <div class="page-container">
+            <div class="page-navigation fixed">
+                <div class="container-fluid position-relative">
+                    <div class="page-navigation-container">
+                        <a href="./aiwb-dashboard.html">
+                            <div class="page-navigation__card page-navigation__active">
+                                <div class="page-navigation__card-heading">
+                                    Retail revenue
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                    <span class="icon-view dollars"></span>
+                                                        <!-- <img src="./images/Green Dial.png" alt=""> -->
+                                                    </div>
+                                                    <p class="details__text">Retail Rev $10M</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center ">
+                                                    <span class="icon-view dollars"></span>
+                                                        <!-- <img src="./images/Yellow Dial.png" alt=""> -->
+                                                    </div>
+                                                    <p class="details__text">Data Rev $6M</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-wholesale.html">
+                            <div class="page-navigation__card ">
+                                <div class="page-navigation__card-heading">
+                                    Wholesale Roaming
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view dollars"></span>
+                                                    </div>
+                                                    <p class="details__text">Rev $4M</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view dollars"></span>
+                                                    </div>
+                                                    <p class="details__text">Cost $2M</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-cem.html" >
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    Experience
+                                </div>
+                                 
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">SQI Breach 25</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">SSI Breach 40</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-testing.html" >
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    Testing
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">Voice Test 1474</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">Failure 8.75%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-iot.html" >
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    IoT
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">Outbound 80k</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">Inbound 28k</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-fraud.html" >
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    FRAUD
+                                </div>
+                               
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view dollars"></span>
+                                                    </div>
+                                                    <p class="details__text">Save $1.9M</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view dollars"></span>
+                                                    </div>
+                                                    <p class="details__text">Loss $380K</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-revenue-assurance.html" >
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    Revenue Assurance
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view dollars"></span>
+                                                    </div>
+                                                    <p class="details__text">Save $1.9M</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view dollars"></span>
+                                                    </div>
+                                                    <p class="details__text">Leakage $380K</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./aiwb-dashboard-security.html">
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    NETWORK SECURITY
+                                </div>
+                               
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">Blocked 348</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <span class="icon-view data"></span>
+                                                    </div>
+                                                    <p class="details__text">Incidents 3.1K</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a>
+                       <!--  <a href="./aiwb-dashboard-steering.html">
+                            <div class="page-navigation__card">
+                                <div class="page-navigation__card-heading">
+                                    Steering Analytics
+                                </div>
+                                <div class="page-navigation__card-alert">
+                                    3
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="page-navigation__card-data">
+                                            <div class="page-navigation__card-data--details">
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <img src="./images/Green Dial.png" alt="">
+                                                    </div>
+                                                    <p class="details__text">Effectiveness 9.2</p>
+                                                </div>
+                                                <div class="details__box">
+                                                    <div class="img__center">
+                                                        <img src="./images/Yellow Dial.png" alt="">
+                                                    </div>
+                                                    <p class="details__text">Leakage $250 K</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-navigation__card-more">
+                                </div>
+                            </div>
+                        </a> -->
+                    </div>
+                    <!-- <div class="drawer" id="drawer-close"><span class="glyphicon glyphicon-triangle-top"></span></div> -->
+                </div>
+            </div>
+            <div class="page-content drawer-open">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="main-cards-container">
+                                <!-- <div class="main-card">
+                                        <div class="heading d-inline-block">RETAIL</div>
+                                        <ul class="parameter-selector">
+                                            <li id="paramter1">paramter1</li>
+                                            <li id="paramter2">paramter2</li>
+                                            <li id="paramter3">paramter3</li>
+                                        </ul>
+                                        <div class="map-preview"><img src="./images/map.png" data-toggle="modal" data-target="#map-1" class="img-responsive" /></div>   
+                                    </div> -->
+                               
+
+
+
+                                <a href="roaming/retail.html">
+                                    <div class="main-card">
+                                        <div class="row">
+                                            <div class="heading col-xs-12">RETAIL REVENUE</div>
+                                            <div class="col-sm-6">
+                                                <div class="main-value">$10 M</div>
+                                                <div class="sub-heading">Retail Revenue</div>
+
+                                                <div class="row mb-15">
+                                                    <div class="col-xs-6">
+                                                        <div class="value">$3 M</div>
+                                                        <div class="sub-heading">Prepaid</div>
+                                                        <div class="row">
+                                                            <div class="col-xs-5">
+                                                                <div class="sub-value">$0.18 M</div>
+                                                                <div class="sub-heading mb-0"> Enterprise</div>
+                                                            </div>
+                                                            <div class="col-xs-6">
+                                                                <div class="sub-value">$2.82 M</div>
+                                                                <div class="sub-heading mb-0">Consumers</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="value">$7 M</div>
+                                                        <div class="sub-heading">Postpaid</div>
+                                                        <div class="row">
+                                                            <div class="col-xs-5">
+                                                                <div class="sub-value">$0.42 K</div>
+                                                                <div class="sub-heading mb-0"> Enterprise</div>
+                                                            </div>
+                                                            <div class="col-xs-6">
+                                                                <div class="sub-value">$6.58 M</div>
+                                                                <div class="sub-heading mb-0">Consumers</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr class="line" />
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="value">$6 M</div>
+                                                        <div class="sub-heading">Data Revenue</div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="value">$3 M</div>
+                                                        <div class="sub-heading">Pack Revenue</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="graph-wrapper">
+                                                    <div class="graph-container">
+                                                        <div class="graph-heading">
+                                                            <div>
+                                                                <!-- <span class="sub-heading">Net Margin</span> -->
+                                                                <hr class="line-xs" />
+                                                            </div>
+                                                            <div class="bubble-container pull-right">
+                                                                <div class="info">Forecast</div>
+                                                                <span class="bubble">$10.7 M</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graph" id="retailRevenue"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                 <a href="roaming/retail.html">
+                                    <div class="main-card">
+                                        <div class="row">
+                                            <div class="heading col-xs-12">OUTBOUND ROAMERS</div>
+                                            <div class="col-sm-6">
+                                                <div class="main-value">296 K</div>
+                                                <div class="sub-heading">Roamers</div>
+                                                <div class="row mb-15">
+                                                    <div class="col-xs-6">
+                                                        <div class="value">176 K</div>
+                                                        <div class="sub-heading">Data Active Roamers</div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="value">41 K</div>
+                                                        <div class="sub-heading">Silent Roamers</div>
+                                                    </div>
+                                                </div>
+                                                <hr class="line" />
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="value">79 K</div>
+                                                        <div class="sub-heading">Data Silent</div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="value">7.5 K</div>
+                                                        <div class="sub-heading">Permanent Roamers</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="graph-wrapper">
+                                                    <div class="graph-container">
+                                                        <div class="graph-heading">
+                                                            
+                                                            <div class="bubble-container pull-right">
+                                                                <div class="info">Forecast</div>
+                                                                <span class="bubble">350 K</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graph" id="roamersInbound"></div>
+                                                    </div>
+                                                    <!-- <div class="graph-container">
+                                                            <div class="graph-heading">
+                                                                <div>
+                                                                    <span class="sub-heading">Payment</span>
+                                                                    <hr class="line-xs" />
+                                                                </div>
+                                                                <div class="bubble-container pull-right">
+                                                                    <div class="info">Forecast</div>
+                                                                    <span class="bubble">$278</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="graph" id="graph2"></div>
+                                                        </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                 <a href="roaming/retail.html">
+                                    <div class="main-card">
+                                        <div class="row">
+                                            <div class="heading col-xs-12">INBOUND ROAMERS</div>
+                                            <div class="col-sm-6">
+                                                <div class="main-value">371 K</div>
+                                                <div class="sub-heading">Roamers</div>
+                                                <div class="row mb-15">
+                                                    <div class="col-xs-6">
+                                                        <div class="value">221 K</div>
+                                                        <div class="sub-heading">Data Active Roamers</div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="value">54 K</div>
+                                                        <div class="sub-heading">Silent Roamers</div>
+                                                    </div>
+                                                </div>
+                                                <hr class="line" />
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="value">95 K</div>
+                                                        <div class="sub-heading">Data Silent</div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="value">9.1 K</div>
+                                                        <div class="sub-heading">Permanent Roamers</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="graph-wrapper">
+                                                    <div class="graph-container">
+                                                        <div class="graph-heading">
+                                                            <!-- <div>
+                                                                <span class="sub-heading">Revenue</span>
+                                                                <hr class="line-xs" />
+                                                            </div> -->
+                                                            <div class="bubble-container pull-right">
+                                                                <div class="info">Forecast</div>
+                                                                <span class="bubble">400 K</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graph" id="retail"></div>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+                               
+
+
+                               
+                               <!--  <a href="#">
+                                    <div class="main-card">
+                                        <div class="heading d-inline-block">RETAIL REVENUE</div>
+                                        <div class="map-preview">
+                                            <div id="map-chart-1" data-toggle="modal" data-target="#map-dialog-1"></div>
+                                        </div>
+                                    </div>
+                                </a> -->
+                              <!--   <a href="#">
+                                    <div class="main-card">
+                                        <div class="heading d-inline-block">WHOLESALE NET MARGIN</div>
+                                        <div class="map-preview">
+                                            <div id="map-chart-2" data-toggle="modal" data-target="#map-dialog-2"></div>
+                                        </div>
+                                    </div>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="map-dialog-1" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content map-modal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">RETAIL REVENUE</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="map-chart-full-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="map-dialog-2" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content map-modal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">WHOLESALE NET MARGIN</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="map-chart-full-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="slick/slick.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/series-label.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.customtag li').click(function(){
+                    debugger;
+                    $(this).addClass('active').siblings().removeClass('active');
+                    var getId = $(this).text();
+                    $('#'+getId).show().siblings().hide();
+                    })
+
+                $('.notes-icon').click(function () {
+                    if ($('.notes-icon').attr('is-open') == 'false') {
+                        $('.notes').show();
+                        $('.notes-icon').attr('is-open', 'true');
+                    } else {
+                        $('.notes').hide();
+                        $('.notes-icon').attr('is-open', 'false');
+                    }
+                });
+
+                $('#drawer-open').click(function () {
+                    $('.page-navigation').slideDown();
+                    $('#drawer-close').show();
+                    $('#drawer-open').hide();
+                    $('.page-content').removeClass('drawer-close').addClass('drawer-open');
+                });
+
+                $('#drawer-close').click(function () {
+                    $('.page-navigation').slideUp();
+                    $('#drawer-open').show();
+                    $('#drawer-close').hide();
+                    $('.page-content').removeClass('drawer-open').addClass('drawer-close');
+                });
+
+                $('.page-navigation-container').slick({
+                    infinite: false,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    responsive: [{
+                            breakpoint: 1250,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 1050,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 810,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 530,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        }
+                    ],
+                    dots: false,
+                    arrows: true
+                });
+
+                $('.main-cards-container').slick({
+                    infinite: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [{
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        }],
+                    dots: false,
+                    arrows: true
+                });
+
+                   
+                $('.sub-cards-container').slick({
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    responsive: [{
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        }
+                    ],
+                    dots: false,
+                    centerMode: true,
+                    arrows: true
+                });
+
+
+Highcharts.chart('roamersInbound', {
+                    colors: ['#C2F388', '#1FA5D2'],
+                    title: {
+                        text: ''
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    chart: {
+                        backgroundColor: '#F4F8F9',
+                        polar: true,
+                        type: 'line'
+                    },
+                    xAxis: {
+                        categories: ['Q3 2017', 'Q4 2017', 'Q1 2017', 'Q2 2018', 'Q3 2018', 'Q4 2018', 'Q1 2019']
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Roamers Outbound (&#39;000s)'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        enabled: false
+                    },
+                    series: [{
+                            name: 'Revenue',
+                            data: [150, 180, 200, 270, 280, 296, 350]
+                        },{
+                            name: 'Revenue',
+                            data: [150, 180, 200, 270, 280, 296]
+                        }],
+                    responsive: {
+                        rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+                                    }
+                                }
+                            }]
+                    }
+                });
+
+
+
+                Highcharts.chart('retail', {
+                    colors: ['#C2F388', '#1FA5D2'],
+                    title: {
+                        text: ''
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    chart: {
+                        backgroundColor: '#F4F8F9',
+                        polar: true,
+                        type: 'line'
+                    },
+                    xAxis: {
+                        categories: ['Q3 2017', 'Q4 2017', 'Q1 2017', 'Q2 2018', 'Q3 2018', 'Q4 2018', 'Q1 2019']
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Roamers Inbound (&#39;000s)'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        enabled: false
+                    },
+                    series: [{
+                            name: 'Revenue',
+                            data: [280, 290, 320, 301, 320, 371, 400]
+                        },
+                        {
+                            name: 'Revenue',
+                            data: [280, 290, 320, 301, 320, 371]
+                        }],
+                    responsive: {
+                        rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+                                    }
+                                }
+                            }]
+                    }
+                });
+
+                Highcharts.chart('retailRevenue', {
+                    colors: ['#C2F388', '#1FA5D2'],
+                    title: {
+                        text: ''
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    chart: {
+                        backgroundColor: '#F4F8F9',
+                        polar: true,
+                        type: 'line'
+                    },
+                    xAxis: {
+                        categories: ['Q4 2017', 'Q1 2017', 'Q2 2018', 'Q3 2018', 'Q4 2018', 'Q1 2019']
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'RETAIL REVENUE ($Millions)'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        enabled: false
+                    },
+                    series: [{
+                            name: 'Revenue',
+                            data: [9, 5, 10, 9, 10, 10.7]
+                        }, {
+                            name: 'Revenue',
+                            data: [9, 5, 10, 9, 10]
+                        }],
+                    responsive: {
+                        rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+                                    }
+                                }
+                            }]
+                    }
+                });
+
+                Highcharts.chart('wholesaleMargin', {
+                    colors: ['#C2F388', '#1FA5D2'],
+                    title: {
+                        text: ''
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    chart: {
+                        backgroundColor: '#F4F8F9',
+                        polar: true,
+                        type: 'line'
+                    },
+                    xAxis: {
+                        categories: ['Q3 2017', 'Q4 2017', 'Q1 2017', 'Q2 2018', 'Q3 2018', 'Q4 2018', 'Q1 2019']
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Wholesale Margin ($Millions)'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        enabled: false
+                    },
+                    series: [{
+                            name: 'Revenue',
+                            data: [1.4, 1.5, 1.7, 2, 1.8, 2, 2.5]
+                        },{
+                            name: 'Revenue',
+                            data: [1.4, 1.5, 1.7, 2, 1.8, 2]
+                        }],
+                    responsive: {
+                        rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+                                    }
+                                }
+                            }]
+                    }
+                });
+
+
+ // Highcharts.chart('wholesalePartners', {
+ //                    colors: ['#C2F388', '#1FA5D2'],
+ //                    title: {
+ //                        text: ''
+ //                    },
+ //                    exporting: {
+ //                        enabled: false
+ //                    },
+ //                    credits: {
+ //                        enabled: false
+ //                    },
+ //                    subtitle: {
+ //                        text: ''
+ //                    },
+ //                    chart: {
+ //                        backgroundColor: '#F4F8F9',
+ //                        polar: true,
+ //                        type: 'line'
+ //                    },
+ //                    xAxis: {
+ //                        categories: ['DTAG Germany', 'T-Mobil Germany', 'SFR', 'Orange France', 'TIM Italy']
+ //                    },
+ //                    yAxis: {
+ //                        title: {
+ //                            text: 'Wholesale Margin ($Millions)'
+ //                        }
+ //                    },
+ //                    legend: {
+ //                        layout: 'vertical',
+ //                        align: 'right',
+ //                        verticalAlign: 'middle',
+ //                        enabled: false
+ //                    },
+ //                    series: [{
+ //                            name: 'Revenue',
+ //                            data: [81, 75, 72, 61, 56]
+ //                        },{
+ //                            name: 'Revenue',
+ //                            data: [81, 75, 72, 61, 56]
+ //                        }],
+ //                    responsive: {
+ //                        rules: [{
+ //                                condition: {
+ //                                    maxWidth: 500
+ //                                },
+ //                                chartOptions: {
+ //                                    legend: {
+ //                                        layout: 'horizontal',
+ //                                        align: 'center',
+ //                                        verticalAlign: 'bottom'
+ //                                    }
+ //                                }
+ //                            }]
+ //                    }
+ //                });
+
+
+
+
+Highcharts.chart('wholesalePartners', {
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Partners'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}'
+                }
+            }
+        },
+
+        series: [{
+                name: 'Brands',
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                colorByPoint: true,
+                data: [{
+                        name: 'DTAG Germany',
+                        y: 81,
+                        color: '#9ACFFF'
+                    },
+                    {
+                        name: 'T-Mobil Germany',
+                        y: 75,
+                        color: '#8AE7AB'
+                    }, {
+                        name: 'SFR',
+                        y: 72,
+                        color: '#F4C28B'
+
+                    }, {
+                        name: 'Orange France',
+                        y: 61,
+                        color: '#FFABBC'
+
+                    }, {
+                        name: 'TIM',
+                        y: 56,
+                        color: '#eef782'
+
+                    }]
+            }]
+
+    });
+
+
+
+Highcharts.chart('wholesaleCountry', {
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Countries'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}'
+                }
+            }
+        },
+
+        series: [{
+                name: 'Brands',
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                colorByPoint: true,
+                data: [{
+                        name: 'Germany',
+                        y: 250,
+                        color: '#9ACFFF'
+                    },
+                    {
+                        name: 'France',
+                        y: 205,
+                        color: '#8AE7AB'
+                    }, {
+                        name: 'Italy',
+                        y: 197,
+                        color: '#F4C28B'
+                    }, {
+                        name: 'Austria',
+                        y: 87,
+                        color: '#FFABBC'
+                    }, {
+                        name: 'Spain',
+                        y: 76,
+                        color: '#eef782'
+                    }]
+            }]
+
+    });
+
+
+
+
+ // Highcharts.chart('wholesaleCountry', {
+ //                    colors: ['#C2F388', '#1FA5D2'],
+ //                    title: {
+ //                        text: ''
+ //                    },
+ //                    exporting: {
+ //                        enabled: false
+ //                    },
+ //                    credits: {
+ //                        enabled: false
+ //                    },
+ //                    subtitle: {
+ //                        text: ''
+ //                    },
+ //                    chart: {
+ //                        backgroundColor: '#F4F8F9',
+ //                        polar: true,
+ //                        type: 'line'
+ //                    },
+ //                    xAxis: {
+ //                        categories: ['Germany', 'France', 'Italy', 'Austria', 'Spain']
+ //                    },
+ //                    yAxis: {
+ //                        title: {
+ //                            text: 'Wholesale Margin ($Millions)'
+ //                        }
+ //                    },
+ //                    legend: {
+ //                        layout: 'vertical',
+ //                        align: 'right',
+ //                        verticalAlign: 'middle',
+ //                        enabled: false
+ //                    },
+ //                    series: [{
+ //                            name: 'Revenue',
+ //                            data: [250, 205, 197, 87, 76]
+ //                        },{
+ //                            name: 'Revenue',
+ //                            data: [250, 205, 197, 87, 76]
+ //                        }],
+ //                    responsive: {
+ //                        rules: [{
+ //                                condition: {
+ //                                    maxWidth: 500
+ //                                },
+ //                                chartOptions: {
+ //                                    legend: {
+ //                                        layout: 'horizontal',
+ //                                        align: 'center',
+ //                                        verticalAlign: 'bottom'
+ //                                    }
+ //                                }
+ //                            }]
+ //                    }
+ //                });
+
+
+ Highcharts.chart('wholesaleGroup', {
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Groups'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}'
+                }
+            }
+        },
+        series: [{
+                name: 'Brands',
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                colorByPoint: true,
+                data: [{
+                        name: 'DTAG',
+                        y: 188,
+                        color: '#9ACFFF'
+                    },
+                    {
+                        name: 'H3G',
+                        y: 176,
+                        color: '#8AE7AB'
+                    }, {
+                        name: 'KPN',
+                        y: 159,
+                        color: '#F4C28B'
+                    }, {
+                        name: 'Orange Europe',
+                        y: 136,
+                        color: '#FFABBC'
+                    }, {
+                        name: 'Telefonica',
+                        y: 127,
+                        color: '#eef782'
+                    }]
+            }]
+
+    });
+ // Highcharts.chart('wholesaleGroup', {
+ //                    colors: ['#C2F388', '#1FA5D2'],
+ //                    title: {
+ //                        text: ''
+ //                    },
+ //                    exporting: {
+ //                        enabled: false
+ //                    },
+ //                    credits: {
+ //                        enabled: false
+ //                    },
+ //                    subtitle: {
+ //                        text: ''
+ //                    },
+ //                    chart: {
+ //                        backgroundColor: '#F4F8F9',
+ //                        polar: true,
+ //                        type: 'line'
+ //                    },
+ //                    xAxis: {
+ //                        categories: ['DTAG', 'H3G', 'KPN', 'Orange Europe', 'Telefonica']
+ //                    },
+ //                    yAxis: {
+ //                        title: {
+ //                            text: 'Wholesale Margin ($Millions)'
+ //                        }
+ //                    },
+ //                    legend: {
+ //                        layout: 'vertical',
+ //                        align: 'right',
+ //                        verticalAlign: 'middle',
+ //                        enabled: false
+ //                    },
+ //                    series: [{
+ //                            name: 'Revenue',
+ //                            data: [188, 176, 159, 136, 127]
+ //                        },{
+ //                            name: 'Revenue',
+ //                            data: [188, 176, 159, 136, 127]
+ //                        }],
+ //                    responsive: {
+ //                        rules: [{
+ //                                condition: {
+ //                                    maxWidth: 500
+ //                                },
+ //                                chartOptions: {
+ //                                    legend: {
+ //                                        layout: 'horizontal',
+ //                                        align: 'center',
+ //                                        verticalAlign: 'bottom'
+ //                                    }
+ //                                }
+ //                            }]
+ //                    }
+ //                });
+
+
+                Highcharts.chart('wholesale', {
+                    colors: ['#C2F388', '#1FA5D2'],
+                    title: {
+                        text: ''
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    chart: {
+                        backgroundColor: '#F4F8F9',
+                        polar: true,
+                        type: 'line'
+                    },
+                    xAxis: {
+                        categories: ['Q2 2017', 'Q3 2017', 'Q4 2017', 'Q1 2018', 'Q2 2018', 'Q3 2018','Q4 2018']
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Roaming Revenue ($Millions)'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        enabled: false
+                    },
+                    series: [{
+                            name: 'Net Margin',
+                            data: [5, 6, 7, 6, 8, 12, 12.5]
+                        }, {
+                            name: 'Net Margin',
+                            data: [5, 6, 7, 6, 8, 12,]
+                        }],
+                    responsive: {
+                        rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+                                    }
+                                }
+                            }]
+                    }
+                });
+
+                // Prepare demo data
+                var data1 = [
+                    ['af', 5],
+                    ['al', 6.6],
+                    ['dz', 4],
+                    ['as', 4.3],
+                    ['ad', 4.8],
+                    ['ao', 6.7],
+                    ['ai', 5],
+                    ['ar', 7.7],
+                    ['am', 5.4],
+                    ['aw', 5.4],
+                    ['au', 5.4],
+                    ['at', 5.4],
+                    ['az', 4.6],
+                    ['bs', 5],
+                    ['bh', 6.2],
+                    ['bd', 6.1],
+                    ['bb', 4],
+                    ['by', 6],
+                    ['be', 6.2],
+                    ['bz', 5.7],
+                    ['bj', 6.6],
+                    ['bm', 4.1],
+                    ['bt', 7.9],
+                    ['bo', 5.1],
+                    ['ba', 8],
+                    ['bw', 11],
+                    ['br', 8],
+                    ['bn', 9.5],
+                    ['bg', 9.7],
+                    ['bf', 9.9],
+                    ['bi', 9.2],
+                    ['kh', 8.5],
+                    ['cm', 11.2],
+                    ['ca', 9.4],
+                    ['cv', 10.5],
+                    ['ky', 8.6],
+                    ['cf', 10.1],
+                    ['td', 9.8],
+                    ['cl', 11.8],
+                    ['cn', 10.2],
+                    ['co', 11.5],
+                    ['km', 9.8],
+                    ['cd', 9.6],
+                    ['cg', 8.9],
+                    ['cr', 9.1],
+                    ['ci', 11.1],
+                    ['hr', 9.8],
+                    ['cu', 11.6],
+                    ['cw', 11.5],
+                    ['cy', 8.5],
+                    ['cz', 9.1],
+                    ['dk', 8.5],
+                    ['dj', 10.3],
+                    ['dm', 9.3],
+                    ['do', 10],
+                    ['ec', 10.8],
+                    ['eg', 5.3],
+                    ['sv', 6.5],
+                    ['gq', 4.5],
+                    ['er', 7.7],
+                    ['ee', 6.5],
+                    ['et', 7.6],
+                    ['fo', 6.7],
+                    ['fj', 4.3],
+                    ['fi', 6.5],
+                    ['fr', 4.2],
+                    ['pf', 5.2],
+                    ['ga', 6.9],
+		    ['gb',9.9],
+                    ['gm', 5.5],
+                    ['ge', 6.2],
+                    ['de', 5.8],
+                    ['gh', 5.5],
+                    ['gr', 4.4],
+                    ['gl', 7.5],
+                    ['gd', 6.9],
+                    ['gu', 4.4],
+                    ['gt', 5.8],
+                    ['gn', 8.7],
+                    ['gw', 9],
+                    ['gy', 10.5],
+                    ['ht', 11.1],
+                    ['hn', 12],
+                    ['hk', 8],
+                    ['hu', 8.5],
+                    ['is', 8.9],
+                    ['in', 8.8],
+                    ['id', 10.5],
+                    ['ir', 2.5],
+                    ['iq', 1.2],
+                    ['ie', 1.1],
+                    ['im', 1.4],
+                    ['il', 2.4],
+                    ['it', 1.7],
+                    ['jm', 2.2],
+                    ['jp', 1.4],
+                    ['jo', 3.9],
+                    ['kz', 1.2],
+                    ['ke', 2.6],
+                    ['ki', 1.7],
+                    ['kp', 1.7],
+                    ['kr', 2.3],
+                    ['xk', 2.7],
+                    ['kw', 10.8],
+                    ['kg', 8.8],
+                    ['la', 8.7],
+                    ['lv', 8.5],
+                    ['lb', 9.8],
+                    ['ls', 10.1],
+                    ['lr', 8.3],
+                    ['ly', 9.7],
+                    ['li', 10],
+                    ['lt', 8.3],
+                    ['lu', 8.8],
+                    ['mo', 10.3],
+                    ['mk', 10],
+                    ['mg', 9.9],
+                    ['mw', 9.1],
+                    ['my', 9.3],
+                    ['mv', 11.3],
+                    ['ml', 8.6],
+                    ['mt', 11.7],
+                    ['mh', 10.8],
+                    ['mr', 8.2],
+                    ['mu', 11],
+                    ['yt', 8.5],
+                    ['mx', 8.1],
+                    ['fm', 11.3],
+                    ['md', 11.9],
+                    ['mc', 12],
+                    ['mn', 10.3],
+                    ['me', 11.3],
+                    ['ma', 10.5],
+                    ['mz', 10.7],
+                    ['mm', 11.5],
+                    ['na', 11.2],
+                    ['np', 8],
+                    ['nl', 9.8],
+                    ['nc', 11.9],
+                    ['nz', 8.2],
+                    ['ni', 8.3],
+                    ['ne', 8.5],
+                    ['ng', 8.5],
+                    ['mp', 10.7],
+                    ['no', 10.2],
+                    ['om', 11.7],
+                    ['pk', 8.1],
+                    ['pw', 8.9],
+                    ['pa', 10.9],
+                    ['pg', 8.5],
+                    ['py', 11.9],
+                    ['pe', 8.4],
+                    ['ph', 10.8],
+                    ['pl', 8.7],
+                    ['pt', 9.2],
+                    ['pr', 8.9],
+                    ['wa', 8.4],
+                    ['ro', 10.9],
+                    ['ru', 10.1],
+                    ['rw', 11.3],
+                    ['ws', 11.2],
+                    ['sm', 10.5],
+                    ['st', 8.6],
+                    ['sa', 8.2],
+                    ['sn', 4.9],
+                    ['rs', 5.5],
+                    ['sc', 4.2],
+                    ['sl', 6.6],
+                    ['sg', 5.4],
+                    ['sk', 6.8],
+                    ['si', 4.7],
+                    ['sb', 6.7],
+                    ['so', 6.2],
+                    ['za', 4.5],
+                    ['ss', 4.2],
+                    ['es', 4],
+                    ['lk', 6.6],
+                    ['kn', 4.4],
+                    ['lc', 7.6],
+                    ['mf', 4.4],
+                    ['vc', 5],
+                    ['sd', 5.9],
+                    ['sr', 7.2],
+                    ['sz', 6.5],
+                    ['se', 7.4],
+                    ['ch', 7.5],
+                    ['sy', 5.5],
+                    ['tj', 5.8],
+                    ['tz', 5.9],
+                    ['th', 4],
+                    ['tp', 7.7],
+                    ['tg', 7.1],
+                    ['to', 7.7],
+                    ['tt', 8.6],
+                    ['tn', 10.6],
+                    ['tr', 10.7],
+                    ['tm', 9.8],
+                    ['tc', 8.8],
+                    ['tv', 9.6],
+                    ['ug', 11.6],
+                    ['ua', 10.4],
+                    ['ae', 10.7],
+                    ['uk', 9.3],
+                    ['us', 10.1],
+                    ['uy', 11.7],
+                    ['uz', 10.1],
+                    ['vu', 11.4],
+                    ['ve', 11.5],
+                    ['vn', 2.3],
+                    ['vi', 2.6],
+                    ['ps', 3],
+                    ['eh', 1.7],
+                    ['ye', 2.3],
+                    ['zm', 1.6],
+                    ['zw', 2.8]
+                ];
+
+                Highcharts.mapChart('map-chart-1', {
+                    chart: {
+                        height: 252
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    mapNavigation: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return this.point.name + " : $" + this.point.value + "M";
+                        }
+                    },
+                    legend: {
+                        title: {
+                            text: 'Target',
+                            style: {
+                                //color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        },
+
+                        align: 'right',
+                        valign: 'center',
+                        verticalAlign: 'top',
+                        y: 20,
+                        //floating: true,
+                        layout: 'vertical',
+                        valueDecimals: 0,
+
+                        symbolRadius: 10,
+                        symbolHeight: 10,
+                        symbolPadding: 5,
+
+                        itemMarginBottom: 7,
+                        labelFormatter: function () {
+                            return "<span style='margin-top:20px;'>" + this.text + "</span>";
+                        },
+
+                        itemStyle: {
+                            font: '9pt Trebuchet MS, Verdana, sans-serif',
+                        }
+                    },
+                    colorAxis: {
+                        dataClasses: [{
+                                from: 8.0,
+                                to: 12.0,
+                                color: '#8fc055',
+                                text: 'Above'
+                            },
+
+                            {
+                                from: 4.0,
+                                to: 7.9,
+                                color: '#f9d048',
+                                text: 'At Par'
+                            },
+                            {
+                                from: 0.0,
+                                to: 3.9,
+                                color: '#e40b18',
+                                text: 'Below',
+                            }
+                        ]
+                    },
+
+                    series: [{
+                            data: data1,
+                            mapData: Highcharts.maps['custom/world'],
+                            borderWidth: 0,
+                        }]
+                });
+
+                Highcharts.mapChart('map-chart-full-1', {
+                    credits: {
+                        enabled: false
+                    },
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    mapNavigation: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return this.point.name + " : $" + this.point.value + "M";
+                        }
+                    },
+                    legend: {
+                        title: {
+                            text: 'Target',
+                            style: {
+                                //color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        },
+
+                        align: 'right',
+                        valign: 'center',
+                        verticalAlign: 'top',
+                        y: 20,
+                        //floating: true,
+                        layout: 'vertical',
+                        valueDecimals: 0,
+
+                        symbolRadius: 10,
+                        symbolHeight: 10,
+                        symbolPadding: 5,
+
+                        itemMarginBottom: 7,
+                        labelFormatter: function () {
+                            return "<span style='margin-top:20px;'>" + this.text + "</span>";
+                        },
+
+                        itemStyle: {
+                            font: '9pt Trebuchet MS, Verdana, sans-serif',
+                        }
+                    },
+                    colorAxis: {
+                        dataClasses: [{
+                                from: 8.0,
+                                to: 12.0,
+                                color: '#8fc055',
+                                text: 'Above'
+                            },
+
+                            {
+                                from: 4.0,
+                                to: 7.9,
+                                color: '#f9d048',
+                                text: 'At Par'
+                            },
+                            {
+                                from: 0.0,
+                                to: 3.9,
+                                color: '#e40b18',
+                                text: 'Below',
+                            }
+                        ]
+                    },
+
+                    series: [{
+                            data: data1,
+                            mapData: Highcharts.maps['custom/world'],
+                            borderWidth: 0,
+                        }]
+                });
+
+                var data2 = [
+                    ['af', 6],
+                    ['al', 7.6],
+                    ['dz', 5],
+                    ['as', 5.3],
+                    ['ad', 5.8],
+                    ['ao', 7.7],
+                    ['ai', 6],
+                    ['ar', 8.7],
+                    ['am', 6.4],
+                    ['aw', 6.4],
+                    ['au', 6.4],
+                    ['at', 6.4],
+                    ['az', 5.6],
+                    ['bs', 6],
+                    ['bh', 7.2],
+                    ['bd', 7.1],
+                    ['bb', 5],
+                    ['by', 7],
+                    ['be', 7.2],
+                    ['bz', 6.7],
+                    ['bj', 7.6],
+                    ['bm', 5.1],
+                    ['bt', 8.9],
+                    ['bo', 6.1],
+                    ['ba', 9],
+                    ['bw', 12],
+                    ['br', 9],
+                    ['bn', 10.5],
+                    ['bg', 10.7],
+                    ['bf', 10.9],
+                    ['bi', 10.2],
+                    ['kh', 9.5],
+                    ['cm', 12],
+                    ['ca', 10.4],
+                    ['cv', 11.5],
+                    ['ky', 9.6],
+                    ['cf', 11.1],
+                    ['td', 10.8],
+                    ['cl', 12],
+                    ['cn', 11.2],
+                    ['co', 12],
+                    ['km', 10.8],
+                    ['cd', 10.6],
+                    ['cg', 9.9],
+                    ['cr', 10.1],
+                    ['ci', 12],
+                    ['hr', 10.8],
+                    ['cu', 12],
+                    ['cw', 12],
+                    ['cy', 9.5],
+                    ['cz', 10.1],
+                    ['dk', 9.5],
+                    ['dj', 11.3],
+                    ['dm', 10.3],
+                    ['do', 11],
+                    ['ec', 11.8],
+                    ['eg', 6.3],
+                    ['sv', 7.5],
+                    ['gq', 5.5],
+                    ['er', 8.7],
+                    ['ee', 7.5],
+                    ['et', 8.6],
+                    ['fo', 7.7],
+                    ['fj', 5.3],
+                    ['fi', 7.5],
+                    ['fr', 5.2],
+                    ['pf', 6.2],
+                    ['ga', 7.9],
+		    ['gb',9.9],
+                    ['gm', 6.5],
+                    ['ge', 7.2],
+                    ['de', 6.8],
+                    ['gh', 6.5],
+                    ['gr', 5.4],
+                    ['gl', 8.5],
+                    ['gd', 7.9],
+                    ['gu', 5.4],
+                    ['gt', 6.8],
+                    ['gn', 9.7],
+                    ['gw', 10],
+                    ['gy', 11.5],
+                    ['ht', 12],
+                    ['hn', 12],
+                    ['hk', 9],
+                    ['hu', 9.5],
+                    ['is', 9.9],
+                    ['in', 9.8],
+                    ['id', 11.5],
+                    ['ir', 3.5],
+                    ['iq', 2.2],
+                    ['ie', 2.1],
+                    ['im', 2.4],
+                    ['il', 3.4],
+                    ['it', 2.7],
+                    ['jm', 3.2],
+                    ['jp', 2.4],
+                    ['jo', 4.9],
+                    ['kz', 2.2],
+                    ['ke', 3.6],
+                    ['ki', 2.7],
+                    ['kp', 2.7],
+                    ['kr', 3.3],
+                    ['xk', 3.7],
+                    ['kw', 11.8],
+                    ['kg', 9.8],
+                    ['la', 9.7],
+                    ['lv', 9.5],
+                    ['lb', 10.8],
+                    ['ls', 11.1],
+                    ['lr', 9.3],
+                    ['ly', 10.7],
+                    ['li', 11],
+                    ['lt', 9.3],
+                    ['lu', 9.8],
+                    ['mo', 11.3],
+                    ['mk', 11],
+                    ['mg', 10.9],
+                    ['mw', 10.1],
+                    ['my', 10.3],
+                    ['mv', 12],
+                    ['ml', 9.6],
+                    ['mt', 12],
+                    ['mh', 11.8],
+                    ['mr', 9.2],
+                    ['mu', 12],
+                    ['yt', 9.5],
+                    ['mx', 9.1],
+                    ['fm', 12],
+                    ['md', 12],
+                    ['mc', 12],
+                    ['mn', 11.3],
+                    ['me', 12],
+                    ['ma', 11.5],
+                    ['mz', 11.7],
+                    ['mm', 12],
+                    ['na', 12],
+                    ['np', 9],
+                    ['nl', 10.8],
+                    ['nc', 12],
+                    ['nz', 9.2],
+                    ['ni', 9.3],
+                    ['ne', 9.5],
+                    ['ng', 9.5],
+                    ['mp', 11.7],
+                    ['no', 11.2],
+                    ['om', 12],
+                    ['pk', 9.1],
+                    ['pw', 9.9],
+                    ['pa', 11.9],
+                    ['pg', 9.5],
+                    ['py', 12],
+                    ['pe', 9.4],
+                    ['ph', 11.8],
+                    ['pl', 9.7],
+                    ['pt', 10.2],
+                    ['pr', 9.9],
+                    ['wa', 9.4],
+                    ['ro', 11.9],
+                    ['ru', 11.1],
+                    ['rw', 12],
+                    ['ws', 12],
+                    ['sm', 11.5],
+                    ['st', 9.6],
+                    ['sa', 9.2],
+                    ['sn', 5.9],
+                    ['rs', 6.5],
+                    ['sc', 5.2],
+                    ['sl', 7.6],
+                    ['sg', 6.4],
+                    ['sk', 7.8],
+                    ['si', 5.7],
+                    ['sb', 7.7],
+                    ['so', 7.2],
+                    ['za', 5.5],
+                    ['ss', 5.2],
+                    ['es', 5],
+                    ['lk', 7.6],
+                    ['kn', 5.4],
+                    ['lc', 8.6],
+                    ['mf', 5.4],
+                    ['vc', 6],
+                    ['sd', 6.9],
+                    ['sr', 8.2],
+                    ['sz', 7.5],
+                    ['se', 8.4],
+                    ['ch', 8.5],
+                    ['sy', 6.5],
+                    ['tj', 6.8],
+                    ['tz', 6.9],
+                    ['th', 5],
+                    ['tp', 8.7],
+                    ['tg', 8.1],
+                    ['to', 8.7],
+                    ['tt', 9.6],
+                    ['tn', 11.6],
+                    ['tr', 11.7],
+                    ['tm', 10.8],
+                    ['tc', 9.8],
+                    ['tv', 10.6],
+                    ['ug', 12],
+                    ['ua', 11.4],
+                    ['ae', 11.7],
+                    ['uk', 10.3],
+                    ['us', 11.1],
+                    ['uy', 12],
+                    ['uz', 11.1],
+                    ['vu', 12],
+                    ['ve', 12],
+                    ['vn', 3.3],
+                    ['vi', 3.6],
+                    ['ps', 4],
+                    ['eh', 2.7],
+                    ['ye', 3.3],
+                    ['zm', 2.6],
+                    ['zw', 3.8]
+                ];
+
+                Highcharts.mapChart('map-chart-2', {
+                    chart: {
+                        height: 252
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    mapNavigation: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return this.point.name + " : $" + this.point.value + "M";
+                        }
+                    },
+                    legend: {
+                        title: {
+                            text: 'Target',
+                            style: {
+                                //color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        },
+
+                        align: 'right',
+                        valign: 'center',
+                        verticalAlign: 'top',
+                        y: 20,
+                        //floating: true,
+                        layout: 'vertical',
+                        valueDecimals: 0,
+
+                        symbolRadius: 10,
+                        symbolHeight: 10,
+                        symbolPadding: 5,
+
+                        itemMarginBottom: 7,
+                        labelFormatter: function () {
+                            return "<span style='margin-top:20px;'>" + this.text + "</span>";
+                        },
+
+                        itemStyle: {
+                            font: '9pt Trebuchet MS, Verdana, sans-serif',
+                        }
+                    },
+                    colorAxis: {
+                        dataClasses: [{
+                                from: 8.0,
+                                to: 12.0,
+                                color: '#8fc055',
+                                text: 'Above'
+                            },
+
+                            {
+                                from: 4.0,
+                                to: 7.9,
+                                color: '#f9d048',
+                                text: 'At Par'
+                            },
+                            {
+                                from: 0.0,
+                                to: 3.9,
+                                color: '#e40b18',
+                                text: 'Below',
+                            }
+                        ]
+                    },
+
+                    series: [{
+                            data: data2,
+                            mapData: Highcharts.maps['custom/world'],
+                            borderWidth: 0,
+                        }]
+                });
+
+                Highcharts.mapChart('map-chart-full-2', {
+                    credits: {
+                        enabled: false
+                    },
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    mapNavigation: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return this.point.name + " : $" + this.point.value + "M";
+                        }
+                    },
+                    legend: {
+                        title: {
+                            text: 'Target',
+                            style: {
+                                //color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        },
+
+                        align: 'right',
+                        valign: 'center',
+                        verticalAlign: 'top',
+                        y: 20,
+                        //floating: true,
+                        layout: 'vertical',
+                        valueDecimals: 0,
+
+                        symbolRadius: 10,
+                        symbolHeight: 10,
+                        symbolPadding: 5,
+
+                        itemMarginBottom: 7,
+                        labelFormatter: function () {
+                            return "<span style='margin-top:20px;'>" + this.text + "</span>";
+                        },
+
+                        itemStyle: {
+                            font: '9pt Trebuchet MS, Verdana, sans-serif',
+                        }
+                    },
+                    colorAxis: {
+                        dataClasses: [{
+                                from: 8.0,
+                                to: 12.0,
+                                color: '#8fc055',
+                                text: 'Above'
+                            },
+
+                            {
+                                from: 4.0,
+                                to: 7.9,
+                                color: '#f9d048',
+                                text: 'At Par'
+                            },
+                            {
+                                from: 0.0,
+                                to: 3.9,
+                                color: '#e40b18',
+                                text: 'Below',
+                            }
+                        ]
+                    },
+
+                    series: [{
+                            data: data2,
+                            mapData: Highcharts.maps['custom/world'],
+                            borderWidth: 0,
+                        }]
+                });
+
+                 var deviceAgent = navigator.userAgent.toLowerCase();
+                    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+                    if (agentID) {
+
+                        $('.sub-cards-container').slick({
+                            autoplay: false,
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            responsive: [{
+                                    breakpoint: 992,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        slidesToScroll: 1,
+                                        arrows: true
+                                    }
+                                },
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1,
+                                        arrows: true
+                                    }
+                                }
+                            ],
+                            dots: false,
+                            centerMode: true,
+                            arrows: true
+                        });
+
+                        $('.main-cards-container').slick({
+                    infinite: false,
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    responsive: [{
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: true
+                            }
+                        }],
+                    dots: false,
+                    arrows: true
+                });
+                 
+                    }
+                     
+            });
+        </script>
+    </body>
+
+</html>

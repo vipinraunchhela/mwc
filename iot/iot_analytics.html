@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IOT Analytics</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href="../aiwb-dashboard.html" class="home-link">
+                            <span class="black-ham">
+                                <span class="home-icon"></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon">
+                                <span class="icon-Dashboard"> </span>
+                            </span>
+                            <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="iot_analytics.html">
+                            <span class="icon">
+                                <span class="icon-My-ticket"> </span>
+                            </span>
+                            <span class="text">Usage Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="iot_subscriber_analytics.html">
+                            <span class="icon"><span class="icon-Report">
+                                </span></span>
+                            <span class="text">Devices Analytics</span>
+                        </a>	
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><span class="icon-help">
+                                </span></span>
+                            <span class="text">Support?FAQ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-section">
+                <div class="header header-new">
+                    <div class="site-logo">
+                        <img src="../aiwb/icons/mobileum-logo.png" alt="">
+                    </div>
+                    <div class="head-right">
+                        <div class="search">
+                            <span class="magnifier">
+                                <span class="icon-Search"></span>
+                            </span>
+                            <input type="text" name="search" placeholder="">
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="bellicon">
+                                        <span class="icon-notification"> </span>
+                                        <span class="badge">5</span>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu notification">
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="notification_text">
+                                                <span class="status icon-Assigned"></span>
+                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
+                                            </div>
+                                            <div class="timeblock">5min ago</div>
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../aiwb/icons/alex.png">
+                                    <span>Alex Sanders</span> <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_body container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 marginTop">
+                            <button type="button" class="btn btn-primary ">This Month</button>
+                            <button type="button" class="btn btn-light ">This Quarter</button>
+                            <button type="button" class="btn btn-light ">This Year</button>
+                            <button type="button" class="btn btn-light ">Custom</button>
+                        </div>
+                        <div class="col-md-6 wholesale marginTop">
+
+                            <div id="prepaidtab" class="tab-pane fade in active">
+                                <div id = "devices"></div>  
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 marginTop" >
+                            <div id="devices2" ></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><h2>Top 5 ARPU
+                            </h2></div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12 table-responsive custom marginTop">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th >DEVICE TYPE</th>
+                                        <th >CATEGORY</th>
+                                        <th >APN</th>
+                                        <th >ARPU VALUE</th>
+                                        <th >DOMESTIC/ROAMER</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class=""><strong>ZTE</strong></div>
+                                        </td>
+                                        <td>
+                                            <div>Auto</div>
+                                        </td>
+                                        <td>
+                                            <div>m2m.auto.com</div>
+                                        </td>
+                                        <td>
+                                            <div>$ 5</div>
+                                        </td>
+                                        <td>
+                                            <div >Domestic</div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class=""><strong>Fibocom</strong></div>
+                                        </td>
+                                        <td>
+                                            <div>Auto</div>
+                                        </td>
+                                        <td>
+                                            <div>m2m.lte.com</div>
+                                        </td>
+                                        <td>
+                                            <div>$ 3.9</div>
+                                        </td>
+                                        <td>
+                                            <div >Domestic</div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class=""><strong>Siemens</strong></div>
+                                        </td>
+                                        <td>
+                                            <div>surveillance</div>
+                                        </td>
+                                        <td>
+                                            <div>m2m.lte.com</div>
+                                        </td>
+                                        <td>
+                                            <div>$ 4.2</div>
+                                        </td>
+                                        <td>
+                                            <div >Roamer</div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class=""><strong>Huawei</strong></div>
+                                        </td>
+                                        <td>
+                                            <div>Home Automation</div>
+                                        </td>
+                                        <td>
+                                            <div>m2m.lte.com</div>
+                                        </td>
+                                        <td>
+                                            <div>$ 2.1</div>
+                                        </td>
+                                        <td>
+                                            <div >Roamer</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class=""><strong>Sierra wireless</strong></div>
+                                        </td>
+                                        <td>
+                                            <div>Telemetry</div>
+                                        </td>
+                                        <td>
+                                            <div>m2m.lte.com</div>
+                                        </td>
+                                        <td>
+                                            <div>$ 4.3</div>
+                                        </td>
+                                        <td>
+                                            <div >Roamer</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/jQuery-plugin-progressbar.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".progress-bar").loading();
+
+
+        $(".setsize").each(function () {
+            $(this).height($(this).width());
+        });
+    });
+    $(window).on('resize', function () {
+        $(".setsize").each(function () {
+            $(this).height($(this).width());
+        });
+
+
+    })
+    $(function () {
+
+
+        var start = moment().subtract(29, 'days');
+        var end = moment();
+
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+        cb(start, end);
+    });
+
+</script>
+<script type="text/javascript">
+    Highcharts.chart('devices', {
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'IOT Usage'
+        },
+        xAxis: {
+            categories: ['DATA(MB)', 'VOICE(SEC)', 'SMS(#)']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '# of Devices'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: '',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        legend: {
+            align: 'right',
+            x: -30,
+            verticalAlign: 'top',
+            y: 25,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+            borderColor: '#CCC',
+            borderWidth: 1,
+            shadow: false
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: false,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                }
+            }
+        },
+        series: [{
+                name: '< 10',
+                data: [10000, 3000, 25000],
+                color: '#9ACFFF'
+            }, {
+                name: '10-100',
+                data: [3000, 0, 10000],
+                color: '#8AE7AB'
+
+            },
+            {
+                name: '100-1000',
+                data: [27000, 4200, 1500],
+                color: '#C4A2E9'
+
+            },
+            {
+                name: '>1000',
+                data: [3000, 900, 1500],
+                color: '#F4C28B'
+
+            }]
+    });
+</script>
+<script type="text/javascript">
+
+    Highcharts.chart('postpaid', {
+
+        title: {
+            text: ''
+        },
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Roamers Count'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+                enableMouseTracking: false
+            }
+        },
+
+        series: [{
+                name: 'Total Retail',
+                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+            }, {
+                name: 'Postpaid',
+                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+            }, {
+                name: 'Prepaid',
+                data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+            }],
+
+        responsive: {
+            rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+        }
+
+    });
+</script>
+<script type="text/javascript">
+
+    Highcharts.chart('iotsubs', {
+
+        title: {
+            text: ''
+        },
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Q1', 'Q2', 'Q3', 'Q4']
+        },
+        yAxis: {
+            title: {
+                text: 'Devices Count '
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+
+                enableMouseTracking: false
+            }
+        },
+
+        series: [{
+                name: 'Total Devices in K',
+                data: [470000, 520000, 340000, 440000]
+            }],
+
+        responsive: {
+            rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+        }
+
+    });
+</script>
+<script type="text/javascript">
+    Highcharts.chart('devices2', {
+        exporting: {enabled: false},
+        credits: {enabled: false},
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'IOT Type'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: '# of Devices'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}'
+                }
+            }
+        },
+
+        series: [{
+                name: 'Brands',
+                exporting: {enabled: false},
+                credits: {enabled: false},
+                colorByPoint: true,
+                data: [{
+                        name: 'AUTO',
+                        y: 56000,
+                        color: '#9ACFFF'
+                    },
+                    {
+                        name: 'SURVEILLANCE',
+                        y: 24000,
+                        color: '#8AE7AB'
+                    }, {
+                        name: 'TELEMETRY',
+                        y: 10380,
+                        color: '#F4C28B'
+
+                    }, {
+                        name: 'HOME AUTOMATION',
+                        y: 47700,
+                        color: '#FFABBC'
+
+                    }]
+            }]
+
+    });
+</script>
+</body>
+</html>
