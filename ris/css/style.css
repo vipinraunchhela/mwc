@@ -213,15 +213,15 @@ main {
 
 .filter-box .heading h2 {
     color: #34404d;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin-right: 15px;
-    width: 157px;
+    width: 170px;
 }
 
 .search {
-    max-width: 320px;
+    max-width: 270px;
     width: 100%;
     margin-right: auto;
 }
