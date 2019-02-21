@@ -1506,7 +1506,15 @@ h4{
     color: #fff;
     padding: 1px 4px;
 }
-
+.sidebar{
+    top:0;
+}
+header {
+    margin-left: 100px;
+}
+.sidebar li.active a:after{
+    display: none;
+}
 
 /* ::-webkit-scrollbar {
     width: 10px;
