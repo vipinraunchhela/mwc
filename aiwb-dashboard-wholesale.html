@@ -27,18 +27,18 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="page-header__logo">
-                            <img src="images/logo1.png" class="img-responsive">
+                            <a href="index.html"><img src="images/logo1.png" class="img-responsive"></a>
                         </div>
                         <div class="page-header__text">
                             Active Intelligence Workbench
                         </div>
                         <div class="page-header-right">
                             <div class="dropdown selector">
-                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">This Quarter
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">This Year
                                     <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
                                     <li><a>This Month</a></li>
-                                    <li><a>This Year</a></li>
+                                    <li><a>This Quarter</a></li>
                                 </ul>
                             </div>
 
@@ -75,11 +75,10 @@
                     
                     <div class="page-navigation-container">
 
-                       
-                       <a href="./aiwb-dashboard.html">
-                            <div class="page-navigation__card">
+                        <a href="./aiwb-dashboard.html">
+                            <div class="page-navigation__card ">
                                 <div class="page-navigation__card-heading">
-                                    Retail revenue
+                                    Retail roaming
                                 </div>
                                 
                                 <div class="row">
@@ -88,15 +87,17 @@
                                             <div class="page-navigation__card-data--details">
                                                 <div class="details__box">
                                                     <div class="img__center">
-                                                        <span class="icon-view dollars"></span>
+                                                    <span class="icon-view dollars"></span>
+                                                        <!-- <img src="./images/Green Dial.png" alt=""> -->
                                                     </div>
-                                                    <p class="details__text">Retail Rev $10M</p>
+                                                    <p class="details__text">Retail Rev $62M</p>
                                                 </div>
                                                 <div class="details__box">
-                                                    <div class="img__center">
-                                                        <span class="icon-view dollars"></span>
+                                                    <div class="img__center ">
+                                                    <span class="icon-view dollars"></span>
+                                                        <!-- <img src="./images/Yellow Dial.png" alt=""> -->
                                                     </div>
-                                                    <p class="details__text">Data Rev $6M</p>
+                                                    <p class="details__text">Data Rev $37.2M</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,13 +121,13 @@
                                                     <div class="img__center">
                                                         <span class="icon-view dollars"></span>
                                                     </div>
-                                                    <p class="details__text">Rev $4M</p>
+                                                    <p class="details__text">Rev $156M</p>
                                                 </div>
                                                 <div class="details__box">
                                                     <div class="img__center">
                                                         <span class="icon-view dollars"></span>
                                                     </div>
-                                                    <p class="details__text">Cost $2M</p>
+                                                    <p class="details__text">Cost $124M</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,7 +200,7 @@
                         <a href="./aiwb-dashboard-iot.html" >
                             <div class="page-navigation__card">
                                 <div class="page-navigation__card-heading">
-                                    IoT
+                                    <span style="text-transform: initial;">IoT</span>
                                 </div>
                                 
                                 <div class="row">
@@ -363,13 +364,13 @@
                                             <div class="heading col-xs-12">WHOLESALE MARGIN</div>
                                             <div class="col-sm-6">
                                                 <div class="main-value">$32 M</div>
-                                                <div class="sub-heading">Wholesale Margin</div>
+                                                <div class="sub-heading">Projected WHolesale Margin</div>
 
                                                 
                                                 
                                                 <div class="row">
                                                     <div class="col-xs-6">
-                                                        <div class="value">$29.92 M</div>
+                                                        <div class="value">$33.5 M</div>
                                                         <div class="sub-heading">Target margin</div>
                                                     </div>
                                                     <div class="col-xs-6">
@@ -414,13 +415,13 @@
                                     <div class="main-card">
                                         <div class="row">
                                             <div class="heading col-xs-12">WHOLESALE COST</div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-12">
                                                 <div class="main-value">$124 M</div>
-                                                <div class="sub-heading">Total Cost</div>
+                                                <div class="sub-heading">Projected Cost</div>
                                                 <div class="row mb-15">
                                                     <div class="col-xs-6">
                                                         <div class="value">$122.5 M</div>
-                                                        <div class="sub-heading">Target Cost</div>
+                                                        <div class="sub-heading">Budget Cost</div>
                                                         <div class="row">
                                                             <div class="col-xs-6">
                                                                 <div class="sub-value">$79.63 M</div>
@@ -460,7 +461,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6">
+                                            <!-- <div class="col-sm-6">
                                                 <div class="graph-wrapper">
                                                     <div class="graph-container">
                                                         <div class="graph-heading no-flex">
@@ -486,7 +487,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </a>
@@ -693,7 +694,7 @@
                         type: 'line'
                     },
                     xAxis: {
-                        categories: ['Q3 2017', 'Q4 2017', 'Q1 2018', 'Q2 2018', 'Q3 2018', 'Q4 2018', 'Q1 2019']
+                        categories: ['2018', '2019']
                     },
                     yAxis: {
                         title: {
@@ -708,10 +709,10 @@
                     },
                     series: [{
                             name: 'Revenue',
-                            data: [1.4, 1.5, 1.7, 2, 1.8, 2, 2.5]
+                            data: [28, 33.5]
                         },{
                             name: 'Revenue',
-                            data: [1.4, 1.5, 1.7, 2, 1.8, 2]
+                            data: [28, 32]
                         }],
                     responsive: {
                         rules: [{
