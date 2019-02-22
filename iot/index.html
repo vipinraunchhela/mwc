@@ -3,8 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>IOT Analytics</title>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <!-- <script src="js/custom.js"></script> -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/laptop-nw-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/laptop-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/main-nw-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/style-nw-td.css" />
+        <link rel="stylesheet" type="text/css" href="css/style-td.css" />
         <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,9 +22,35 @@
         <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <style type="text/css" media="screen">
+        .roamer-box-hide {
+                max-height: 393px;
+                overflow: auto;
+            }
+
+            .iot-main-section{
+                margin-bottom: 70px;
+            }
+            
+        </style>
     </head>
     <body>
         <div>
+        <header>
+            <a href="../index.html"><div class="header-top"></div></a>
+            <div class="header-heading">
+                <div class="hea-head">
+                    <h2>Roaming CEM Dashboard</h2>
+                </div>
+                <div class="header-heading-icon">
+                    <ul>
+                        <li><a href=""><span class="icon1"></span></a></li>
+                        <li><a href=""><span class="icon2"></span></a></li>
+                    </ul>
+                </div>
+            </div><!-- header-heading -->  
+        </header>
+
             <div class="sidebar">
                 <ul>
                     <li>
@@ -26,6 +61,14 @@
                         </a>
                     </li>
                     <li class="active">
+                        <a href="#">
+                            <span class="icon">
+                                <span class="icon-Dashboard"> </span>
+                            </span>
+                            <span class="text">Experience Analytics</span>
+                        </a>
+                    </li>
+                    <li >
                         <a href="#">
                             <span class="icon">
                                 <span class="icon-Dashboard"> </span>
@@ -46,7 +89,7 @@
                             <span class="icon"><span class="icon-Report">
                                 </span></span>
                             <span class="text">Devices Analytics</span>
-                        </a>	
+                        </a>    
                     </li>
                    <!--  <li>
                         <a href="#">
@@ -57,542 +100,802 @@
                     </li> -->
                 </ul>
             </div>
-            <div class="main-section">
+        <div class="main-section iot-main-section">
+            <main>
+                <div class="wrapper">
 
-                <div class="header header-new">
-                    <div class="site-logo">
-                        <img src="../aiwb/icons/mobileum-logo.png" alt="">
-                    </div>
-                    <div class="head-right">
-                        <div class="search">
-                            <span class="magnifier">
-                                <span class="icon-Search"></span>
-                            </span>
-                            <input type="text" name="search" placeholder="">
-                        </div>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span class="bellicon">
-                                        <span class="icon-notification"> </span>
-                                        <span class="badge">5</span>
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu notification">
-                                    <li><a href="#">
-                                            <div class="notification_text">
-                                                <span class="status icon-Assigned"></span>
-                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
-                                            </div>
-                                            <div class="timeblock">5min ago</div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            <div class="notification_text">
-                                                <span class="status icon-Assigned"></span>
-                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
-                                            </div>
-                                            <div class="timeblock">5min ago</div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            <div class="notification_text">
-                                                <span class="status icon-Assigned"></span>
-                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
-                                            </div>
-                                            <div class="timeblock">5min ago</div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            <div class="notification_text">
-                                                <span class="status icon-Assigned"></span>
-                                                Assigned 05 more <strong>By-Pass </strong>tickets in your account
-                                            </div>
-                                            <div class="timeblock">5min ago</div>
-                                        </a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../aiwb/icons/alex.png">
-                                    <span>Alex Sanders</span> <span class="caret"></span></a>
+                    <div class="left-white-box">
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">My Profile</a></li>
-                                    <li><a href="#">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="main_body container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 marginTop">
-                            <button type="button" class="btn btn-primary ">This Month</button>
-                            <button type="button" class="btn btn-light ">This Quarter</button>
-                            <button type="button" class="btn btn-light ">This Year</button>
-                            <button type="button" class="btn btn-light ">Custom</button>
-                        </div>
-                        <div class="col-md-6 wholesale marginTop">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#prepaidtab">Revenue</a></li>
-                                <li><a data-toggle="tab" href="#postpaidtab">Devices</a></li>
-
-                            </ul>
-
-                            <div class="tab-content">
-                                <div id="prepaidtab" class="tab-pane fade in active">
-                                    <div style = " height:360px;"id = "iotrev"></div>
-
-                                </div>
-                                <div id="postpaidtab" class="tab-pane fade">
-                                    <div style = " height:360px;" id = "iotsubs"></div>
-
-                                </div>
+                        <div class="filter-box">
+                            <div class="heading">
+                                <h2>Outbound IoT Devices</h2>
                             </div>
-                        </div>
-                        <div class="col-md-6 marginTop" >
-                            <div id="iotpie" ></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12"><h2>Top Customers by Revenue
-                            </h2></div>
-                    </div>
-                    <div class="row">
+                            <div class="search">
+                                <input type="text" name="lastname" class="search-bar" placeholder="Search Network Here...">
+                            </div>
+                            <div class="tabs-icons">
+                                <ul>
+                                    <li><a href="javascript:void"><span class="icons1"></span></a></li>
+                                    <li><a href="javascript:void" class="table-grid-show"><span class="icons2"></span></a></li>
+                                    <li><a href="javascript:void" class="roamer-box-show active"><span class="icons3"></span></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- filter-box -->
 
-                        <div class="col-md-12 table-responsive custom marginTop">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2">CUSTOMER</th>
-                                        <th rowspan="2">TOTAL CONNECTION</th>
-                                        <th rowspan="2">ACTIVE CONNECTIONS</th>
-                                        <th rowspan="2">REVENUE</th>
-                                        <th rowspan="2">ARPU</th>
-                                        <th  style ="text-align: center;  "rowspan="1" colspan="2">QoQ</th>
-                                    </tr>
-                                    <tr>
-                                        <th colspan ="1" rowspan="1">ACTUAL</th>
-                                        <th colspan ="1" rowspan="1">FORECASTED</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class=""><strong>Gx. Enterprise</strong></div>
-                                        </td>
-                                        <td>
-                                            <div>100</div>
-                                        </td>
-                                        <td>
-                                            <div>20</div>
-                                        </td>
-                                        <td>
-                                            <div>$ 342.9K</div>
-                                        </td>
-                                        <td>
-                                            <div >$ 50</div>
-                                        </td>
-                                        <td>
-                                            <div >12%</div>
-                                        </td>
-                                        <td>
-                                            <div >10%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class=""><strong>AUDI</strong></div>
-                                        </td>
-                                        <td>
-                                            <div>120</div>
-                                        </td>
-                                        <td>
-                                            <div>30</div>
-                                        </td>
-                                        <td>
-                                            <div>$ 442.9K</div>
-                                        </td>
-                                        <td>
-                                            <div >$ 60</div>
-                                        </td>
-                                        <td>
-                                            <div >13%</div>
-                                        </td>
-                                        <td>
-                                            <div >11%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class=""><strong>Rx Home Security</strong></div>
-                                        </td>
-                                        <td>
-                                            <div>110</div>
-                                        </td>
-                                        <td>
-                                            <div>30</div>
-                                        </td>
-                                        <td>
-                                            <div>$ 362.9K</div>
-                                        </td>
-                                        <td>
-                                            <div >$ 50</div>
-                                        </td>
-                                        <td>
-                                            <div >10%</div>
-                                        </td>
-                                        <td>
-                                            <div >9%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class=""><strong>German. Enterprise</strong></div>
-                                        </td>
-                                        <td>
-                                            <div>105</div>
-                                        </td>
-                                        <td>
-                                            <div>60</div>
-                                        </td>
-                                        <td>
-                                            <div>$ 242.9K</div>
-                                        </td>
-                                        <td>
-                                            <div >$ 70</div>
-                                        </td>
-                                        <td>
-                                            <div >12%</div>
-                                        </td>
-                                        <td>
-                                            <div >9%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class=""><strong>Trans. Enterprise</strong></div>
-                                        </td>
-                                        <td>
-                                            <div>200</div>
-                                        </td>
-                                        <td>
-                                            <div>10</div>
-                                        </td>
-                                        <td>
-                                            <div>$ 348.9K</div>
-                                        </td>
-                                        <td>
-                                            <div >$ 60</div>
-                                        </td>
-                                        <td>
-                                            <div >12%</div>
-                                        </td>
-                                        <td>
-                                            <div >10%</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                        <div class="roaming-pack">
+                            <div class="roaming-pack-lside">
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-2.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Outbound IoT Devices</p>
+                                        <h3>86,7830</h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="hr"></div>
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-3.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Network Outages</p>
+                                        <h3>2<span><img src="images/icons/icons-8.png" class="img-responsive" alt="mobileum"></span><i>2hrs ago</i></h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-4.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Affected IoT Devices</p>
+                                        <h3>3420</h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="hr"></div>
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-5.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Service Outages</p>
+                                        <h3>6<span><img src="images/icons/icons-9.png" class="img-responsive" alt="mobileum"></span><i>8 mins ago </i></h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-7.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Affected IoT Devices</p>
+                                        <h3>26,530 </h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+                            </div><!-- roaming-pack-lside -->
+
+                            <div class="roaming-pack-rside">
+
+                                <div class="back-m-scroll">
+
+                                    <div class="roamer-box-hide">
+                                        <div class="roamer-box">
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>2120</h2>
+                                                    <img src="images/icons/icons-10.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Singtel</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>1300</h2>
+                                                    <img src="images/icons/icons-10.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>A1 Telekom Au..</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>10,520</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Vodafone Aus</h6>
+                                                    <div class="alert-gif"></div> 
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>5970</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Vodafone Haryana</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>3510</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                                            <span class="sr-only">75% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Major</p>
+                                                    <h6>VIVA Bahrain</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>2060</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                                            <span class="sr-only">75% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Major</p>
+                                                    <h6>A1 Telekom Austria</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>1370</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                                            <span class="sr-only">75% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Major</p>
+                                                    <h6>Telecom North</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>1010</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:25%">
+                                                            <span class="sr-only">25% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Minor</p>
+                                                    <h6>SmarTone Mobile</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>880</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:25%">
+                                                            <span class="sr-only">25% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Minor</p>
+                                                    <h6>Skytel LLC</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>640</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>Smartfren</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>610</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>Maxis Malaysia</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>680</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>Setel NV</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>400</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>As EMT</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>25</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>Vodafone Ireland</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                        </div><!-- roamer-box -->
+                                    </div><!-- roamer-box-hide -->
+
+                                    <div class="gb-horizontal-scroll">
+                                        <div class="table-grid">
+                                            <table class="radius">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Network</th>
+                                                        <th>Affected <br> IoT Devices <span class="filter-icon"></span></th>
+                                                        <th>Service <br> Status  </th>
+                                                        <th>Alarm</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Vodafone</a></td>
+                                                        <td>45</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">ACeS Regional Services Co....</a></td>
+                                                        <td>45</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">ACeS Phillippines Cellular r...</a></td>
+                                                        <td>35</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                                                        <td><span class="icon progress-bar-orange"></span>Major</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">AL Madar Telecomm Comp...</a></td>
+                                                        <td>25</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">BTC Mobile EOOD (28403)</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">BH Telecom Joint Stock C...</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Claro Chile SA (730 03)</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Colombia Movil SA</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-orange"></span>Major</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Claro CR Telecomunicacie...</a></td>
+                                                        <td>16</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Compania Dominicana de Compania Dominicana de...</a></td>
+                                                        <td>11</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div><!-- table-grid -->
+                                    </div><!-- gb-horizontal-scroll -->
+
+                                </div><!-- back-m-scroll -->
+
+
+                            </div><!-- roaming-pack-rside -->
+
+                        </div><!-- roaming-pack -->
+
+                    </div><!-- left-white-box -->
+
+                    <div class="right-white-box">
+
+                        <div class="filter-box">
+                            <div class="heading">
+                                <h2>Inbound IoT Devices</h2>
+                            </div>
+                            <div class="search">
+                                <input type="text" name="lastname" class="search-bar" placeholder="Search Network Here...">
+                            </div>
+                            <div class="tabs-icons">
+                                <ul>
+                                    <li><a href="javascript:void"><span class="icons1"></span></a></li>
+                                    <li><a href="javascript:void" class="table-grid-show"><span class="icons2"></span></a></li>
+                                    <li><a href="javascript:void" class="roamer-box-show active"><span class="icons3"></span></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- filter-box -->
+
+                        <div class="roaming-pack">
+                            <div class="roaming-pack-lside">
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-21.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Inbound IoT Devices</p>
+                                        <h3>65,420</h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="hr"></div>
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-3.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Network Outages</p>
+                                        <h3>1<span><img src="images/icons/icons-8.png" class="img-responsive" alt="mobileum"></span><i>1hr ago</i></h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-4.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Affected IoT Devices</p>
+                                        <h3>1720</h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="hr"></div>
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-5.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Service Outages</p>
+                                        <h3>111<span><img src="images/icons/icons-9.png" class="img-responsive" alt="mobileum"></span><i>10hrs ago</i></h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+
+                                <div class="details-box-flex">
+                                    <div class="icons">
+                                        <img src="images/icons/icons-7.png" class="img-responsive" alt="mobileum">
+                                    </div><!--  -->
+                                    <div class="details">
+                                        <p>Affected IoT Devices</p>
+                                        <h3>4690</h3>
+                                    </div><!--  -->
+                                </div><!-- details-box-flex -->
+                            </div><!-- roaming-pack-lside -->
+
+                            <div class="roaming-pack-rside">
+
+                                <div class="back-m-scroll">
+
+                                    <div class="roamer-box-hide">
+                                        <div class="roamer-box">
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>1720</h2>
+                                                    <img src="images/icons/icons-10.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Vodafone D2</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>200</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Orange Spain</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>120</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Meteor Ireland</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>110</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                                            <span class="sr-only">95% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Critical</p>
+                                                    <h6>Telstra</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>1360</h2>
+                                                    <img src="images/icons/icons-11.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                                            <span class="sr-only">75% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Major</p>
+                                                    <h6>Telefonic UJ</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>1010</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-orange" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                                            <span class="sr-only">75% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Major</p>
+                                                    <h6>STC</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>680</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                                                            <span class="sr-only">35% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Minor</p>
+                                                    <h6>Viva Kuwait</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>220</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                                                            <span class="sr-only">35% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Minor</p>
+                                                    <h6>SFR</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>150</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                                                            <span class="sr-only">35% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Minor</p>
+                                                    <h6>INWI</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>230</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>Wind</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>220</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>AT&T</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>160</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>SALT</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>150</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>As EMT</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                            <div class="roamer-box-details">
+                                                <a href="internal-cem.html">
+                                                    <h2>80</h2>
+                                                    <img src="images/icons/icons-12.png" class="img-responsive" alt="mobileum">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                                            <span class="sr-only">50% Complete</span>
+                                                        </div>
+                                                    </div> 
+                                                    <p>Warning</p>
+                                                    <h6>Vodafone Haryana</h6>
+                                                </a>
+                                            </div><!-- roamer-box-details -->
+                                        </div><!-- roamer-box -->
+                                    </div><!-- roamer-box-hide -->
+
+                                    <div class="gb-horizontal-scroll">
+                                        <div class="table-grid">
+                                            <table class="radius">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Network</th>
+                                                        <th>Affected <br> IoT Devices <span class="filter-icon"></span></th>
+                                                        <th>Service <br> Status  </th>
+                                                        <th>Alarm</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Vodafone</a></td>
+                                                        <td>45</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">ACeS Regional Services Co....</a></td>
+                                                        <td>45</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">ACeS Phillippines Cellular r...</a></td>
+                                                        <td>35</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                                                        <td><span class="icon progress-bar-orange"></span>Major</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">AL Madar Telecomm Comp...</a></td>
+                                                        <td>25</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">BTC Mobile EOOD (28403)</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">BH Telecom Joint Stock C...</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-red"></span>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Claro Chile SA (730 03)</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Colombia Movil SA</a></td>
+                                                        <td>18</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In service</td>
+                                                        <td><span class="icon progress-bar-orange"></span>Major</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Claro CR Telecomunicacie...</a></td>
+                                                        <td>16</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="internal-cem.html">Compania Dominicana de Compania Dominicana de...</a></td>
+                                                        <td>11</td>
+                                                        <td><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Affected</td>
+                                                        <td><span class="icon progress-bar-blue"></span>Minor</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div><!-- table-grid -->
+                                    </div><!-- gb-horizontal-scroll -->
+
+                                </div><!-- back-m-scroll -->
+
+
+                            </div><!-- roaming-pack-rside -->
+
+                        </div><!-- roaming-pack -->
+
+                    </div><!-- right-white-box -->
+
                 </div>
-            </div>
+            </main><!-- main -->
         </div>
-    </div>
+        </div>
+
+        </div>
+            <footer class="footer-status">
+            <ul>
+                <li>Service Status</li>
+                <li><a href=""><span class="icon"><img src="images/icons/icons-13.png" alt="mobileum"></span>Outage</a></li>
+                <li><a href=""><span class="icon"><img src="images/icons/icons-14.png" alt="mobileum"></span>Service Affected</a></li>
+                <li><a href=""><span class="icon"><img src="images/icons/icons-15.png" alt="mobileum"></span>In Service</a></li>
+                <li>Alarm Status</li>
+                <li><a href=""><span class="icon progress-bar-red"></span>Critical</a></li>
+                <li><a href=""><span class="icon progress-bar-orange"></span>Major</a></li>
+                <li><a href=""><span class="icon progress-bar-blue"></span>Minor</a></li>
+                <li><a href=""><span class="icon progress-bar-yellow"></span>Warning</a></li>
+            </ul>
+        </footer><!-- footer-status -->
 </div>
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/jQuery-plugin-progressbar.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $(".progress-bar").loading();
 
 
-        $(".setsize").each(function () {
-            $(this).height($(this).width());
-        });
-    });
-    $(window).on('resize', function () {
-        $(".setsize").each(function () {
-            $(this).height($(this).width());
-        });
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
+    <script>
+      /*  $(".back-m-scroll").mCustomScrollbar({
+                setHeight: 393,
+            });
+*/
+            $(".internal-cem-table").mCustomScrollbar({
+                setHeight: 210,
+            });
 
-    })
-    $(function () {
+            $(".table-scroll").mCustomScrollbar({
+                setHeight: 82,
+            });
 
+            /*$(".tab-scroll").mCustomScrollbar({
+                setHeight: 1000,
+            });*/
 
-        var start = moment().subtract(29, 'days');
-        var end = moment();
+            $(".welcome-sms").mCustomScrollbar({
+                setHeight: 130,
+            });
 
-        function cb(start, end) {
-            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-        }
-        $('#reportrange').daterangepicker({
-            startDate: start,
-            endDate: end,
-            ranges: {
-                'Today': [moment(), moment()],
-                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            }
-        }, cb);
-        cb(start, end);
-    });
-
-</script>
-<script type="text/javascript">
-
-    Highcharts.chart('iotpie', {
-        exporting: {enabled: false},
-        credits: {enabled: false},
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Service Distribution'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.percentage:.0f} %',
-                    distance: -50,
-                    filter: {
-                        property: 'percentage',
-                        operator: '>',
-                        value: 4
-                    },
-                    style: {
-                        textOutline: false
-                    }
-                },
-                showInLegend: true
-            }
-        },
-
-        series: [{
-                name: 'Brands',
-                colorByPoint: true,
-                data: [{
-                        name: 'Auto',
-                        y: 60,
-                        color: '#9ACFFF',
-                    }, {
-                        name: 'Home Automation',
-                        y: 40,
-                        sliced: true,
-                        selected: true,
-                        color: '#8AE7AB',
-                    }, {
-                        name: 'Telemetry',
-                        y: 10,
-                        color: '#C4A2E9',
-                    }, {
-                        name: 'Surveillance',
-                        y: 60,
-                        color: '#CFCFFF',
-                    }]
-            }]
-    });
-</script>
-<script type="text/javascript">
-
-    Highcharts.chart('postpaid', {
-
-        title: {
-            text: ''
-        },
-        exporting: {enabled: false},
-        credits: {enabled: false},
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
-        yAxis: {
-            title: {
-                text: 'Roamers Count'
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
-        },
-
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: false
-                },
-                enableMouseTracking: false
-            }
-        },
-
-        series: [{
-                name: 'Total Retail',
-                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-            }, {
-                name: 'Postpaid',
-                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-            }, {
-                name: 'Prepaid',
-                data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-            }],
-
-        responsive: {
-            rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
-                    }
-                }]
-        }
-
-    });
-</script>
-<script type="text/javascript">
-
-    Highcharts.chart('iotsubs', {
-
-        title: {
-            text: ''
-        },
-        exporting: {enabled: false},
-        credits: {enabled: false},
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['W1', 'W2', 'W3', 'W4']
-        },
-        yAxis: {
-            title: {
-                text: 'Devices Count '
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
-        },
-
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: false
-                },
-                marker: {
-                    enabled: false,
-                    lineWidth: 1,
-                    lineColor: '#666666'
-                },
-
-                enableMouseTracking: false
-            }
-        },
-
-        series: [{
-                name: 'Total Devices in K',
-                data: [470000, 480000, 510000, 500000]
-            }],
-
-        responsive: {
-            rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
-                    }
-                }]
-        }
-
-    });
-</script>
-<script type="text/javascript">
-
-    Highcharts.chart('iotrev', {
-
-        title: {
-            text: ''
-        },
-        exporting: {enabled: false},
-        credits: {enabled: false},
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['W1', 'W2', 'W3', 'W4']
-        },
-        yAxis: {
-            title: {
-                text: 'Revenue in $'
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
-        },
-
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: false
-                },
-                marker: {
-                    enabled: false,
-                    lineWidth: 1,
-                    lineColor: '#666666'
-                },
-                enableMouseTracking: false
-            }
-        },
-
-        series: [{
-                name: 'Total Revenue',
-                data: [10000, 20000, 40000, 30000]
-            }],
-
-        responsive: {
-            rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
-                    }
-                }]
-        }
-
-    });
-</script>
+            $(".gb-horizontal-scroll").mCustomScrollbar({
+                    axis:"x",
+                    advanced:{autoExpandHorizontalScroll:true}
+});
+    </script>
+    <iframe id="remotepage" style="width:0;height:0;border:0; border:none; onload="onMyFrameLoad(this)"> </iframe>
 </body>
 </html>

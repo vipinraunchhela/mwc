@@ -2206,6 +2206,7 @@ border-radius: 5px;
 box-shadow: 0px 0px 2px #efefef;
 display: flex;
 padding: 5px 0 5px 5px;
+margin-bottom: 50px;
 }
 
 .gsma-full-frame .left-aside {

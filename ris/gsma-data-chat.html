@@ -36,7 +36,7 @@
             <div class="header-top"></div>
             <div class="header-heading header-master">
                 <div class="hea-head">
-                    <h2><a href="">Roaming CEM Dashboard</a> <a href="#">/ R-CX Country Dashboard</a> / Australia</h2>
+                    <h2><a href="">Roaming CEM Dashboard</a> <a href="#">/ SQI Country Dashboard</a> / Australia</h2>
                 </div>
                 <div class="header-heading-icon">
                     <ul>
@@ -76,7 +76,7 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="gsma-datashboard.html">
+                    <a href="partner-gsma-data-chat.html">
                         <span class="icon">
                             <span class="icon-Dashboard"> </span>
                         </span>
@@ -91,14 +91,14 @@
                         <span class="text">Care View</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="../ris/partner-ranking.html">
                         <span class="icon">
                             <span class="icon-Dashboard"> </span>
                         </span>
                         <span class="text">Partner Ranking</span>
                     </a>
-                </li>
+                </li> -->
                 <!-- <li >
                     <a href="data-service.html">
                         <span class="icon"><span class="icon-Report">
@@ -169,1137 +169,725 @@
         </div>
     </div>
     <!-- ===========main=========== -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- JS For Highcharts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-    <!-- JS For Highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-    <!-- For Overall R-CX Score Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('data-rcx', {
-
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'Overall R-CX Score '
-                },
-                tickInterval: 1,
-                max: 10,
-                min: 1
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline',
-
-                },
-            },
-            legend: {
-                // layout: 'vertical',
-                // align: 'right',
-                // verticalAlign: 'center',
-                symbolHeight: 10,
-                symbolWidth: 10,
-                symbolRadius: 0,
-                y: 0,
-                padding: 3,
-
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 8.2],
-                        [Date.UTC(2013, 9, 10), 8.3],
-                        [Date.UTC(2013, 9, 20), 7.9],
-                        [Date.UTC(2013, 10, 1), 8],
-                        [Date.UTC(2013, 10, 10), 7.1],
-                        [Date.UTC(2013, 10, 20), 6.9],
-                        [Date.UTC(2013, 11, 1), 8.1],
-                        [Date.UTC(2013, 11, 10), 8.9],
-                        [Date.UTC(2013, 11, 20), 8.7],
-                        [Date.UTC(2013, 12, 1), 8.8],
-                        [Date.UTC(2013, 12, 10), 8.6],
-                        [Date.UTC(2013, 12, 20), 8.1],
-                        [Date.UTC(2014, 1, 1), 8.9],
-                        [Date.UTC(2014, 1, 10), 7.9],
-                        [Date.UTC(2014, 1, 20), 8.6],
-                        [Date.UTC(2014, 2, 1), 8.7],
-                        [Date.UTC(2014, 2, 10), 8.3]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 6.8],
-                        [Date.UTC(2013, 9, 10), 6.9],
-                        [Date.UTC(2013, 9, 20), 7.5],
-                        [Date.UTC(2013, 10, 1), 7.1],
-                        [Date.UTC(2013, 10, 10), 6.9],
-                        [Date.UTC(2013, 10, 20), 7.1],
-                        [Date.UTC(2013, 11, 1), 6.8],
-                        [Date.UTC(2013, 11, 10), 7],
-                        [Date.UTC(2013, 11, 20), 6.4],
-                        [Date.UTC(2013, 12, 1), 6.3],
-                        [Date.UTC(2013, 12, 10), 7.2],
-                        [Date.UTC(2013, 12, 20), 7],
-                        [Date.UTC(2014, 1, 1), 6.9],
-                        [Date.UTC(2014, 1, 10), 6.2],
-                        [Date.UTC(2014, 1, 20), 6.3],
-                        [Date.UTC(2014, 2, 1), 6.1],
-                        [Date.UTC(2014, 2, 10), 6.4]
-                    ],
-
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 4.8],
-                        [Date.UTC(2013, 9, 10), 4.9],
-                        [Date.UTC(2013, 9, 20), 4.1],
-                        [Date.UTC(2013, 10, 1), 3.8],
-                        [Date.UTC(2013, 10, 10), 4.2],
-                        [Date.UTC(2013, 10, 20), 4.9],
-                        [Date.UTC(2013, 11, 1), 4.8],
-                        [Date.UTC(2013, 11, 10), 4.4],
-                        [Date.UTC(2013, 11, 20), 4.1],
-                        [Date.UTC(2013, 12, 1), 4.2],
-                        [Date.UTC(2013, 12, 10), 4.1],
-                        [Date.UTC(2013, 12, 20), 4.4],
-                        [Date.UTC(2014, 1, 1), 4.7],
-                        [Date.UTC(2014, 1, 10), 4.9],
-                        [Date.UTC(2014, 1, 20), 4.1],
-                        [Date.UTC(2014, 2, 1), 3.9],
-                        [Date.UTC(2014, 2, 10), 3.7]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
-
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 500
-                        },
-                        chartOptions: {
-                            legend: {
-                                // layout: 'horizontal',
-                                // align: 'center',
-                                // verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+<!-- For Data-RCX Starts-->
+<script type="text/javascript">
+  
+  Highcharts.chart('data-rcx', {
+    chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'Network SQI Score' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 2,
+        max: 10,
+        min:0,
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0 ,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [8.3, 7.5, 8, 8.2, 8.4, 8.1],
+        color: '#f4341b',
+          showInLegend:false,
 
-        });
-    </script>
-    <!-- For Data-RCX Ends-->
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [6.3, 6.5, 6, 6.2, 6.4, 6.1],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [4.3, 4.5, 4, 4.2, 4.4, 4.1],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
+});
 
-    <!-- For Premium Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('premium', {
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'Subscribers'
-                },
-                tickInterval: 250,
-                max: 2000,
-                min: 0
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline'},
-            },
-            legend: {
-                // layout: 'vertical',
-                // align: 'left',
-                // verticalAlign: 'bottom',
-                // symbolHeight: 10,
-                // symbolWidth: 10,
-                // symbolRadius: 0,
-                // y: 0,
-                // padding: 3,
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 1535],
-                        [Date.UTC(2013, 9, 10), 1634],
-                        [Date.UTC(2013, 9, 20), 1532],
-                        [Date.UTC(2013, 10, 1), 1575],
-                        [Date.UTC(2013, 10, 10), 1678],
-                        [Date.UTC(2013, 10, 20), 1478],
-                        [Date.UTC(2013, 11, 1), 1543],
-                        [Date.UTC(2013, 11, 10), 1589],
-                        [Date.UTC(2013, 11, 20), 1645],
-                        [Date.UTC(2013, 12, 1), 1643],
-                        [Date.UTC(2013, 12, 10), 1574],
-                        [Date.UTC(2013, 12, 20), 1643],
-                        [Date.UTC(2014, 1, 1), 1598],
-                        [Date.UTC(2014, 1, 10), 1654],
-                        [Date.UTC(2014, 1, 20), 1632],
-                        [Date.UTC(2014, 2, 1), 1598],
-                        [Date.UTC(2014, 2, 10), 1621]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 342],
-                        [Date.UTC(2013, 9, 10), 321],
-                        [Date.UTC(2013, 9, 20), 352],
-                        [Date.UTC(2013, 10, 1), 325],
-                        [Date.UTC(2013, 10, 10), 364],
-                        [Date.UTC(2013, 10, 20), 338],
-                        [Date.UTC(2013, 11, 1), 375],
-                        [Date.UTC(2013, 11, 10), 354],
-                        [Date.UTC(2013, 11, 20), 353],
-                        [Date.UTC(2013, 12, 1), 374],
-                        [Date.UTC(2013, 12, 10), 325],
-                        [Date.UTC(2013, 12, 20), 345],
-                        [Date.UTC(2014, 1, 1), 355],
-                        [Date.UTC(2014, 1, 10), 365],
-                        [Date.UTC(2014, 1, 20), 354],
-                        [Date.UTC(2014, 2, 1), 357],
-                        [Date.UTC(2014, 2, 10), 362]
-                    ],
+</script>
 
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 164],
-                        [Date.UTC(2013, 9, 10), 168],
-                        [Date.UTC(2013, 9, 20), 196],
-                        [Date.UTC(2013, 10, 1), 178],
-                        [Date.UTC(2013, 10, 10), 186],
-                        [Date.UTC(2013, 10, 20), 189],
-                        [Date.UTC(2013, 11, 1), 191],
-                        [Date.UTC(2013, 11, 10), 187],
-                        [Date.UTC(2013, 11, 20), 185],
-                        [Date.UTC(2013, 12, 1), 192],
-                        [Date.UTC(2013, 12, 10), 191],
-                        [Date.UTC(2013, 12, 20), 187],
-                        [Date.UTC(2014, 1, 1), 192],
-                        [Date.UTC(2014, 1, 10), 179],
-                        [Date.UTC(2014, 1, 20), 182],
-                        [Date.UTC(2014, 2, 1), 185],
-                        [Date.UTC(2014, 2, 10), 191]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
+<script type="text/javascript">
+  Highcharts.chart('data-rcx-old', {
 
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 500
-                        },
-                        chartOptions: {
-                            legend: {
-                                // layout: 'horizontal',
-                                // align: 'center',
-                                // verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+      title: {
+          text: ''
+      },
+      // subtitle: {
+      //     text: 'Source: thesolarfoundation.com'
+      // },
+       exporting: { enabled: false },
+      credits: { enabled: false },
+
+      yAxis: {
+          title: {
+              text: 'Network SQI Score '
+          },
+          tickInterval: 2,
+          max: 10,
+          min:0,
+
+      },
+      xAxis: {
+          //title: { text: 'TIME' },
+          //tickInterval: 1,
+          //minRange: 0,
+          //max:1,
+          type: 'datetime',
+          //dateTimeLabelFormats: { day: '00:00' },
+          //labels: { rotation: 0 },
+          tickInterval: 4 * 3600 * 1000,
+
+      },
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+
+      plotOptions: {
+          series: {
+              label: {
+                  connectorAllowed: false,
+                  enabled: false
+              },
+               marker: {
+                enabled: true
+              },
+                pointStart: Date.UTC(2006, 0, 01, 21),
+                pointInterval: 5 * 3600 * 1000
+              // showInLegend: false,
+              // pointStart: 21
+          }
+      },
+
+      series: [{
+          showInLegend: false,
+        name : "Vodafone Australia",
+          data: [8,5,9,8,5,9,5,9,7,8,6,5,9,9,8,7,8],
+          color: '#f4341b',
+          marker : {enabled: false}
+      }, {
+        name : "Telstra",
+          showInLegend: false,
+          data: [8,6,9,7,8,6,5,9,9,6,7,8,8,5,9,5,9],
+          color: '#1d8acf',
+          marker : {enabled: false}
+      }, {
+        name : "Optus",
+          showInLegend: false,
+          data: [5,9,5,9,7,8,6,8,8,6,9,8,9,9,6,7,8],
+          color: '#f2be09',
+          marker : {enabled: false}
+      },
+      {
+        data : {},
+        color: '#f4341b',
+
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        data : {},
+        color: '#1d8acf',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        data : {},
+        color: '#f2be09',
+        marker : {symbol : 'circle',radius : 12 }
+    }],
+
+      responsive: {
+          rules: [{
+              condition: {
+                  maxWidth: 500
+              },
+              chartOptions: {
+                  legend: {
+                      layout: 'horizontal',
+                      align: 'center',
+                      verticalAlign: 'bottom'
+                  }
+              }
+          }]
+      }
+
+  });
+</script>
+<!-- For Data-RCX Ends-->
+
+
+<!-- For Premium Starts-->
+<script type="text/javascript">
+  Highcharts.chart('premium', {
+
+      chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'Subcribers' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 500,
+        max: 2000,
+        min:0,
+
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
-        });
-    </script>
-    <!-- For Premium Ends-->
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [1650, 1600, 1750, 1700, 1900, 1800],
+        color: '#f4341b',
+        showInLegend:false,
 
-    <!-- For Non-Premium Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('non-premium', {
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [400, 410, 420, 430, 410, 400],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [200, 210, 220, 230, 210, 200],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
+  });
+</script>
+<!-- For Premium Ends-->
 
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'Subscribers'
-                },
-                tickInterval: 10,
-                max: 60,
-                min: 0
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline'},
-            },
-            legend: {
-                // layout: 'vertical',
-                // align: 'left',
-                // verticalAlign: 'bottom',
-                // symbolHeight: 10,
-                // symbolWidth: 10,
-                // symbolRadius: 0,
-                // y: 0,
-                // padding: 3,
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 44],
-                        [Date.UTC(2013, 9, 10), 45],
-                        [Date.UTC(2013, 9, 20), 51],
-                        [Date.UTC(2013, 10, 1), 45],
-                        [Date.UTC(2013, 10, 10), 46],
-                        [Date.UTC(2013, 10, 20), 51],
-                        [Date.UTC(2013, 11, 1), 48],
-                        [Date.UTC(2013, 11, 10), 49],
-                        [Date.UTC(2013, 11, 20), 50],
-                        [Date.UTC(2013, 12, 1), 43],
-                        [Date.UTC(2013, 12, 10), 45],
-                        [Date.UTC(2013, 12, 20), 39],
-                        [Date.UTC(2014, 1, 1), 45],
-                        [Date.UTC(2014, 1, 10), 44],
-                        [Date.UTC(2014, 1, 20), 41],
-                        [Date.UTC(2014, 2, 1), 42],
-                        [Date.UTC(2014, 2, 10), 44]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 32],
-                        [Date.UTC(2013, 9, 10), 33],
-                        [Date.UTC(2013, 9, 20), 32],
-                        [Date.UTC(2013, 10, 1), 34],
-                        [Date.UTC(2013, 10, 10), 29],
-                        [Date.UTC(2013, 10, 20), 35],
-                        [Date.UTC(2013, 11, 1), 37],
-                        [Date.UTC(2013, 11, 10), 42],
-                        [Date.UTC(2013, 11, 20), 39],
-                        [Date.UTC(2013, 12, 1), 38],
-                        [Date.UTC(2013, 12, 10), 47],
-                        [Date.UTC(2013, 12, 20), 35],
-                        [Date.UTC(2014, 1, 1), 38],
-                        [Date.UTC(2014, 1, 10), 39],
-                        [Date.UTC(2014, 1, 20), 38],
-                        [Date.UTC(2014, 2, 1), 39],
-                        [Date.UTC(2014, 2, 10), 41]
-                    ],
 
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 54],
-                        [Date.UTC(2013, 9, 10), 49],
-                        [Date.UTC(2013, 9, 20), 52],
-                        [Date.UTC(2013, 10, 1), 51],
-                        [Date.UTC(2013, 10, 10), 48],
-                        [Date.UTC(2013, 10, 20), 47],
-                        [Date.UTC(2013, 11, 1), 46],
-                        [Date.UTC(2013, 11, 10), 50],
-                        [Date.UTC(2013, 11, 20), 49],
-                        [Date.UTC(2013, 12, 1), 48],
-                        [Date.UTC(2013, 12, 10), 51],
-                        [Date.UTC(2013, 12, 20), 50],
-                        [Date.UTC(2014, 1, 1), 49],
-                        [Date.UTC(2014, 1, 10), 50],
-                        [Date.UTC(2014, 1, 20), 51],
-                        [Date.UTC(2014, 2, 1), 49],
-                        [Date.UTC(2014, 2, 10), 50]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
+<!-- For Non-Premium Starts-->
+<script type="text/javascript">
+  Highcharts.chart('non-premium', {
 
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 500
-                        },
-                        chartOptions: {
-                            legend: {
-                                layout: 'horizontal',
-                                align: 'center',
-                                verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+      chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'Subcribers' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 10,
+        max: 60,
+        min:0,
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [46, 50, 52, 53, 51, 48],
+        color: '#f4341b',
+          showInLegend:false,
 
-        });
-    </script>
-    <!-- For Non-Premium Ends-->
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        
+        data: [32, 33, 31, 34, 28, 36],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [50, 52, 57, 60, 48, 49],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
 
-    <!-- For voice-rcx Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('voice-rcx', {
+  });
+</script>
+<!-- For Non-Premium Ends-->
 
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'Voice R-CX Score '
-                },
-                tickInterval: 1,
-                max: 10,
-                min: 1
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline'},
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                verticalAlign: 'bottom',
-                symbolHeight: 10,
-                symbolWidth: 10,
-                symbolRadius: 0,
-                y: 0,
-                padding: 3,
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
+<!-- For voice-rcx Starts-->
+<script type="text/javascript">
+  Highcharts.chart('voice-rcx', {
 
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 7.2],
-                        [Date.UTC(2013, 9, 10), 7.3],
-                        [Date.UTC(2013, 9, 20), 6.9],
-                        [Date.UTC(2013, 10, 1), 7],
-                        [Date.UTC(2013, 10, 10), 7.3],
-                        [Date.UTC(2013, 10, 20), 7.2],
-                        [Date.UTC(2013, 11, 1), 7.5],
-                        [Date.UTC(2013, 11, 10), 7.9],
-                        [Date.UTC(2013, 11, 20), 7.7],
-                        [Date.UTC(2013, 12, 1), 7.8],
-                        [Date.UTC(2013, 12, 10), 7.6],
-                        [Date.UTC(2013, 12, 20), 7.8],
-                        [Date.UTC(2014, 1, 1), 7.9],
-                        [Date.UTC(2014, 1, 10), 7.8],
-                        [Date.UTC(2014, 1, 20), 7.6],
-                        [Date.UTC(2014, 2, 1), 7.7],
-                        [Date.UTC(2014, 2, 10), 7.6]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 5.8],
-                        [Date.UTC(2013, 9, 10), 5.9],
-                        [Date.UTC(2013, 9, 20), 6.5],
-                        [Date.UTC(2013, 10, 1), 6.1],
-                        [Date.UTC(2013, 10, 10), 5.9],
-                        [Date.UTC(2013, 10, 20), 6.1],
-                        [Date.UTC(2013, 11, 1), 5.8],
-                        [Date.UTC(2013, 11, 10), 6],
-                        [Date.UTC(2013, 11, 20), 5.4],
-                        [Date.UTC(2013, 12, 1), 5.3],
-                        [Date.UTC(2013, 12, 10), 6.2],
-                        [Date.UTC(2013, 12, 20), 6],
-                        [Date.UTC(2014, 1, 1), 5.9],
-                        [Date.UTC(2014, 1, 10), 5.2],
-                        [Date.UTC(2014, 1, 20), 5.3],
-                        [Date.UTC(2014, 2, 1), 5.1],
-                        [Date.UTC(2014, 2, 10), 5.4]
-                    ],
-
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 5.7],
-                        [Date.UTC(2013, 9, 10), 5.9],
-                        [Date.UTC(2013, 9, 20), 5.7],
-                        [Date.UTC(2013, 10, 1), 5.8],
-                        [Date.UTC(2013, 10, 10), 6.1],
-                        [Date.UTC(2013, 10, 20), 6.3],
-                        [Date.UTC(2013, 11, 1), 5.8],
-                        [Date.UTC(2013, 11, 10), 5.7],
-                        [Date.UTC(2013, 11, 20), 5.7],
-                        [Date.UTC(2013, 12, 1), 5.6],
-                        [Date.UTC(2013, 12, 10), 5.8],
-                        [Date.UTC(2013, 12, 20), 5.7],
-                        [Date.UTC(2014, 1, 1), 5.7],
-                        [Date.UTC(2014, 1, 10), 5.9],
-                        [Date.UTC(2014, 1, 20), 5.8],
-                        [Date.UTC(2014, 2, 1), 6],
-                        [Date.UTC(2014, 2, 10), 5.9]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
-
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 1000
-                        },
-                        chartOptions: {
-                            legend: {
-                                layout: 'horizontal',
-                                align: 'center',
-                                verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+     chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'Voice SSI Score' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 2,
+        max: 10,
+        min:0,
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [8.3, 7.5, 8, 8.2, 8.4, 8.1],
+        color: '#f4341b',
+          showInLegend:false,
 
-        });
-    </script>
-    <!-- For voice-rcx Ends-->
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [6.3, 6.5, 6, 6.2, 6.4, 6.1],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [4.3, 4.5, 4, 4.2, 4.4, 4.1],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
 
-    <!-- For regis-rcx Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('data-rcx-score', {
+  });
+</script>
+<!-- For voice-rcx Ends-->
 
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'Data R-CX Score'
-                },
-                tickInterval: 1,
-                max: 10,
-                min: 1
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline'},
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                verticalAlign: 'bottom',
-                symbolHeight: 10,
-                symbolWidth: 10,
-                symbolRadius: 0,
-                y: 0,
-                padding: 3,
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
-
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 7.2],
-                        [Date.UTC(2013, 9, 10), 7.3],
-                        [Date.UTC(2013, 9, 20), 6.9],
-                        [Date.UTC(2013, 10, 1), 7],
-                        [Date.UTC(2013, 10, 10), 6.1],
-                        [Date.UTC(2013, 10, 20), 5.9],
-                        [Date.UTC(2013, 11, 1), 7.1],
-                        [Date.UTC(2013, 11, 10), 7.9],
-                        [Date.UTC(2013, 11, 20), 7.7],
-                        [Date.UTC(2013, 12, 1), 7.8],
-                        [Date.UTC(2013, 12, 10), 7.6],
-                        [Date.UTC(2013, 12, 20), 7.1],
-                        [Date.UTC(2014, 1, 1), 7.9],
-                        [Date.UTC(2014, 1, 10), 6.9],
-                        [Date.UTC(2014, 1, 20), 7.6],
-                        [Date.UTC(2014, 2, 1), 7.7],
-                        [Date.UTC(2014, 2, 10), 7.3]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 5.8],
-                        [Date.UTC(2013, 9, 10), 5.9],
-                        [Date.UTC(2013, 9, 20), 6.5],
-                        [Date.UTC(2013, 10, 1), 6.1],
-                        [Date.UTC(2013, 10, 10), 5.9],
-                        [Date.UTC(2013, 10, 20), 6.1],
-                        [Date.UTC(2013, 11, 1), 5.8],
-                        [Date.UTC(2013, 11, 10), 6],
-                        [Date.UTC(2013, 11, 20), 5.4],
-                        [Date.UTC(2013, 12, 1), 5.3],
-                        [Date.UTC(2013, 12, 10), 6.2],
-                        [Date.UTC(2013, 12, 20), 6],
-                        [Date.UTC(2014, 1, 1), 5.9],
-                        [Date.UTC(2014, 1, 10), 5.2],
-                        [Date.UTC(2014, 1, 20), 5.3],
-                        [Date.UTC(2014, 2, 1), 5.1],
-                        [Date.UTC(2014, 2, 10), 5.4]
-                    ],
-
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 3.4],
-                        [Date.UTC(2013, 9, 10), 3.1],
-                        [Date.UTC(2013, 9, 20), 3.5],
-                        [Date.UTC(2013, 10, 1), 3.2],
-                        [Date.UTC(2013, 10, 10), 3.3],
-                        [Date.UTC(2013, 10, 20), 3.4],
-                        [Date.UTC(2013, 11, 1), 3.1],
-                        [Date.UTC(2013, 11, 10), 3.2],
-                        [Date.UTC(2013, 11, 20), 3.4],
-                        [Date.UTC(2013, 12, 1), 3.1],
-                        [Date.UTC(2013, 12, 10), 3.3],
-                        [Date.UTC(2013, 12, 20), 3.5],
-                        [Date.UTC(2014, 1, 1), 3.5],
-                        [Date.UTC(2014, 1, 10), 3.6],
-                        [Date.UTC(2014, 1, 20), 3.4],
-                        [Date.UTC(2014, 2, 1), 3.2],
-                        [Date.UTC(2014, 2, 10), 3.1]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
-
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 1000
-                        },
-                        chartOptions: {
-                            legend: {
-                                layout: 'horizontal',
-                                align: 'center',
-                                verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+<!-- For regis-rcx Starts-->
+<script type="text/javascript">
+  Highcharts.chart('data-rcx-score', {
+ chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'Data SSI Score' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 2,
+        max: 10,
+        min:0,
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [8.3, 7.5, 8, 8.2, 8.4, 8.1],
+        color: '#f4341b',
+          showInLegend:false,
 
-        });
-    </script>
-    <!-- For regis-rcx Ends-->
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [6.3, 6.5, 6, 6.2, 6.4, 6.1],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [4.3, 4.5, 4, 4.2, 4.4, 4.1],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
 
-    <!-- For regis-rcx Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('regis-rcx', {
+  });
+</script>
+<!-- For regis-rcx Ends-->
 
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'Reg R-CX Score '
-                },
-                tickInterval: 1,
-                max: 10,
-                min: 1
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline'},
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                verticalAlign: 'bottom',
-                symbolHeight: 10,
-                symbolWidth: 10,
-                symbolRadius: 0,
-                y: 0,
-                padding: 3,
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
 
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 8.9],
-                        [Date.UTC(2013, 9, 10), 8.8],
-                        [Date.UTC(2013, 9, 20), 9.1],
-                        [Date.UTC(2013, 10, 1), 8.8],
-                        [Date.UTC(2013, 10, 10), 8.7],
-                        [Date.UTC(2013, 10, 20), 8.8],
-                        [Date.UTC(2013, 11, 1), 8.9],
-                        [Date.UTC(2013, 11, 10), 8.8],
-                        [Date.UTC(2013, 11, 20), 9],
-                        [Date.UTC(2013, 12, 1), 9.1],
-                        [Date.UTC(2013, 12, 10), 8.8],
-                        [Date.UTC(2013, 12, 20), 8.9],
-                        [Date.UTC(2014, 1, 1), 8.9],
-                        [Date.UTC(2014, 1, 10), 9],
-                        [Date.UTC(2014, 1, 20), 9.1],
-                        [Date.UTC(2014, 2, 1), 9.2],
-                        [Date.UTC(2014, 2, 10), 9]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 8.3],
-                        [Date.UTC(2013, 9, 10), 8.2],
-                        [Date.UTC(2013, 9, 20), 8.1],
-                        [Date.UTC(2013, 10, 1), 8.4],
-                        [Date.UTC(2013, 10, 10), 8.2],
-                        [Date.UTC(2013, 10, 20), 8.3],
-                        [Date.UTC(2013, 11, 1), 8.2],
-                        [Date.UTC(2013, 11, 10), 8.1],
-                        [Date.UTC(2013, 11, 20), 8.5],
-                        [Date.UTC(2013, 12, 1), 8.1],
-                        [Date.UTC(2013, 12, 10), 8.2],
-                        [Date.UTC(2013, 12, 20), 8.4],
-                        [Date.UTC(2014, 1, 1), 8.2],
-                        [Date.UTC(2014, 1, 10), 8.3],
-                        [Date.UTC(2014, 1, 20), 8.1],
-                        [Date.UTC(2014, 2, 1), 8.2],
-                        [Date.UTC(2014, 2, 10), 8.1]
-                    ],
 
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 7.1],
-                        [Date.UTC(2013, 9, 10), 7.2],
-                        [Date.UTC(2013, 9, 20), 7.2],
-                        [Date.UTC(2013, 10, 1), 7.3],
-                        [Date.UTC(2013, 10, 10), 7.1],
-                        [Date.UTC(2013, 10, 20), 7.4],
-                        [Date.UTC(2013, 11, 1), 7.2],
-                        [Date.UTC(2013, 11, 10), 7.4],
-                        [Date.UTC(2013, 11, 20), 7.5],
-                        [Date.UTC(2013, 12, 1), 7.1],
-                        [Date.UTC(2013, 12, 10), 7.2],
-                        [Date.UTC(2013, 12, 20), 7.5],
-                        [Date.UTC(2014, 1, 1), 7.6],
-                        [Date.UTC(2014, 1, 10), 7.7],
-                        [Date.UTC(2014, 1, 20), 8],
-                        [Date.UTC(2014, 2, 1), 7.9],
-                        [Date.UTC(2014, 2, 10), 7.9]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
+<!-- For regis-rcx Starts-->
+<script type="text/javascript">
+  Highcharts.chart('regis-rcx', {
 
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 1000
-                        },
-                        chartOptions: {
-                            legend: {
-                                layout: 'horizontal',
-                                align: 'center',
-                                verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+      chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'Reg. SSI Score' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 2,
+        max: 10,
+        min:0,
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [8.3, 7.5, 8, 8.2, 8.4, 8.1],
+        color: '#f4341b',
+          showInLegend:false,
 
-        });
-    </script>
-    <!-- For regis-rcx Ends-->
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [6.3, 6.5, 6, 6.2, 6.4, 6.1],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [4.3, 4.5, 4, 4.2, 4.4, 4.1],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
 
-    <!-- For sms-rcx Starts-->
-    <script type="text/javascript">
-        Highcharts.chart('sms-rcx', {
+  });
+</script>
+<!-- For regis-rcx Ends-->
 
-            title: {text: ''},
-            exporting: {enabled: false},
-            credits: {enabled: false},
-            yAxis: {
-                title: {
-                    text: 'SMS R-CX Score '
-                },
-                tickInterval: 1,
-                max: 10,
-                min: 1
-            },
-            xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000 * 30,
-                labels: {
-                    rotation: 0
-                },
-                dateTimeLabelFormats: {month: '%b'},
-                title: {text: 'Timeline'},
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                verticalAlign: 'bottom',
-                symbolHeight: 10,
-                symbolWidth: 10,
-                symbolRadius: 0,
-                y: 0,
-                padding: 3,
-            },
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                        enabled: false
-                    },
-                    marker: {
-                        enabled: true
-                    },
-                }
-            },
-
-            series: [
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 8.9],
-                        [Date.UTC(2013, 9, 10), 8.8],
-                        [Date.UTC(2013, 9, 20), 9.1],
-                        [Date.UTC(2013, 10, 1), 8.8],
-                        [Date.UTC(2013, 10, 10), 8.7],
-                        [Date.UTC(2013, 10, 20), 8.8],
-                        [Date.UTC(2013, 11, 1), 8.9],
-                        [Date.UTC(2013, 11, 10), 8.8],
-                        [Date.UTC(2013, 11, 20), 9],
-                        [Date.UTC(2013, 12, 1), 9.1],
-                        [Date.UTC(2013, 12, 10), 8.8],
-                        [Date.UTC(2013, 12, 20), 8.9],
-                        [Date.UTC(2014, 1, 1), 8.9],
-                        [Date.UTC(2014, 1, 10), 9],
-                        [Date.UTC(2014, 1, 20), 9.1],
-                        [Date.UTC(2014, 2, 1), 9.2],
-                        [Date.UTC(2014, 2, 10), 9]
-                    ],
-                    color: '#f4341b',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 8.3],
-                        [Date.UTC(2013, 9, 10), 8.2],
-                        [Date.UTC(2013, 9, 20), 8.1],
-                        [Date.UTC(2013, 10, 1), 8.4],
-                        [Date.UTC(2013, 10, 10), 8.2],
-                        [Date.UTC(2013, 10, 20), 8.3],
-                        [Date.UTC(2013, 11, 1), 8.2],
-                        [Date.UTC(2013, 11, 10), 8.1],
-                        [Date.UTC(2013, 11, 20), 8.5],
-                        [Date.UTC(2013, 12, 1), 8.1],
-                        [Date.UTC(2013, 12, 10), 8.2],
-                        [Date.UTC(2013, 12, 20), 8.4],
-                        [Date.UTC(2014, 1, 1), 8.2],
-                        [Date.UTC(2014, 1, 10), 8.3],
-                        [Date.UTC(2014, 1, 20), 8.1],
-                        [Date.UTC(2014, 2, 1), 8.2],
-                        [Date.UTC(2014, 2, 10), 8.1]
-                    ],
-
-                    color: '#1d8acf',
-                    marker: {enabled: false}
-                },
-                {
-                    showInLegend: false,
-                    name: '',
-                    data: [
-                        [Date.UTC(2013, 9, 1), 8.3],
-                        [Date.UTC(2013, 9, 10), 8.4],
-                        [Date.UTC(2013, 9, 20), 8.4],
-                        [Date.UTC(2013, 10, 1), 8],
-                        [Date.UTC(2013, 10, 10), 8],
-                        [Date.UTC(2013, 10, 20), 7.9],
-                        [Date.UTC(2013, 11, 1), 7.8],
-                        [Date.UTC(2013, 11, 10), 7.9],
-                        [Date.UTC(2013, 11, 20), 8],
-                        [Date.UTC(2013, 12, 1), 7.9],
-                        [Date.UTC(2013, 12, 10), 7.8],
-                        [Date.UTC(2013, 12, 20), 8],
-                        [Date.UTC(2014, 1, 1), 8],
-                        [Date.UTC(2014, 1, 10), 7.9],
-                        [Date.UTC(2014, 1, 20), 8],
-                        [Date.UTC(2014, 2, 1), 7.9],
-                        [Date.UTC(2014, 2, 10), 7.9]
-                    ],
-                    color: '#f2be09',
-                    marker: {enabled: false}
-                },
-                {
-                    name: "Vodafone Australia",
-                    data: {},
-                    color: '#f4341b',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Telstra",
-                    data: {},
-                    color: '#1d8acf',
-                    marker: {symbol: 'circle', radius: 12}
-                },
-                {
-                    name: "Optus",
-                    data: {},
-                    color: '#f2be09',
-                    marker: {symbol: 'circle', radius: 12}
-                }],
-
-            responsive: {
-                rules: [{
-                        condition: {
-                            maxWidth: 1000
-                        },
-                        chartOptions: {
-                            legend: {
-                                layout: 'horizontal',
-                                align: 'center',
-                                verticalAlign: 'bottom'
-                            }
-                        }
-                    }]
+<!-- For sms-rcx Starts-->
+<script type="text/javascript">
+  Highcharts.chart('sms-rcx', {
+ chart: { type: 'spline' },
+    exporting: { enabled: false },
+    credits: { enabled: false },
+    title: { text: '' },
+    subtitle: { text: '' },
+    xAxis: { categories: [ 'Oct', 'Nov', 'Dec','Jan', 'Feb', 'Mar'], title: { text: 'Timeline' }, },
+    yAxis: {
+      //categories: [ '0', '2', '4','6', '8', '10'],
+        title: { text: 'SMS SSI Score' },
+        labels: {
+            //formatter: function () { return this.value + '°'; }
+        },
+        tickInterval: 2,
+        max: 10,
+        min:0,
+    },
+    legend: {
+          // symbol: 'circle',
+          //layout: 'vertical',
+          //align: 'left',
+          //verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 0,
+      },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                //radius: 4,
+                //lineColor: '#666666',
+                //lineWidth: 1
             }
+        }
+    },
+    series: [{
+        name: '',
+        marker: { symbol: 'circle', enabled:false },
+        data: [8.7, 8.9, 8, 8.9, 9, 10],
+        color: '#f4341b',
+          showInLegend:false,
 
-        });
-    </script>
+    }, {
+        name: '',
+          color: '#1d8acf',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [8.3, 8.1, 7.9, 8.6, 9, 8.8],
+    }, {
+        name: '',
+          color: '#f2be09',
+          showInLegend:false,
+        marker: { enabled:false},
+        data: [7, 7.9, 8.2, 8.3, 7, 8],
+    },
+    {
+        name: 'Vodafone Australia',       
+        data: [],
+        color: '#f4341b',
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Telstra',
+          color: '#1d8acf',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }, {
+        name: 'Optus',
+          color: '#f2be09',
+        data: [],
+         marker: { symbol: 'circle',radius : 12 },
+    }]
+
+  });
+</script>
+<!-- For sms-rcx Ends-->
+
 <iframe id="remotepage" style="width:0;height:0;border:0; border:none; onload="onMyFrameLoad(this)"> </iframe>
     <!-- For sms-rcx Ends-->
 </body>

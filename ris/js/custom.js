@@ -12,10 +12,10 @@ $(".table-scroll").mCustomScrollbar({
     setHeight: 82,
 });
 
-$(".tab-scroll").mCustomScrollbar({
+/*$(".tab-scroll").mCustomScrollbar({
     setHeight: 1000,
 });
-
+*/
 $(".welcome-sms").mCustomScrollbar({
     setHeight: 130,
 });

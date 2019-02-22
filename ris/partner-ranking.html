@@ -25,10 +25,7 @@
         <link rel="stylesheet" type="text/css" href="css/style-td-rcx.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet">
-        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
     </head>
     <body>
 
@@ -64,15 +61,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="roaming-cem-dashboard.html">
+                    <a href="dashboard-cem.html">
                         <span class="icon"><span class="icon-Report">
                             </span></span>
                         <span class="text">Network Outages</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="gsma-datashboard.html">
+                <li class="active">
+                    <a href="../ris/partner-ranking.html">
                         <span class="icon">
                             <span class="icon-Dashboard"> </span>
                         </span>
@@ -87,14 +84,14 @@
                         <span class="text">Care View</span>
                     </a>
                 </li>
-                <li class="active">
+                <!-- <li class="active">
                     <a href="../ris/partner-ranking.html">
                         <span class="icon">
                             <span class="icon-Dashboard"> </span>
                         </span>
                         <span class="text">Partner Ranking</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li >
                     <a href="data-service.html">
@@ -124,10 +121,101 @@
 <div class="roaming-tabs">
 
   <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'current-status')" id="defaultOpen">Top Partners</button>
+     <button class="tablinks" onclick="openCity(event, 'partner')" id="defaultOpen">Partner Quality</button>
+    <button class="tablinks" onclick="openCity(event, 'current-status')">Top Partners</button>
     <button class="tablinks" onclick="openCity(event, 'country-info')">Group View</button>
     <button class="tablinks trip" onclick="openCity(event, 'trip-hist')" >Inferior Preferred Partners</button>
   </div><!-- tab -->
+
+
+
+    <div id="partner" class="tabcontent">
+      <div class="tab-scroll">
+                    <div class="xxgsma-main">
+                      <div class="gsma-full-frame">
+                        <div class="left-aside">
+                          <h2>Roamers</h2>
+                          <div class="gsma-rating">
+                            <div class="gs-icons">
+                              <img src="images/icons/icons-32.png" class="img-responsive">
+                            </div>
+                            <div class="gs-details">
+                              <p>Very Good</p>
+                              <h3>186,432 <span>(60%)</span></h3>
+                            </div>
+                          </div><!-- gsma-rating -->
+                          <div class="gsma-rating">
+                            <div class="gs-icons">
+                              <img src="images/icons/icons-33.png" class="img-responsive">
+                            </div>
+                            <div class="gs-details">
+                              <p>Good</p>
+                              <h3>74,321 <span>(24%)</span></h3>
+                            </div>
+                          </div><!-- gsma-rating -->
+                          <div class="gsma-rating">
+                            <div class="gs-icons">
+                              <img src="images/icons/icons-34.png" class="img-responsive">
+                            </div>
+                            <div class="gs-details">
+                              <p>Fair</p>
+                              <h3>23,432<span>(7%)</span></h3>
+                            </div>
+                          </div><!-- gsma-rating -->
+                          <div class="gsma-rating">
+                            <div class="gs-icons">
+                              <img src="images/icons/icons-35.png" class="img-responsive">
+                            </div>
+                            <div class="gs-details">
+                              <p>Poor</p>
+                              <h3>16,345 <span>(6%)</span></h3>
+                            </div>
+                          </div><!-- gsma-rating -->
+                          <div class="gsma-rating">
+                            <div class="gs-icons">
+                              <img src="images/icons/icons-36.png" class="img-responsive">
+                            </div>
+                            <div class="gs-details">
+                              <p>Very Poor</p>
+                              <h3>8,345 <span>(3%)</span></h3>
+                            </div>
+                          </div><!-- gsma-rating -->  
+                        </div><!-- left-aside -->
+                        <div class="gsma-right-aside">
+                          <div class="gsma-right-box1">
+                            <div class="heading">
+                              <h2>country sqi Score </h2>
+                            </div>
+                            <div class="gsma-date-box">
+                              <div class="cur-sta-flex">
+                                   <div class="text">From</div>
+                                   <div class="input-box">
+                                    <input type="date" name="" placeholder="28/01/2018" class="input-control date-icon">
+                                   </div><!--  -->
+                              </div><!-- cur-sta-flex -->
+                              <div class="cur-sta-flex">
+                                   <div class="text">To</div>
+                                   <div class="input-box">
+                                    <input type="date" name="" placeholder="02/02/2018" class="input-control date-icon">
+                                   </div><!--  -->
+                              </div><!-- cur-sta-flex -->
+                              <div class="cur-sta-flex">
+                                   <div class="input-box">
+                                    <input type="button" name="" value="SEARCH" class="btn-blue">
+                                   </div><!--  -->
+                              </div><!-- cur-sta-flex -->
+                            </div><!-- gsma-date-box -->
+                          </div><!-- gsma-right-box1 -->
+                          <div class="gsma-map">
+                            <a href="partner-gsma-data-chat.html"><div id="container"></div></a>
+                          </div><!-- gsma-ma -->
+                        </div><!-- gsma-right-aside -->
+                      </div><!-- gsma-full-frame -->
+                    </div><!-- gsma-main -->
+
+
+      </div><!-- tab-scroll -->
+    </div><!-- current-status -->      
 
     <div id="current-status" class="tabcontent">
       <div class="tab-scroll">
@@ -160,14 +248,14 @@
                          </div> 
                        </div>
 
-                     <div class="col-md-2 col-sm-12 pull-right">
-                        <div class="input-group search pageSearch" >
-                           <input type="text" placeholder="Search" class="form-control dateStyle"/>
-                           <span class="input-group-addon searchFa">
-                           <a href="#"> <i class="fa fa-search"></i></a>
-                           </span>
-                        </div>
-                     </div>
+<!--                      <div class="col-md-2 col-sm-12 pull-right">
+   <div class="input-group search pageSearch" >
+      <input type="text" placeholder="Search" class="form-control dateStyle"/>
+      <span class="input-group-addon searchFa">
+      <a href="#"> <i class="fa fa-search"></i></a>
+      </span>
+   </div>
+</div> -->
                   </div>
                </div>
                <!--------- Table Section ------------>
@@ -416,14 +504,14 @@
                          </div> 
                        </div>
 
-                     <div class="col-md-2 col-sm-12 pull-right">
+                     <!-- <div class="col-md-2 col-sm-12 pull-right">
                         <div class="input-group search pageSearch" >
                            <input type="text" placeholder="Search" class="form-control dateStyle"/>
                            <span class="input-group-addon searchFa">
                            <a href="#"> <i class="fa fa-search"></i></a>
                            </span>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                </div>
                <!--------- Table Section ------------>
@@ -445,7 +533,7 @@
                         <tbody>
                            <tr>
                               <td>1</td>
-                              <td>02 UK</td>
+                              <td>Vodafone UK</td>
                               <td>United Kingdom</td>
                               <td class="orangeColor">8.19</td>
                               <td>23,124</td>
@@ -453,12 +541,12 @@
                               <td class="redColor">7.2</td>
                               <td class="redColor">7.5</td>
                               <td class="greenColor">9.3</td>
-                              <td>LBTR(B)</td>
+                              <td>LBTR(P)</td>
                            </tr>
                            <tr>
                               <td>2</td>
-                              <td>Maxis</td>
-                              <td>Malaysia</td>
+                              <td>Vodafone IRL</td>
+                              <td>Ireland</td>
                               <td class="orangeColor">8.18</td>
                               <td>1,342</td>
                               <td class="orangeColor">8.7</td>
@@ -469,8 +557,8 @@
                            </tr>
                            <tr>
                               <td>3</td>
-                              <td>Optus</td>
-                              <td>Australia</td>
+                              <td>Vodafone ESP</td>
+                              <td>Germany</td>
                               <td class="orangeColor">8.11</td>
                               <td>1,672</td>
                               <td class="orangeColor">8.8</td>
@@ -481,8 +569,8 @@
                            </tr>
                            <tr>
                               <td>4</td>
-                              <td>Telstra</td>
-                              <td>Australia</td>
+                              <td>Vodafone DE</td>
+                              <td>Italy</td>
                               <td class="orangeColor">8.07</td>
                               <td>321</td>
                               <td class="orangeColor">8.6</td>
@@ -493,8 +581,8 @@
                            </tr>
                            <tr>
                               <td>5</td>
-                              <td>Meteor</td>
-                              <td>Ireland</td>
+                              <td>Vodafone PT</td>
+                              <td>Portugal</td>
                               <td class="orangeColor">8.04</td>
                               <td>3,298</td>
                               <td class="orangeColor">8.5</td>
@@ -503,7 +591,7 @@
                               <td class="greenColor">9.1</td>
                               <td>SRDC(80+%)</td>
                            </tr>
-                           <tr>
+                          <!--  <tr>
                               <td>6</td>
                               <td>Orange</td>
                               <td>France</td>
@@ -515,7 +603,7 @@
                               <td class="greenColor">9.1</td>
                               <td>LBTR(P)</td>
                            </tr>
-                           <!-- <tr>
+                           <tr>
                               <td>7</td>
                               <td>02 UK</td>
                               <td>United Kingdom</td>
@@ -628,14 +716,14 @@
                          </div> 
                        </div>
 
-                     <div class="col-md-2 col-sm-12 pull-right">
+                     <!-- <div class="col-md-2 col-sm-12 pull-right">
                         <div class="input-group search pageSearch" >
                            <input type="text" placeholder="Search" class="form-control dateStyle"/>
                            <span class="input-group-addon searchFa">
                            <a href="#"> <i class="fa fa-search"></i></a>
                            </span>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                </div>
                <!--------- Table Section ------------>
@@ -658,10 +746,10 @@
                         <tbody>
                            <tr>
                               <td>1</td>
-                              <td>02 UK</td>
-                              <td>United Kingdom</td>
+                              <td>Meteor</td>
+                              <td>Ireland</td>
                               <td class="orangeColor">8.19</td>
-                              <td>23,124</td>
+                              <td>1,124</td>
                               <td class="orangeColor">8.9</td>
                               <td class="redColor">7.2</td>
                               <td class="redColor">7.5</td>
@@ -671,15 +759,15 @@
                            </tr>
                            <tr>
                               <td>2</td>
-                              <td>Maxis</td>
-                              <td>Malaysia</td>
-                              <td class="orangeColor">8.18</td>
-                              <td>1,342</td>
-                              <td class="orangeColor">8.7</td>
-                              <td class="redColor">7.3</td>
-                              <td class="redColor">7.7</td>
-                              <td class="greenColor">9.4</td>
-                              <td>SRDC(90%)</td>
+                              <td>Vodafone IRL</td>
+                              <td>Ireland</td>
+                              <td class="orangeColor">6.18</td>
+                              <td>11,342</td>
+                              <td class="orangeColor">5.7</td>
+                              <td class="redColor">6.3</td>
+                              <td class="redColor">6.7</td>
+                              <td class="greenColor">7.4</td>
+                              <td>LBTR(P)</td>
                               <td class="redColor">25%</td>                              
                            </tr>
                            <tr>
@@ -687,50 +775,50 @@
                               <td>Optus</td>
                               <td>Australia</td>
                               <td class="orangeColor">8.11</td>
-                              <td>1,672</td>
+                              <td>672</td>
                               <td class="orangeColor">8.8</td>
                               <td class="redColor">7.4</td>
                               <td class="redColor">7.8</td>
                               <td class="greenColor">9.1</td>
-                              <td>LBTR(P)</td>
+                              <td>SRDC(10&)</td>
                               <td class="redColor"></td>
                            </tr>
                            <tr>
                               <td>4</td>
                               <td>Telstra</td>
                               <td>Australia</td>
-                              <td class="orangeColor">8.07</td>
-                              <td>321</td>
-                              <td class="orangeColor">8.6</td>
-                              <td class="redColor">7.3</td>
-                              <td class="redColor">7.7</td>
-                              <td class="greenColor">9.0</td>
-                              <td>LBTR(N)</td>
+                              <td class="orangeColor">6.07</td>
+                              <td>7,321</td>
+                              <td class="orangeColor">6.6</td>
+                              <td class="redColor">6.3</td>
+                              <td class="redColor">5.7</td>
+                              <td class="greenColor">8.0</td>
+                              <td>SRDC(90%)</td>
                               <td class="redColor">23%</td>
                            </tr>
                            <tr>
                               <td>5</td>
-                              <td>Meteor</td>
-                              <td>Ireland</td>
+                              <td>Boyuges</td>
+                              <td>France</td>
                               <td class="orangeColor">8.04</td>
-                              <td>3,298</td>
+                              <td>1,298</td>
                               <td class="orangeColor">8.5</td>
                               <td class="redColor">7.2</td>
                               <td class="redColor">7.6</td>
                               <td class="greenColor">9.1</td>
-                              <td>SRDC(80+%)</td>
+                              <td>LBTR(N)</td>
                               <td class="redColor"></td>
                            </tr>
                            <tr>
                               <td>6</td>
                               <td>Orange</td>
                               <td>France</td>
-                              <td class="orangeColor">8.02</td>
-                              <td>7,432</td>
-                              <td class="orangeColor">8.4</td>
-                              <td class="redColor">7.1</td>
-                              <td class="redColor">7.5</td>
-                              <td class="greenColor">9.1</td>
+                              <td class="orangeColor">6.02</td>
+                              <td>9,432</td>
+                              <td class="orangeColor">6.4</td>
+                              <td class="redColor">5.1</td>
+                              <td class="redColor">5.5</td>
+                              <td class="greenColor">7.1</td>
                               <td>LBTR(P)</td>
                               <td class="redColor">22%</td>
                            </tr>
@@ -754,6 +842,303 @@
 
 
 
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+<!-- For Overall R-CX Score Starts-->
+<script type="text/javascript">
+  
+
+
+// Prepare demo data
+var data = [
+['af', 1], 
+['al', 9], 
+['dz', 6], 
+['as', 9], 
+['ad', 5], 
+['ao', 8], 
+['ai', 9], 
+['ar', 7], 
+['am', 6], 
+['aw', 3], 
+['au', 3], 
+['at', 9], 
+['az', 9], 
+['bs', 3], 
+['bh', 9], 
+['bd', 9], 
+['bb', 6], 
+['by', 9], 
+['be', 3], 
+['bz', 9], 
+['bj', 8], 
+['bm', 9], 
+['bt', 9], 
+['bo', 9], 
+['ba', 7], 
+['bw', 9], 
+['br', 9], 
+['bn', 7], 
+['bg', 6], 
+['bf', 6], 
+['bi', 3], 
+['kh', 8], 
+['cm', 9], 
+['ca', 9], 
+['cv', 9], 
+['ky', 9], 
+['cf', 7], 
+['td', 9], 
+['cl', 9], 
+['cn', 8], 
+['co', 9], 
+['km', 3], 
+['cd', 9], 
+['cg', 9], 
+['cr', 9], 
+['ci', 6], 
+['hr', 7], 
+['cu', 9], 
+['cw', 3], 
+['cy', 9], 
+['cz', 9], 
+['dk', 9], 
+['dj', 3], 
+['dm', 9], 
+['do', 9], 
+['ec', 5], 
+['eg', 8], 
+['sv', 9], 
+['gq', 9], 
+['er', 5], 
+['ee', 3], 
+['et', 8], 
+['fo', 3], 
+['fj', 9], 
+['fi', 9], 
+['fr', 9], 
+['pf', 7], 
+['ga', 6], 
+['gm', 9], 
+['ge', 7], 
+['de', 9], 
+['gh', 9], 
+['gr', 8], 
+['gl', 9], 
+['gd', 3], 
+['gu', 3], 
+['gt', 9], 
+['gn', 9], 
+['gw', 5], 
+['gy', 9], 
+['ht', 3], 
+['hn', 6], 
+['hk', 6], 
+['hu', 9], 
+['is', 3], 
+['in', 9], 
+['id', 9], 
+['ir', 9], 
+['iq', 7], 
+['ie', 6], 
+['im', 9], 
+['il', 3], 
+['it', 9], 
+['jm', 9], 
+['jp', 3], 
+['jo', 6], 
+['kz', 6], 
+['ke', 7], 
+['ki', 9], 
+['kp', 9], 
+['kr', 5], 
+['xk', 9], 
+['kw', 9], 
+['kg', 9], 
+['la', 9], 
+['lv', 3], 
+['lb', 9], 
+['ls', 7], 
+['lr', 4], 
+['ly', 4], 
+['li', 9], 
+['lt', 5], 
+['lu', 9], 
+['mo', 9], 
+['mk', 8], 
+['mg', 3], 
+['mw', 9], 
+['my', 8], 
+['mv', 9], 
+['ml', 9], 
+['mt', 9], 
+['mh', 3], 
+['mr', 3], 
+['mu', 6], 
+['yt', 5], 
+['mx', 5], 
+['fm', 9], 
+['md', 9], 
+['mc', 9], 
+['mn', 9], 
+['me', 4], 
+['ma', 7], 
+['mz', 3], 
+['mm', 7], 
+['na', 3], 
+['np', 9], 
+['nl', 4], 
+['nc', 9], 
+['nz', 9], 
+['ni', 4], 
+['ne', 9], 
+['ng', 9], 
+['mp', 9], 
+['no', 9], 
+['om', 9], 
+['pk', 9], 
+['pw', 4], 
+['pa', 4], 
+['pg', 9], 
+['py', 9], 
+['pe', 9], 
+['ph', 3], 
+['pl', 9], 
+['pt', 9], 
+['pr', 4], 
+['wa', 9], 
+['ro', 9], 
+['ru', 9], 
+['rw', 4], 
+['ws', 6], 
+['sm', 5], 
+['st', 9], 
+['sa', 9], 
+['sn', 6], 
+['rs', 8], 
+['sc', 9], 
+['sl', 8], 
+['sg', 7], 
+['sk', 9], 
+['si', 9], 
+['sb', 9], 
+['so', 9], 
+['za', 4], 
+['ss', 8], 
+['es', 9], 
+['lk', 3], 
+['kn', 9], 
+['lc', 9], 
+['mf', 5], 
+['vc', 9], 
+['sd', 9], 
+['sr', 3], 
+['sz', 6], 
+['se', 9], 
+['ch', 9], 
+['sy', 9], 
+['tj', 4], 
+['tz', 5], 
+['th', 9], 
+['tp', 7], 
+['tg', 9], 
+['to', 9], 
+['tt', 9], 
+['tn', 6], 
+['tr', 9], 
+['tm', 9], 
+['tc', 4], 
+['tv', 3], 
+['ug', 9], 
+['ua', 7], 
+['ae', 9], 
+['uk', 9], 
+['us', 9], 
+['uy', 1], 
+['uz', 6], 
+['vu', 9], 
+['ve', 3], 
+['vn', 9], 
+['vi', 3], 
+['ps', 6], 
+['eh', 2], 
+['ye', 4], 
+['zm', 1], 
+['zw', 3]
+
+];
+
+
+// Initiate the chart
+Highcharts.mapChart('container', {
+  chart: { },
+  title: { text: '' },
+    subtitle: { text: '' },
+
+    mapNavigation: {
+        enabled: false
+    },
+
+    legend: {
+                title: {
+                    text: 'Experience',
+                    style: {
+                        //color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                    }
+                },
+
+                align: 'right',
+                valign: 'center',
+                verticalAlign: 'top',
+                margin: 0,
+                y: 20,
+                //floating: true,
+                layout: 'vertical',
+                valueDecimals: 0,
+               
+                symbolRadius: 10,
+                symbolHeight: 10,
+
+                labelFormatter: function() {
+                        return  this.text +" ( " +this.from +" - " +this.to +" )";
+                    },
+                   /* itemStyle: {
+                      fontSize:'35px',
+                 font: '35pt Trebuchet MS, Verdana, sans-serif',
+                 color: '#ff0000'
+                },*/
+                
+            },
+
+             colorAxis: {
+                dataClasses: [
+                { from: 8.0, to: 9.9, color: '#8fc055',text:'Very good' }, 
+                { from: 6.0, to: 7.9, color: '#f9d048',text:'Good' }, 
+                { from: 4.0, to: 5.9, color: '#fdb757',text:'Fair' }, 
+                { from: 2.0, to: 3.9, color: '#ff8942',text:'Poor' },
+                { from: 0.0, to: 1.9, color: '#ff3a3a',text:'Very Poor', }
+                ]
+            },
+
+    series: [{
+      data: data,
+       showInLegend: false,      
+       name:'',
+      mapData: Highcharts.maps['custom/world'],
+      borderWidth: 0,   
+      point: {
+                events: {
+                    click: function () {
+                        //alert('Category: ');
+                        window.location = "Country-SQI-Heatmap.html";
+                    }
+                }
+            }             
+    }]
+});
+
+</script>
 
 
 
@@ -777,24 +1162,6 @@
         </script>
 
         <!-- JS For Highcharts -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/series-label.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript">
-         $(function () {
-          $("#datepickerStart").datepicker({ 
-                autoclose: true, 
-                todayHighlight: true
-          }).datepicker();
-         });
-         $(function () {
-          $("#datepickerEnd").datepicker({ 
-                autoclose: true, 
-                todayHighlight: true
-          }).datepicker();
-         });
-      </script>
 
     </body>
 </html>

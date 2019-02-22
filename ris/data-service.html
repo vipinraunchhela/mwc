@@ -29,6 +29,12 @@
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
     </head>
+    <style>
+        .detials h5{
+            opacity: 1;
+            padding: 0;
+        }
+    </style>
     <body>
 
         <header>
@@ -137,9 +143,9 @@
                   <div class="analysis-box">
                     <h5><span>Fault :</span> Invalid Parameter in Session Setup Message</h5>
                     <div class="flexs-para">
-                      <div class="heading">
+                      <h5 style="padding: 0; opacity: 1">
                         <span>Possible Causes :</span>
-                      </div><!-- heading -->
+                      </h5><!-- heading -->
                       <div class="detials">
                         <h5>Vodafone Australia Configuration Issue ?</h5>
                         <h5>Vodafone Australia Recent Software Upgrade ?</h5>
@@ -212,386 +218,386 @@
         <script src="https://code.highcharts.com/modules/series-label.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-        <!-- For Data-RCX Starts-->
-        <script type="text/javascript">
-            Highcharts.chart('data-rcx', {
+<script type="text/javascript">
+  Highcharts.chart('data-rcx', {
 
-                title: {
-                    text: ''
-                },
-                // subtitle: {
-                //     text: 'Source: thesolarfoundation.com'
-                // },
-                exporting: {
-                    enabled: false
-                },
-                credits: {
-                    enabled: false
-                },
+      title: {
+          text: ''
+      },
+      // subtitle: {
+      //     text: 'Source: thesolarfoundation.com'
+      // },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
 
-                yAxis: {
-                    title: {
-                        text: 'R-CX Score'
-                    },
-                    tickInterval: 2,
-                    max: 10,
+      yAxis: {
+          title: {
+              text: ' SSI Score'
+          },
+          tickInterval: 2,
+          max: 10,
 
-                },
-                xAxis: {
-                    title: {
-                        text: 'TIME'
-                    },
-                    // tickInterval: 1,
-                    minRange: 1,
-                    type: 'datetime',
-                    dateTimeLabelFormats: {
-                        day: '00:00'
-                    },
+      },
+      xAxis: {
+          title: {
+              text: 'TIME'
+          },
+          // tickInterval: 1,
+          minRange: 1,
+          type: 'datetime',
+          dateTimeLabelFormats: {
+                day: '00:00'   
+            },
 
-                    labels: {
-                        rotation: 0
-                    },
-
-                    tickInterval: 3 * 3600 * 1000,
-
-                },
-                legend: {
-                    // symbol: 'circle',
-                    layout: 'vertical',
-                    align: 'left',
-                    verticalAlign: 'bottom',
-                    symbolHeight: 10,
-                    symbolWidth: 10,
-                    symbolRadius: 0,
-                    y: 0,
-                    padding: 3,
-                },
-
-                plotOptions: {
-                    series: {
-                        label: {
-                            connectorAllowed: false,
-                            enabled: false
-                        },
-                        marker: {
-                            enabled: true
-                        },
-                        pointStart: Date.UTC(2018, 01, 01, 07, 30),
-                        pointInterval: 10 * 1800 * 250
-                                // showInLegend: false,
-                                // pointStart: 21
-                    }
-                },
-
-                series: [{
-                        showInLegend: false,
-                        name: 'Vodafone Aus',
-                        data: [10, 9.5, 9.1, 9.0, 9.2, 0, 0, 0],
-                        color: '#f4341b',
-                        marker: {enabled: false}
-                    }, {
-                        showInLegend: false,
-                        name: 'Telstra',
-                        data: [8, 8.5, 8.2, 8.9, 8.8, 8.7, 8.9, 9.0],
-                        color: '#1d8acf',
-                        marker: {enabled: false}
-                    }, {
-                        showInLegend: false,
-                        name: 'Optus',
-                        data: [6, 6.5, 6.2, 6.1, 6.3, 6.4, 6.2, 6.1],
-                        color: '#f2be09',
-                        marker: {enabled: false}
-                    },
-                    {
-                        name: "Vodafone Australia",
-                        data: {},
-                        color: '#f4341b',
-                        marker: {symbol: 'circle', radius: 12}
-                    },
-                    {
-                        name: "Telstra",
-                        data: {},
-                        color: '#1d8acf',
-                        marker: {symbol: 'circle', radius: 12}
-                    },
-                    {
-                        name: "Optus",
-                        data: {},
-                        color: '#f2be09',
-                        marker: {symbol: 'circle', radius: 12}
-                    }],
-
-                responsive: {
-                    rules: [{
-                            condition: {
-                                maxWidth: 500
-                            },
-                            chartOptions: {
-                                legend: {
-                                    layout: 'horizontal',
-                                    align: 'center',
-                                    verticalAlign: 'bottom'
-                                }
-                            }
-                        }]
-                }
-
-            });
-        </script>
-        <!-- For Data-RCX Ends-->
+            labels: {
+            rotation: 0
+        },
 
 
-        <!-- For Premium Starts-->
-        <script type="text/javascript">
-            Highcharts.chart('premium', {
+          tickInterval: 3 * 3600 * 1000,
 
-                title: {
-                    text: ''
-                },
-                // subtitle: {
-                //     text: 'Source: thesolarfoundation.com'
-                // },
-                exporting: {
-                    enabled: false
-                },
-                credits: {
-                    enabled: false
-                },
+      },
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+          y: 0,
+          padding: 3,
+      },
 
-                yAxis: {
-                    title: {
-                        text: '# Roamers'
-                    },
-                    tickInterval: 50,
-                },
+      plotOptions: {
+          series: {
+              label: {
+                  connectorAllowed: false,
+                  enabled: false
+              },
+               marker: {
+                enabled: true
+              },
+                pointStart: Date.UTC(2006, 0, 01, 21),
+                pointInterval: 5 * 3600 * 1000
+              // showInLegend: false,
+              // pointStart: 21
+          }
+      },
 
-                xAxis: {
-                    title: {
-                        text: 'TIME'
-                    },
-                    // tickInterval: 1,
-                    minRange: 1,
-                    type: 'datetime',
-                    dateTimeLabelFormats: {
-                        day: '00:00'
-                    },
+      series: [{
+          showInLegend: false,
+          name: '',
+          data: [10, 9.5, 9.1, 0],
+          color: '#f4341b',
+          marker : {enabled: false}
+      }, {
+          showInLegend: false,
+          name: '',
+          data: [8, 8.5, 8.2, 8.9],
+          color: '#1d8acf',
+          marker : {enabled: false}
+      }, {
+          showInLegend: false,
+          name: '',
+          data: [6, 6.5, 6.2, 6.1],
+          color: '#f2be09',
+          marker : {enabled: false}
+      },
+      {
+        name : "Vodafone Australia",
+        data : {},
+        color: '#f4341b',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        name : "Telstra",
+        data : {},
+        color: '#1d8acf',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        name : "Optus",
+        data : {},
+        color: '#f2be09',
+        marker : {symbol : 'circle',radius : 12 }
+    }],
 
-                    labels: {
-                        rotation: 0
-                    },
+      responsive: {
+          rules: [{
+              condition: {
+                  maxWidth: 500
+              },
+              chartOptions: {
+                  legend: {
+                      layout: 'horizontal',
+                      align: 'center',
+                      verticalAlign: 'bottom'
+                  }
+              }
+          }]
+      }
 
-                    tickInterval: 3 * 3600 * 1000,
-
-                },
-
-                legend: {
-                    // symbol: 'circle',
-                    layout: 'vertical',
-                    align: 'left',
-                    verticalAlign: 'bottom',
-                    symbolHeight: 10,
-                    symbolWidth: 10,
-                    symbolRadius: 0,
-                    y: 0,
-                    padding: 3
-                },
-
-                plotOptions: {
-                    series: {
-                        label: {
-                            connectorAllowed: false,
-                            enabled: false
-                        },
-                        marker: {
-                            enabled: true
-                        },
-                        pointStart: Date.UTC(2018, 01, 01, 10, 30),
-                        pointInterval: 10 * 1800 * 100
-
-                                // showInLegend: false,
-                                // pointStart: 21
-                    }
-                },
-
-                series: [{
-                        showInLegend: false,
-                        name: 'Vodafone Aus',
-                        data: [370, 240, 320, 330, 304, 0, 0, 0, 0],
-                        color: '#f4341b',
-                        marker: {enabled: false}
-                    }, {
-                        showInLegend: false,
-                        name: 'Telstra',
-                        data: [0, 0, 0, 0, 0, 350, 350, 344, 357],
-                        color: '#1d8acf',
-                        marker: {enabled: false}
-                    }, {
-                        showInLegend: false,
-                        name: 'Optus',
-                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        color: '#f2be09',
-                        marker: {enabled: false}
-                    },
-                    {
-                        name: "Vodafone Australia",
-                        data: {},
-                        color: '#f4341b',
-                        marker: {symbol: 'circle', radius: 12}
-                    },
-                    {
-                        name: "Telstra",
-                        data: {},
-                        color: '#1d8acf',
-                        marker: {symbol: 'circle', radius: 12}
-                    },
-                    {
-                        name: "Optus",
-                        data: {},
-                        color: '#f2be09',
-                        marker: {symbol: 'circle', radius: 12}
-                    }],
-
-                responsive: {
-                    rules: [{
-                            condition: {
-                                maxWidth: 500
-                            },
-                            chartOptions: {
-                                legend: {
-                                    layout: 'horizontal',
-                                    align: 'center',
-                                    verticalAlign: 'bottom'
-                                }
-                            }
-                        }]
-                }
-            });
-        </script>
-        <!-- For Premium Ends-->
+  });
+</script>
+<!-- For Data-RCX Ends-->
 
 
-        <!-- For Non-Premium Starts-->
-        <script type="text/javascript">
-            Highcharts.chart('non-premium', {
+<!-- For Premium Starts-->
+<script type="text/javascript">
+  Highcharts.chart('premium', {
 
-                title: {
-                    text: ''
-                },
-                // subtitle: {
-                //     text: 'Source: thesolarfoundation.com'
-                // },
-                exporting: {
-                    enabled: false
-                },
-                credits: {
-                    enabled: false
-                },
+      title: {
+          text: ''
+      },
+      // subtitle: {
+      //     text: 'Source: thesolarfoundation.com'
+      // },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
 
-                yAxis: {
-                    title: {
-                        text: 'R-CX Score'
-                    },
-                    tickInterval: 50
-                },
-                xAxis: {
-                    title: {
-                        text: 'TIME'
-                    },
-                    // tickInterval: 1,
-                    minRange: 1,
-                    type: 'datetime',
-                    dateTimeLabelFormats: {
-                        day: '00:00'
-                    },
+      yAxis: {
+          title: {
+              text: 'Roamer Count'
+          },
+          tickInterval: 50,
+        },
 
-                    labels: {
-                        rotation: 0
-                    },
-                    tickInterval: 3 * 3600 * 1000,
-                },
-                legend: {
-                    // symbol: 'circle',
-                    layout: 'vertical',
-                    align: 'left',
-                    verticalAlign: 'bottom',
-                    symbolHeight: 10,
-                    symbolWidth: 10,
-                    symbolRadius: 0,
-                    y: 0,
-                    padding: 3,
-                },
+        xAxis: {
+          title: {
+              text: 'TIME'
+          },
+          // tickInterval: 1,
+          minRange: 1,
+          type: 'datetime',
+          dateTimeLabelFormats: {
+                day: '00:00'   
+            },
 
-                plotOptions: {
-                    series: {
-                        label: {
-                            connectorAllowed: false,
-                            enabled: false
-                        },
-                        marker: {
-                            enabled: true
-                        },
-                        pointStart: Date.UTC(2006, 0, 01, 21),
-                        pointInterval: 3 * 3600 * 1000
-                                // showInLegend: false,
-                                // pointStart: 21
-                    }
-                },
+            labels: {
+            rotation: 0
+        },
 
-                series: [{
-                        showInLegend: false,
-                        name: 'Vodafone Aus',
-                        data: [370, 340, 320, 350, 320, 320],
-                        color: '#f4341b',
-                        marker: {enabled: false}
-                    }, {
-                        showInLegend: false,
-                        name: 'Telstra',
-                        data: [270, 220, 220, 255, 250, 220],
-                        color: '#1d8acf',
-                        marker: {enabled: false}
-                    }, {
-                        showInLegend: false,
-                        name: 'Optus',
-                        data: [50, 50, 50, 65, 60, 70],
-                        color: '#f2be09',
-                        marker: {enabled: false}
-                    },
-                    {
-                        name: "Vodafone Australia",
-                        data: {},
-                        color: '#f4341b',
-                        marker: {symbol: 'circle', radius: 12}
-                    },
-                    {
-                        name: "Telstra",
-                        data: {},
-                        color: '#1d8acf',
-                        marker: {symbol: 'circle', radius: 12}
-                    },
-                    {
-                        name: "Optus",
-                        data: {},
-                        color: '#f2be09',
-                        marker: {symbol: 'circle', radius: 12}
-                    }],
 
-                responsive: {
-                    rules: [{
-                            condition: {
-                                maxWidth: 500
-                            },
-                            chartOptions: {
-                                legend: {
-                                    layout: 'horizontal',
-                                    align: 'center',
-                                    verticalAlign: 'bottom'
-                                }
-                            }
-                        }]
-                }
+          tickInterval: 3 * 3600 * 1000,
 
-            });
-        </script>
-        <!-- For Non-Premium Ends-->
+      },
+
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+           y: 0,
+          padding: 3
+      },
+
+      plotOptions: {
+          series: {
+              label: {
+                  connectorAllowed: false,
+                  enabled: false
+              },
+               marker: {
+                enabled: true
+              },
+              pointStart: Date.UTC(2006, 0, 01, 21),
+              pointInterval: 5 * 3600 * 1000
+
+              // showInLegend: false,
+              // pointStart: 21
+          }
+      },
+
+      series: [{
+          showInLegend: false,
+          name: '',
+          data: [370, 240, 320, 330, 0],
+          color: '#f4341b',
+          marker : {enabled: false}
+      }, {
+          showInLegend: false,
+          name: '',
+          data: [0, 0, 0, 350, 350],
+          color: '#1d8acf',
+          marker : {enabled: false}
+      }, {
+          showInLegend: false,
+          name: '',
+          data: [0, 0, 0, 0, 0],
+          color: '#f2be09',
+          marker : {enabled: false}
+      },
+      {
+        name : "Vodafone Australia",
+        data : {},
+        color: '#f4341b',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        name : "Telstra",
+        data : {},
+        color: '#1d8acf',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        name : "Optus",
+        data : {},
+        color: '#f2be09',
+        marker : {symbol : 'circle',radius : 12 }
+    }],
+
+      responsive: {
+          rules: [{
+              condition: {
+                  maxWidth: 500
+              },
+              chartOptions: {
+                  legend: {
+                      layout: 'horizontal',
+                      align: 'center',
+                      verticalAlign: 'bottom'
+                  }
+              }
+          }]
+      }
+  });
+</script>
+<!-- For Premium Ends-->
+
+
+<!-- For Non-Premium Starts-->
+<script type="text/javascript">
+  Highcharts.chart('non-premium', {
+
+      title: {
+          text: ''
+      },
+      // subtitle: {
+      //     text: 'Source: thesolarfoundation.com'
+      // },
+       exporting: {
+        enabled: false
+      },
+      credits: {
+        enabled: false
+      },
+
+      yAxis: {
+          title: {
+              text: 'Roamer Count'
+          },
+          tickInterval: 50
+      },
+      xAxis: {
+          title: {
+              text: 'TIME'
+          },
+          // tickInterval: 1,
+          minRange: 1,
+          type: 'datetime',
+          dateTimeLabelFormats: {
+                day: '00:00'   
+            },
+         
+                labels: {
+            rotation: 0
+        },
+          tickInterval: 3 * 3600 * 1000,
+      },
+      legend: {
+          // symbol: 'circle',
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'bottom',
+          symbolHeight: 10,
+          symbolWidth: 10,
+          symbolRadius: 0,
+           y: 0,
+          padding: 3,
+      },
+
+      plotOptions: {
+          series: {
+              label: {
+                  connectorAllowed: false,
+                  enabled: false
+              },
+               marker: {
+                enabled: true
+              },
+              pointStart: Date.UTC(2006, 0, 01, 21),
+              pointInterval: 3 * 3600 * 1000
+              // showInLegend: false,
+              // pointStart: 21
+          }
+      },
+
+      series: [{
+          showInLegend: false,
+          name: '',
+          data: [370, 340, 320, 350, 320, 320],
+          color: '#f4341b',
+          marker : {enabled: false}
+      }, {
+          showInLegend: false,
+          name: '',
+          data: [270, 220, 220, 255, 250, 220],
+          color: '#1d8acf',
+          marker : {enabled: false}
+      }, {
+          showInLegend: false,
+          name: '',
+          data: [50, 50, 50, 65, 60, 70],
+          color: '#f2be09',
+          marker : {enabled: false}
+      },
+      {
+        name : "Vodafone Australia",
+        data : {},
+        color: '#f4341b',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        name : "Telstra",
+        data : {},
+        color: '#1d8acf',
+        marker : {symbol : 'circle',radius : 12 }
+    },
+    {
+        name : "Optus",
+        data : {},
+        color: '#f2be09',
+        marker : {symbol : 'circle',radius : 12 }
+    }],
+
+      responsive: {
+          rules: [{
+              condition: {
+                  maxWidth: 500
+              },
+              chartOptions: {
+                  legend: {
+                      layout: 'horizontal',
+                      align: 'center',
+                      verticalAlign: 'bottom'
+                  }
+              }
+          }]
+      }
+
+  });
+</script>
     </body>
 </html>
