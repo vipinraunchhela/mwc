@@ -181,13 +181,13 @@
                                                     <div class="img__center">
                                                         <span class="icon-view data"></span>
                                                     </div>
-                                                    <p class="details__text">Outbound 80k</p>
+                                                    <p class="details__text">Voice Test 1474</p>
                                                 </div>
                                                 <div class="details__box">
                                                     <div class="img__center">
                                                         <span class="icon-view data"></span>
                                                     </div>
-                                                    <p class="details__text">Inbound 28k</p>
+                                                    <p class="details__text">Failure 3.75%</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -675,7 +675,7 @@
                     arrows: true
                 });
    Highcharts.chart('wholesaleMargin', {
-                    colors: ['#C2F388', '#1FA5D2'],
+                    colors: ['#C2F388', 'red'],
                     title: {
                         text: ''
                     },
@@ -708,10 +708,10 @@
                         enabled: false
                     },
                     series: [{
-                            name: 'Revenue',
+                            name: 'Target',
                             data: [28, 33.5]
                         },{
-                            name: 'Revenue',
+                            name: 'Projected',
                             data: [28, 32]
                         }],
                     responsive: {
