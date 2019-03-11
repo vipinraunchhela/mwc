@@ -35,6 +35,9 @@
             color: #fff;
             border: 1px solid #fff;
         }
+        .body-section{
+            width: 80%;
+        }
 
         </style>
     </head>
@@ -42,7 +45,7 @@
     <body>
        
         <div class="container-fluid body-banner">
-        <div class="container">
+        <div class="body-section">
            <div class="row">
                <div class="col-md-12 text-center">
                    <img src="images/list-logo.png" class="header-logo">
@@ -62,7 +65,7 @@
                                 </tr>
                             </table>
                             </li>
-                            <li><a href="">Retail</a>
+                            <li><a>Retail</a>
                             <ul>
                                 <li><a id="roamingBusinessAdvisor" data-toggle="modal" data-target="#myModal">Roaming Business Advisor</a></li>
                                 <li><a id="roamPolicy" data-toggle="modal" data-target="#myModal">RoamPolicy</a></li>
@@ -106,7 +109,7 @@
                             </ul>
 
                             </li>
-                            <li><a href="">IoT</a>
+                            <li><a >IoT</a>
                             <ul>
                                 <li><a id="roamingIoT" data-toggle="modal" data-target="#myModal">Roaming IoT</a></li>
                                 <li><a href="aiwb-dashboard-iot.html">Demo</a></li>
@@ -127,40 +130,40 @@
                                 </tr>
                             </table>
                             </li>
-                            <li><a href="">SS7 and Diameter Firewall</a>
+                            <li><a>SS7 and Diameter Firewall</a>
                                 <ul>
                                     <li><a id="ss7andDiameterFirewall" data-toggle="modal" data-target="#myModal">SS7 and Diameter Firewall</a></li>
-                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
+                                    <li><a target="_blank" href="http://dev.evolved-intelligence.com:9384/provisioning/">Demo</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">GTP Firewall</a>
+                            <li><a>GTP Firewall</a>
                                 <ul>
                                     <li><a id="gtpFirewall" data-toggle="modal" data-target="#myModal">GTP Firewall</a></li>
-                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
+                                    <li><a href="http://dev.evolved-intelligence.com:9384/provisioning/">Demo</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">SMS Firewall</a>
+                            <li><a>SMS Firewall</a>
                                 <ul>
                                     <li><a id="SMSFirewall" data-toggle="modal" data-target="#myModal">SMS Firewall</a></li>
-                                    <li><a href="aiwb-dashboard-security.html">Demo</a></li>
+                                    <li><a href="http://dev.evolved-intelligence.com:9384/provisioning/">Demo</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">5G SEPP</a>
+                            <li><a>5G SEPP</a>
                                 <ul>
                                     <li><a id="5GSEPP" data-toggle="modal" data-target="#myModal">5G SEPP</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Security Analytics</a>
+                            <li><a>Security Analytics</a>
                                 <ul>
                                     <li><a href="aiwb-dashboard-security.html">Demo</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Voice Firewall</a>
+                            <li><a>Voice Firewall</a>
                                 <ul>
                                     <li><a id="voiceFirewall" data-toggle="modal" data-target="#myModal">Voice Firewall</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Pen Testing</a>
+                            <li><a>Pen Testing</a>
                                 <ul>
                                     <li><a id="penTesting" data-toggle="modal" data-target="#myModal">Pen Testing</a></li>
                                 </ul>
@@ -182,17 +185,17 @@
                                 </tr>
                             </table>
                             </li>
-                            <li><a href="">Fraud</a>
+                            <li><a>Fraud</a>
                             <ul class="show-left">
                                 <li><a id="virtualFraudManager" data-toggle="modal" data-target="#myModal">Virtual Fraud Manager</a></li>
                                 <li><a id="voiceFirewall " data-toggle="modal" data-target="#myModal">Voice Firewall </a></li>
                                 <li><a href="aiwb-dashboard-fraud.html">Demo</a></li>
                             </ul>
                             </li>
-                            <li><a href="">Revenue Assurance</a>
+                            <li><a>Revenue Assurance</a>
                                 <ul class="show-left">
                                     <li><a id="interconnectRiskManager" data-toggle="modal" data-target="#myModal">Interconnect Risk Manager</a></li>
-                                    <li><a href="">Demo</a></li>
+                                    <li><a href="aiwb-dashboard-revenue-assurance.html">Demo</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -351,15 +354,16 @@
 
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="slick/slick.js"></script>
-        <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        
+        <script src="js/bootstrap.min.js"></script>        
+        <!-- <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
         <script type="text/javascript">
             $('a').on('click', function(){
                var itemId = $(this).attr('id');
                $('.iframes div.'+itemId+'').show().siblings().hide();
             })
+            // $('iframe').css("-webkit-transform", "scale(" + 1.63 + ")"); 
+            // $('iframe').css("zoom", "0.63");
         </script>
     </body>
 

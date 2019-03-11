@@ -28,7 +28,7 @@ h1.text-center:before {
     left: 0;
     height: 1px;
     background: #fff;
-    width: 24%;
+    width: calc(50% - 330px);
     content: '';
     top: 0;
     bottom: 0;
@@ -39,7 +39,7 @@ h1.text-center:after {
     right: 0;
     height: 1px;
     background: #fff;
-    width: 24%;
+    width: calc(50% - 330px);
     content: '';
     top: 0;
     bottom: 0;
@@ -155,13 +155,12 @@ h1.text-center:after {
 }
 
 .modal-dialog{
-	width:1030px;
-	height:400px;
+	width:90%;
+	height:80%;
 }
-iframe{
-	width:1000px;
-	height:500px;
-}
+/*iframe{
+
+}*/
 .iframes > div{
 	display: none;
 }
@@ -169,8 +168,46 @@ iframe{
 	margin: 20px 0;
 }
 
+.modal-body.iframes{
+	overflow: auto;
+	/*-webkit-overflow-scrolling: touch;*/
+	
+}
+iframe{
+	height:100%;
+	width:100%;
+}
+.modal-body.iframes > div{
+	width:100%;
+	height:500px;
+	overflow: scroll;
+	-webkit-overflow-scrolling:touch;
+}
+button.close{
+	position: absolute;
+	right: 0;
+}
 
+.body-section{
+	width: 1200px;
+	margin: auto;
+}
 
+@media screen and (min-width: 1400px) {
+  .body-section {
+	    width: 80%;
+	    margin: auto;
+	}
+	.modal-dialog {
+	    width: 80%;
+	    height: 85%;
+	}
+	.modal-content,
+	.modal-body.iframes,
+	.modal-body.iframes > div{
+		height:100%;
+	}
+}
 
 
 
