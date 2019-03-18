@@ -54,7 +54,7 @@
                                         <h3 class="panel-title">Mobileum - Active Intelligence Workbench</h3>
                                     </div>
                                     <div class="panel-body">
-                                        <form name="loginform" onSubmit="return validateForm();" action="index.html" method="post">
+                                        <form name="loginform" >
                                         <fieldset>
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="Username" name="usr" type="text">
@@ -67,7 +67,7 @@
                                                     <input name="remember" type="checkbox" value="Remember Me"> Remember Me
                                                 </label>
                                             </div> -->
-                                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                                            <input class="btn btn-lg btn-success btn-block" type="button" onclick="validateForm()" value="Login">
                                         </fieldset>
                                         </form>
                                     </div>
@@ -88,11 +88,10 @@
                 var username = "mobileum"; 
                 var password = "M@b_mwc2019";
                 if ((un == username) && (pw == password)) {
-                    return true;
+                    window.location.href = "index.html?login=1"; 
                 }
                 else {
                     alert ("Login was unsuccessful, please check your username and password");
-                    return false;
                 }
           }
         </script>
