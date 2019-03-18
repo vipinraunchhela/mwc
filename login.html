@@ -35,6 +35,10 @@
                 padding: 15px 15px;
             }
 
+            .panel-title{
+                font-weight: 600;
+            }
+
         </style>
     </head>
 
@@ -47,7 +51,7 @@
                             <div class="col-md-4 col-md-offset-4">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title">Please Log in</h3>
+                                        <h3 class="panel-title">Mobileum - Active Intelligence Workbench</h3>
                                     </div>
                                     <div class="panel-body">
                                         <form name="loginform" onSubmit="return validateForm();" action="index.html" method="post">
@@ -81,8 +85,8 @@
             function validateForm() {
                 var un = document.loginform.usr.value;
                 var pw = document.loginform.pword.value;
-                var username = "username"; 
-                var password = "password";
+                var username = "mobileum"; 
+                var password = "M@b_mwc2019";
                 if ((un == username) && (pw == password)) {
                     return true;
                 }
